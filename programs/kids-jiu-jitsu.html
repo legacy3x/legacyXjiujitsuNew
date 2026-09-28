@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <title>Kids Jiu-Jitsu — Legacy X Jiu-Jitsu</title>
-<meta name="description" content="Kids Brazilian Jiu-Jitsu in Woodstock, Ontario for ages 4–12. Fun, structured Gi and No-Gi classes, Tuesday and Thursday 6:00–6:35 PM. The first class is free."/>
+<meta name="description" content="Kids and teen Brazilian Jiu-Jitsu in Woodstock, Ontario for ages 3–15: Little Warriors (3–5), Legacy Juniors (6–12), and Legacy Next Gen (13–15). The first class is free."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -435,6 +435,27 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 .footer-bottom p { font-size: 12px; color: var(--muted); }
 .footer-motto { font-family: var(--ff-display); font-size: 15px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); }
 
+/* ── AGE GROUPS ── */
+.groups-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-top: 48px; }
+.group-card { background: var(--dark); padding: 40px 32px 36px; border-top: 3px solid var(--blue); }
+.group-card:nth-child(2) { border-top-color: var(--purple); }
+.group-card:nth-child(3) { border-top-color: #8b5a2b; }
+.group-ages {
+  font-family: var(--ff-display); font-weight: 800; font-size: 14px;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: 10px;
+}
+.group-card:nth-child(2) .group-ages { color: #9b72d6; }
+.group-card:nth-child(3) .group-ages { color: #c08a57; }
+.group-name {
+  font-family: var(--ff-display); font-weight: 900; font-size: 36px;
+  text-transform: uppercase; line-height: 1; margin-bottom: 10px;
+}
+.group-tagline {
+  font-family: var(--ff-display); font-weight: 700; font-style: italic; font-size: 19px;
+  letter-spacing: 0.5px; color: rgba(255,255,255,0.85); margin-bottom: 16px; line-height: 1.25;
+}
+.group-desc { font-size: 15px; line-height: 1.75; color: var(--muted); }
+
 /* ── KIDS VARIANTS ── */
 .flow.three { grid-template-columns: repeat(3, 1fr); }
 .quote-grid.single { grid-template-columns: 1fr; max-width: 760px; }
@@ -452,6 +473,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   .nav-links, .nav-cta { display: none; }
   .nav-mobile-toggle { display: flex; }
   .curriculum-grid { grid-template-columns: 1fr 1fr; }
+  .groups-grid { grid-template-columns: 1fr; }
   .flow { grid-template-columns: 1fr 1fr; row-gap: 32px; }
   .first-grid { grid-template-columns: 1fr; gap: 40px; }
   .coach-card { grid-template-columns: 1fr; }
@@ -524,15 +546,45 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
       <span>›</span>
       Kids Jiu-Jitsu
     </div>
-    <div class="page-tag">Kids · Gi &amp; No-Gi · Ages 4–12</div>
+    <div class="page-tag">Kids &amp; Teens · Gi &amp; No-Gi · Ages 3–15</div>
     <h1 class="page-title">Kids<br/><em>Jiu-Jitsu.</em></h1>
-    <p class="page-subtitle">A fun, structured program introducing children to movement fundamentals, discipline, and confidence through Jiu-Jitsu. Classes include games, exercises, and age-appropriate technique in a positive, encouraging environment.</p>
+    <p class="page-subtitle">A fun, structured program introducing children to movement fundamentals, discipline, and confidence through Jiu-Jitsu. Three age groups, each with games, exercises, and age-appropriate technique in a positive, encouraging environment.</p>
     <div class="header-actions">
       <a href="https://legacy-x-jiujitsu.gymdesk.com/signup" target="_blank" class="btn-primary">Try a Free Class</a>
       <a href="../schedule.html" class="btn-outline">View Schedule</a>
     </div>
   </div>
 </div>
+
+<!-- ── AGE GROUPS ── -->
+<section class="band-navy">
+  <div class="section">
+    <div class="section-label">Three Age Groups</div>
+    <h2 class="section-headline">The right class<br/><em>for every age.</em></h2>
+    <p class="section-intro">Kids train with others their own age, so every class is pitched at the right level. At 16, students move up to our <a href="adult-jiu-jitsu.html" style="color:var(--blue);">Adult program</a>.</p>
+
+    <div class="groups-grid">
+      <div class="group-card">
+        <div class="group-ages">Ages 3–5</div>
+        <h3 class="group-name">Little Warriors</h3>
+        <div class="group-tagline">Move. Learn. Grow.</div>
+        <p class="group-desc">A first step onto the mat. Our youngest students build balance, coordination, and listening skills through games and simple movements, all while having fun.</p>
+      </div>
+      <div class="group-card">
+        <div class="group-ages">Ages 6–12</div>
+        <h3 class="group-name">Legacy Juniors</h3>
+        <div class="group-tagline">Build Skills. Build Confidence. Build Character.</div>
+        <p class="group-desc">Jiu-Jitsu fundamentals taught through structured drills, games, and age-appropriate technique, with a focus on discipline, respect, and confidence.</p>
+      </div>
+      <div class="group-card">
+        <div class="group-ages">Ages 13–15</div>
+        <h3 class="group-name">Legacy Next Gen</h3>
+        <div class="group-tagline">Develop Your Game.</div>
+        <p class="group-desc">For teens ready to go deeper — sharper technique, more positional work, and the foundation to step into the adult program at 16.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ── WHAT KIDS GAIN ── -->
 <section>
@@ -567,11 +619,11 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 </section>
 
 <!-- ── CLASS FLOW ── -->
-<section class="band-navy">
+<section>
   <div class="section">
     <div class="section-label">Inside a Class</div>
-    <h2 class="section-headline">35 minutes,<br/><em>well spent.</em></h2>
-    <p class="section-intro">Kids classes run Tuesday and Thursday from 6:00 to 6:35 PM. Every class mixes three things together, in both Gi and No-Gi.</p>
+    <h2 class="section-headline">What a class<br/><em>looks like.</em></h2>
+    <p class="section-intro">Every class mixes three things together, in both Gi and No-Gi, adapted to each age group.</p>
 
     <div class="flow three">
       <div class="flow-step">
@@ -594,7 +646,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 </section>
 
 <!-- ── FIRST CLASS ── -->
-<section>
+<section class="band-navy">
   <div class="section">
     <div class="first-grid">
       <div>
@@ -631,7 +683,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
           <span class="check-icon">📍</span>
           <div>
             <div class="check-title">Where to go</div>
-            <p class="check-desc">27 Bysham Park Drive (Units 1 &amp; 2), Woodstock, ON. Tuesday &amp; Thursday, 6:00 PM.</p>
+            <p class="check-desc">27 Bysham Park Drive (Units 1 &amp; 2), Woodstock, ON. Check the <a href="../schedule.html" style="color:var(--blue);">class schedule</a> for your child's group.</p>
           </div>
         </li>
       </ul>
@@ -640,7 +692,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 </section>
 
 <!-- ── COACH ── -->
-<section class="band-navy">
+<section>
   <div class="section">
     <div class="section-label">Your Child's Coach</div>
     <h2 class="section-headline">Meet Coach<br/><em>Brandon.</em></h2>
@@ -680,7 +732,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 </section>
 
 <!-- ── TESTIMONIAL ── -->
-<section>
+<section class="band-navy">
   <div class="section">
     <div class="section-label">From Our Parents</div>
     <h2 class="section-headline">What parents<br/><em>are saying.</em></h2>
@@ -696,7 +748,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 </section>
 
 <!-- ── FAQ ── -->
-<section class="band-navy">
+<section>
   <div class="section">
     <div class="section-label">Parent FAQ</div>
     <h2 class="section-headline">Common<br/><em>questions.</em></h2>
@@ -704,15 +756,15 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
     <div class="faq-list">
       <details class="faq-item">
         <summary>What age can my child start?</summary>
-        <p class="faq-answer">The Kids program is for ages 4–12. We assess each child individually to make sure they are ready for the class environment. If you're unsure, reach out and we're happy to discuss it with you before the first class.</p>
+        <p class="faq-answer">Kids can start at age 3. Little Warriors is for ages 3–5, Legacy Juniors for ages 6–12, and Legacy Next Gen for ages 13–15. We assess each child individually to make sure they are ready for the class environment. If you're unsure, reach out and we're happy to discuss it with you before the first class.</p>
       </details>
       <details class="faq-item">
         <summary>Does my child need any experience?</summary>
         <p class="faq-answer">No. The program is built to introduce children to Jiu-Jitsu from the very beginning, starting with movement fundamentals and building up from there.</p>
       </details>
       <details class="faq-item">
-        <summary>How long is each class?</summary>
-        <p class="faq-answer">Kids classes run 35 minutes, from 6:00 to 6:35 PM every Tuesday and Thursday.</p>
+        <summary>What happens when my child turns 16?</summary>
+        <p class="faq-answer">Students 16 and older move up to our <a href="adult-jiu-jitsu.html" style="color:var(--blue);">Adult Jiu-Jitsu program</a>, where they keep building on everything they've learned.</p>
       </details>
       <details class="faq-item">
         <summary>Is Jiu-Jitsu safe for kids?</summary>
@@ -735,7 +787,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   <div class="trial-inner">
     <div>
       <h2 class="trial-headline">Their first class<br/>is on us.</h2>
-      <p class="trial-sub">No experience needed. No commitment required. Bring your child Tuesday or Thursday at 6:00 PM and we'll take care of the rest.</p>
+      <p class="trial-sub">No experience needed. No commitment required. Find your child's group on the schedule, bring them in, and we'll take care of the rest.</p>
     </div>
     <a href="https://legacy-x-jiujitsu.gymdesk.com/signup" target="_blank" class="btn-white">Book a Free Class</a>
   </div>

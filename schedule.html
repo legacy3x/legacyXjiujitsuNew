@@ -262,7 +262,8 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   .nav-mobile-toggle { display: flex; }
   .quick-band-inner { flex-wrap: wrap; }
   .quick-item { flex: 1 1 45%; border-bottom: 1px solid var(--border); }
-  .quick-item:nth-child(2) { border-right: none; }
+  .quick-item:nth-child(2n) { border-right: none; }
+  .quick-item:last-child { flex-basis: 100%; }
   .schedule-header { flex-direction: column; align-items: flex-start; }
   .gymdesk-widget-wrap { padding: 24px 20px; }
   .cta-inner { grid-template-columns: 1fr; }
@@ -342,15 +343,22 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
     <div class="quick-item">
       <div class="quick-icon">🥋</div>
       <div>
-        <div class="quick-label">Adult Classes</div>
+        <div class="quick-label">Adults · 16+</div>
         <div class="quick-value">7:00 PM – 8:00 PM</div>
+      </div>
+    </div>
+    <div class="quick-item">
+      <div class="quick-icon">🧒</div>
+      <div>
+        <div class="quick-label">Little Warriors · 3–5</div>
+        <div class="quick-value">6:00 PM – 6:35 PM</div>
       </div>
     </div>
     <div class="quick-item">
       <div class="quick-icon">👦</div>
       <div>
-        <div class="quick-label">Kids Classes</div>
-        <div class="quick-value">6:00 PM – 6:35 PM</div>
+        <div class="quick-label">Juniors &amp; Next Gen · 6–15</div>
+        <div class="quick-value">6:00 PM – 6:45 PM</div>
       </div>
     </div>
     <div class="quick-item">
