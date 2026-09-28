@@ -380,31 +380,6 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 .footer-bottom p { font-size: 12px; color: var(--muted); }
 .footer-motto { font-family: var(--ff-display); font-size: 15px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); }
 
-/* ── EVENT CARD ── */
-.event-card {
-  display: grid; grid-template-columns: 160px 1fr; margin-top: 40px;
-  background: var(--dark); border-left: 3px solid var(--purple);
-}
-.event-date {
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 32px 16px; border-right: 1px solid var(--border);
-  font-family: var(--ff-display); text-transform: uppercase; text-align: center;
-}
-.event-month { font-weight: 700; font-size: 16px; letter-spacing: 3px; color: var(--blue); }
-.event-day { font-weight: 900; font-size: 64px; line-height: 1; }
-.event-year { font-weight: 600; font-size: 14px; letter-spacing: 2px; color: var(--muted); }
-.event-body { padding: 36px 40px; }
-.event-name {
-  font-family: var(--ff-display); font-weight: 900; font-size: 34px;
-  text-transform: uppercase; line-height: 1.05; margin-bottom: 12px;
-}
-.text-link {
-  font-family: var(--ff-display); font-weight: 800; font-size: 15px;
-  letter-spacing: 2px; text-transform: uppercase; color: var(--blue);
-  display: inline-flex; align-items: center; gap: 8px; transition: gap 0.2s;
-}
-.text-link:hover { gap: 12px; }
-
 /* ── VARIANTS ── */
 .flow.three { grid-template-columns: repeat(3, 1fr); }
 .page-badge {
@@ -436,10 +411,6 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   .flow, .flow.three { grid-template-columns: 1fr; }
   .split-card { padding: 32px 24px; }
   .faq-item summary { font-size: 19px; }
-  .event-card { grid-template-columns: 1fr; }
-  .event-date { flex-direction: row; gap: 10px; padding: 20px 24px; border-right: none; border-bottom: 1px solid var(--border); justify-content: flex-start; }
-  .event-day { font-size: 40px; }
-  .event-body { padding: 28px 24px; }
   .footer-inner { grid-template-columns: 1fr; }
 }
 </style>
@@ -611,30 +582,8 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   </div>
 </section>
 
-<!-- ── UPCOMING EVENT ── -->
-<section class="band-navy">
-  <div class="section">
-    <div class="section-label">Coming Up</div>
-    <h2 class="section-headline">Save<br/><em>the date.</em></h2>
-
-    <div class="event-card">
-      <div class="event-date">
-        <div class="event-month">Oct</div>
-        <div class="event-day">17</div>
-        <div class="event-year">2026</div>
-      </div>
-      <div class="event-body">
-        <div class="split-tag">Competition · No-Gi Event</div>
-        <h3 class="event-name">Something Big Is Coming</h3>
-        <p class="split-desc">Legacy X's first major No-Gi event. Time, location, and registration details will be announced soon.</p>
-        <a href="../events.html" class="text-link">See all events <span>→</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ── FAQ ── -->
-<section>
+<section class="band-navy">
   <div class="section">
     <div class="section-label">Competition FAQ</div>
     <h2 class="section-headline">Common<br/><em>questions.</em></h2>
