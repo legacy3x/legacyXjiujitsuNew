@@ -183,7 +183,7 @@ nav {
 }
 .featured-day {
   font-family: var(--ff-display); font-weight: 900; font-size: 72px;
-  line-height: 1; color: var(--white); letter-spacing: -2px;
+  line-height: 1; color: var(--white); letter-spacing: 4px; text-indent: 4px;
 }
 .featured-year {
   font-family: var(--ff-display); font-size: 14px; font-weight: 600;
@@ -258,29 +258,32 @@ nav {
   background: var(--navy);
   border-top: 3px solid var(--border);
   display: grid;
-  grid-template-columns: 160px 1fr auto;
+  grid-template-columns: 240px 1fr auto;
   gap: 0;
   margin-bottom: 3px;
   transition: border-color 0.2s, background 0.2s;
 }
 .event-card:hover { border-top-color: var(--purple); background: #1b2448; }
 
+/* Date block matches the featured event */
 .event-date-col {
-  padding: 32px 28px;
+  padding: 40px 36px;
+  background: var(--blue);
   display: flex; flex-direction: column; justify-content: center; align-items: center;
-  text-align: center; border-right: 1px solid var(--border); flex-shrink: 0;
+  text-align: center; flex-shrink: 0;
 }
 .event-month {
-  font-family: var(--ff-display); font-size: 12px; font-weight: 700;
-  letter-spacing: 2px; text-transform: uppercase; color: var(--purple); margin-bottom: 4px;
+  font-family: var(--ff-display); font-size: 13px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.8);
+  margin-bottom: 4px;
 }
 .event-day {
-  font-family: var(--ff-display); font-weight: 900; font-size: 48px;
-  line-height: 1; color: var(--white); letter-spacing: -1px;
+  font-family: var(--ff-display); font-weight: 900; font-size: 72px;
+  line-height: 1; color: var(--white); letter-spacing: 4px; text-indent: 4px;
 }
 .event-year {
-  font-family: var(--ff-display); font-size: 12px; color: var(--muted);
-  margin-top: 4px; letter-spacing: 1px;
+  font-family: var(--ff-display); font-size: 14px; font-weight: 600;
+  color: rgba(255,255,255,0.7); margin-top: 4px; letter-spacing: 1px;
 }
 
 .event-body { padding: 32px 36px; display: flex; flex-direction: column; justify-content: center; }
@@ -304,37 +307,6 @@ nav {
   text-transform: uppercase; color: var(--white); margin-bottom: 12px;
 }
 .empty-sub { font-size: 16px; color: var(--muted); line-height: 1.7; max-width: 400px; margin: 0 auto; }
-
-/* ── PAST EVENTS ── */
-.past-section { margin-top: 64px; }
-.past-label {
-  font-family: var(--ff-display); font-size: 12px; font-weight: 700;
-  letter-spacing: 3px; text-transform: uppercase; color: var(--muted);
-  margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--border);
-}
-
-.past-card {
-  background: rgba(255,255,255,0.02);
-  border-top: 1px solid var(--border);
-  display: grid; grid-template-columns: 120px 1fr;
-  gap: 0; opacity: 0.65; transition: opacity 0.2s;
-}
-.past-card:hover { opacity: 1; }
-
-.past-date-col {
-  padding: 20px 24px; border-right: 1px solid var(--border);
-  display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-}
-.past-month { font-family: var(--ff-display); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
-.past-day { font-family: var(--ff-display); font-weight: 900; font-size: 32px; line-height: 1; color: var(--muted); }
-.past-year { font-family: var(--ff-display); font-size: 11px; color: var(--muted); margin-top: 2px; }
-
-.past-body { padding: 20px 28px; display: flex; flex-direction: column; justify-content: center; }
-.past-title {
-  font-family: var(--ff-display); font-weight: 800; font-size: 18px;
-  text-transform: uppercase; color: var(--white); margin-bottom: 4px;
-}
-.past-meta { font-size: 13px; color: var(--muted); }
 
 /* ── NEWSLETTER BAND ── */
 .newsletter-band { background: var(--navy); border-top: 1px solid var(--border); }
@@ -402,14 +374,13 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   .featured-day { font-size: 48px; }
   .featured-cta-col { border-left: none; border-top: 1px solid var(--border); flex-direction: row; flex-wrap: wrap; justify-content: flex-start; padding: 24px 44px; }
   .event-card { grid-template-columns: 1fr; }
-  .event-date-col { flex-direction: row; gap: 12px; border-right: none; border-bottom: 1px solid var(--border); padding: 20px 28px; justify-content: flex-start; align-items: center; }
+  .event-date-col { flex-direction: row; gap: 16px; padding: 24px 28px; justify-content: flex-start; }
+  .event-day { font-size: 48px; }
   .event-action-col { border-left: none; border-top: 1px solid var(--border); flex-direction: row; flex-wrap: wrap; justify-content: flex-start; padding: 20px 36px; }
   .newsletter-inner { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 600px) {
-  .past-card { grid-template-columns: 1fr; }
-  .past-date-col { flex-direction: row; gap: 10px; border-right: none; border-bottom: 1px solid var(--border); padding: 14px 20px; align-items: center; }
   .footer-inner { grid-template-columns: 1fr; }
 }
 </style>
@@ -528,7 +499,6 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
         </div>
         <div class="featured-cta-col">
           <span class="event-badge">Next Up</span>
-          <a href="contact.html" class="event-btn">Get Notified</a>
         </div>
       </div>
 
@@ -588,24 +558,6 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
       <div class="empty-icon">📅</div>
       <div class="empty-title">No events in this category yet.</div>
       <p class="empty-sub">Check back soon or subscribe to our newsletter to be the first to know when new events are announced.</p>
-    </div>
-
-    <!-- PAST EVENTS -->
-    <div class="past-section">
-      <div class="past-label">Past Events</div>
-
-      <div class="past-card" data-category="academy">
-        <div class="past-date-col">
-          <div class="past-month">Jun</div>
-          <div class="past-day">01</div>
-          <div class="past-year">2026</div>
-        </div>
-        <div class="past-body">
-          <div class="past-title">Legacy X Grand Opening</div>
-          <div class="past-meta">Woodstock, ON · Academy Milestone</div>
-        </div>
-      </div>
-
     </div>
 
   </div>
@@ -693,12 +645,6 @@ function filterEvents(category, btn) {
     const match = category === 'all' || card.dataset.category === category;
     card.style.display = match ? 'grid' : 'none';
     if (match) visibleCount++;
-  });
-
-  // Filter past events
-  document.querySelectorAll('.past-card').forEach(card => {
-    const match = category === 'all' || card.dataset.category === category;
-    card.style.display = match ? 'grid' : 'none';
   });
 
   // Show/hide empty state
