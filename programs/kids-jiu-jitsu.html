@@ -818,8 +818,9 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
       <p class="newsletter-sub">Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox.</p>
     </div>
     <div>
-      <form class="newsletter-form" onsubmit="return false;">
-        <input class="newsletter-input" type="email" placeholder="Your email address"/>
+      <form class="newsletter-form" novalidate>
+        <input class="newsletter-input" type="email" name="email" placeholder="Your email address" aria-label="Email address" autocomplete="email" required/>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;"/>
         <button class="newsletter-btn" type="submit">Subscribe</button>
       </form>
     </div>
@@ -877,6 +878,8 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
     <div class="footer-motto">Discipline · Confidence · Legacy</div>
   </div>
 </footer>
+
+<script src="../js/newsletter.js"></script>
 
 </body>
 </html>

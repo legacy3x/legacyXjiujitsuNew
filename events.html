@@ -571,8 +571,9 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
       <p class="newsletter-sub">Subscribe to the Legacy X newsletter and be the first to know about upcoming competitions, seminars, open mats, and academy announcements.</p>
     </div>
     <div>
-      <form class="newsletter-form" onsubmit="return false;">
-        <input class="newsletter-input" type="email" placeholder="Your email address"/>
+      <form class="newsletter-form" novalidate>
+        <input class="newsletter-input" type="email" name="email" placeholder="Your email address" aria-label="Email address" autocomplete="email" required/>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;"/>
         <button class="newsletter-btn" type="submit">Subscribe</button>
       </form>
     </div>
@@ -650,6 +651,8 @@ function filterEvents(category, btn) {
   document.getElementById('empty-state').style.display = visibleCount === 0 ? 'block' : 'none';
 }
 </script>
+
+<script src="js/newsletter.js"></script>
 
 </body>
 </html>
