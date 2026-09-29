@@ -465,6 +465,8 @@ section { position: relative; }
   max-width: 420px;
   margin-bottom: 40px;
 }
+.why-intro:has(+ .why-intro) { margin-bottom: 16px; }
+.why-desc + .why-desc { margin-top: 10px; }
 
 .why-items {
   display: flex;
@@ -622,28 +624,6 @@ section { position: relative; }
 }
 
 .testimonial-featured .stars { font-size: 16px; }
-
-.tf-rating {
-  text-align: center;
-  border-left: 1px solid var(--border);
-  padding-left: 40px;
-}
-
-.tf-score {
-  font-family: var(--ff-display);
-  font-weight: 900;
-  font-size: 72px;
-  line-height: 1;
-  color: var(--blue);
-}
-
-.tf-label {
-  font-size: 12px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 4px;
-}
 
 /* ── PHOTO MOSAIC ────────────────────────────────── */
 #gallery {
@@ -958,7 +938,6 @@ footer {
   .why-right { display: none; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .testimonial-featured { grid-column: span 1; grid-template-columns: 1fr; }
-  .tf-rating { border-left: none; border-top: 1px solid var(--border); padding: 24px 0 0; text-align: left; }
   .mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 200px 200px; }
   .mosaic-cell.tall { grid-row: span 1; }
   .cta-inner { grid-template-columns: 1fr; }
@@ -1072,12 +1051,12 @@ footer {
   <div class="hero-content">
     <p class="hero-eyebrow">Woodstock, Ontario</p>
     <h1 class="hero-headline">
-      The mat<br/>
-      is where<br/>
-      <span class="accent">it starts.</span>
+      Build your<br/>
+      legacy<br/>
+      <span class="accent">on the mat.</span>
     </h1>
     <p class="hero-sub">
-      Legacy X is an independent Brazilian Jiu-Jitsu academy built on movement, technique, and real community. Adults, kids, and total beginners are welcome — no experience needed.
+      World-class Jiu-Jitsu training for all levels. Join our community and transform your life through martial arts — no experience needed.
     </p>
     <div class="hero-actions">
       <a href="https://legacy-x-jiujitsu.gymdesk.com/signup" target="_blank" class="btn-primary">Try a Free Class</a>
@@ -1108,9 +1087,9 @@ footer {
       </div>
       <div class="program-card">
         <div class="program-icon">👦</div>
-        <div class="program-age">Kids &amp; Teens · Ages 3–15</div>
+        <div class="program-age">Kids &amp; Teens · Ages 4–15</div>
         <h3 class="program-name">Kids Jiu-Jitsu</h3>
-        <p class="program-desc">Three age groups — Little Warriors (3–5), Legacy Juniors (6–12), and Legacy Next Gen (13–15) — building movement, skills, and confidence in an engaging, positive environment.</p>
+        <p class="program-desc">Three age groups — Little Warriors (4–6), Legacy Juniors (7–12), and Legacy Next Gen (13–15) — building movement, skills, and confidence in an engaging, positive environment.</p>
       </div>
       <div class="program-card">
         <div class="program-icon">👩</div>
@@ -1128,13 +1107,13 @@ footer {
         <div class="program-icon">🏆</div>
         <div class="program-age">Intermediate–Advanced</div>
         <h3 class="program-name">Competition</h3>
-        <p class="program-desc">Structured training for athletes preparing for OJA-sanctioned events and tournaments. Drilling, live rounds, strategy, and competition-specific preparation.</p>
+        <p class="program-desc">Structured training for athletes preparing for IBJJF/OJA-sanctioned events and tournaments. Drilling, live rounds, strategy, and competition-specific preparation.</p>
       </div>
       <div class="program-card">
         <div class="program-icon">🎯</div>
         <div class="program-age">All levels · 1-on-1</div>
         <h3 class="program-name">Private Lessons</h3>
-        <p class="program-desc">One-on-one coaching built around your personal goals, your pace, and your schedule. Accelerate your progress with dedicated attention from Coach Francis.</p>
+        <p class="program-desc">One-on-one coaching built around your personal goals, your pace, and your schedule. Accelerate your progress with dedicated private lessons.</p>
       </div>
     </div>
   </div>
@@ -1147,31 +1126,33 @@ footer {
       <div class="why-left">
         <p class="section-tag">Why Legacy X</p>
         <h2 class="section-headline">Built on<br/>the right<br/><em>foundation.</em></h2>
-        <p class="why-intro">Legacy X isn't a franchise. It's an independent academy in Woodstock built on the belief that Jiu-Jitsu changes people — and that starts with the right environment, the right teaching, and a community that shows up for each other.</p>
+        <p class="why-intro">Legacy X Jiu-Jitsu was built on a simple belief: Jiu-Jitsu can change lives when it’s taught in the right environment.</p>
+        <p class="why-intro">Through structured teaching, purposeful training, and a community that supports one another, we create a place where kids, teens, and adults can build skills, confidence, resilience, and lasting relationships.</p>
 
         <div class="why-items">
           <div class="why-item">
             <div class="why-num">01</div>
             <div>
               <h3 class="why-title">Curriculum-driven teaching</h3>
-              <p class="why-desc">Every class follows a structured progression — from movement fundamentals through positional control, escapes, and eventually offense. You always know where you are and what comes next.</p>
-              <p class="why-badge">White belt → Black belt roadmap</p>
+              <p class="why-desc">Every class is part of a structured learning path. Students progress from movement and fundamentals to positional control, escapes, transitions, and offense — building skills step by step instead of simply collecting techniques.</p>
+              <p class="why-badge">A clear path from White Belt to Black Belt.</p>
             </div>
           </div>
           <div class="why-item">
             <div class="why-num">02</div>
             <div>
               <h3 class="why-title">Safe, welcoming environment</h3>
-              <p class="why-desc">A culture built on respect, hygiene, and ego-free training. New students are welcomed from day one and never thrown to the wolves. Everyone starts somewhere.</p>
-              <p class="why-badge">OJA Member Club</p>
+              <p class="why-desc">Respect comes first. We’re committed to providing a clean, positive, and ego-free training environment where beginners feel welcome and experienced students continue to grow.</p>
+              <p class="why-desc">No intimidation. No pressure to keep up.</p>
+              <p class="why-badge">Come as you are. Start where you are.</p>
             </div>
           </div>
           <div class="why-item">
             <div class="why-num">03</div>
             <div>
               <h3 class="why-title">Real community</h3>
-              <p class="why-desc">Small classes mean real relationships. Legacy X members know each other by name and train with purpose together — on the mats and off.</p>
-              <p class="why-badge">Woodstock, Ontario</p>
+              <p class="why-desc">Jiu-Jitsu is better when you feel like you belong. We’re building a community where coaches know their students, training partners support one another, and everyone has a role in helping the people around them improve.</p>
+              <p class="why-badge">Come train. Grow. Belong.</p>
             </div>
           </div>
         </div>
@@ -1205,31 +1186,27 @@ footer {
       <div class="testimonial-featured">
         <div>
           <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="testimonial-text">"From the very first class I felt welcomed. Coach Francis takes the time to explain the why behind every technique, not just the how. It's rare to find that kind of teaching."</p>
-          <p class="testimonial-meta">Legacy X Member · Woodstock</p>
-        </div>
-        <div class="tf-rating">
-          <div class="tf-score">5.0</div>
-          <div class="tf-label">Google Rating</div>
+          <p class="testimonial-text">"Having trained with Francis for years, I can say firsthand that his technical knowledge is only matched by his integrity as a person. He has created an environment that is technical, safe, and completely ego-free. You’re not just joining a gym—you’re becoming part of a community led by one of the best in the business. I couldn’t be prouder to see him open the doors at Legacy X. Woodstock is lucky to have him!"</p>
+          <p class="testimonial-meta">Rain Plaff · Black Belt</p>
         </div>
       </div>
 
       <div class="testimonial-card">
         <div class="stars">★ ★ ★ ★ ★</div>
-        <p class="testimonial-text">"I had zero experience. I walked in nervous and walked out wanting to come back every night. The community is what makes this place."</p>
-        <p class="testimonial-meta">Adult Beginner · Woodstock</p>
+        <p class="testimonial-text">"Congratulation on your black belt and you are an awesome teammate and teacher. You are the one that coached me through my first ever tournament win and i'll never forget that! Thanks"</p>
+        <p class="testimonial-meta">Brody. F · Adult Student</p>
       </div>
 
       <div class="testimonial-card">
         <div class="stars">★ ★ ★ ★ ★</div>
-        <p class="testimonial-text">"My kid started the trial classes and now she talks about Jiu-Jitsu constantly. The energy in that room is amazing — fun, safe, and structured."</p>
-        <p class="testimonial-meta">Kids Program Parent</p>
+        <p class="testimonial-text">"Training with Francis has been one of the highlights of my jiu-jitsu journey. I’ve known him since I first started Brazilian Jiu-Jitsu, and I always looked forward to his Monday night classes because he had a unique way of grabbing your attention and making every lesson engaging. He taught me so much about lapel grips and the finer details of technique, and he always took the time to walk around the mat after demonstrating a move to make sure each of us truly understood it. Seeing him earn his black belt was no surprise—his dedication, teaching ability, and passion for the art are unmatched. He was, and still is, one of my favorite instructors to learn jiu-jitsu in the gi."</p>
+        <p class="testimonial-meta">Nicholas C. · Adult Student</p>
       </div>
 
       <div class="testimonial-card">
         <div class="stars">★ ★ ★ ★ ★</div>
-        <p class="testimonial-text">"I've trained at a few gyms over the years. Legacy X is the first one where I feel like the coach actually cares about your long-term development, not just filling spots."</p>
-        <p class="testimonial-meta">Returning Practitioner</p>
+        <p class="testimonial-text">"You’ve really helped me with your coaching—both in tournaments and my superfight—and of course with your lessons every Monday, which I always look forward to. In and out of the gym, you’ve supported me. Thank you."</p>
+        <p class="testimonial-meta">Matthew L. · Adult Student</p>
       </div>
     </div>
   </div>
