@@ -86,7 +86,7 @@ export function mountEvents({ sb, root, setStatus }) {
     }).join('');
 
     root.innerHTML = `
-      <div class="main-head"><h1>Events</h1><a href="/events.html" target="_blank" rel="noopener">View events page ↗</a></div>
+      <div class="main-head"><h1>View / Add Events</h1><a href="/events.html" target="_blank" rel="noopener">View events page ↗</a></div>
       <p class="hint">Event changes go live right away — no need to press Publish site.</p>
       <p style="margin-bottom:18px;"><button class="btn btn-primary" id="ev-new">+ New event</button></p>
       ${events.length ? `

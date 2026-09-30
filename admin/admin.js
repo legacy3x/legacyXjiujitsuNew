@@ -13,7 +13,11 @@ const PAGE_ORDER = [
   'programs/jiu-jitsu-over-55', 'programs/competition', 'programs/private-lessons',
   'corporate', 'schedule', 'instructors', 'events', 'faq', 'contact', 'privacy', 'terms',
 ];
-const WORDS = { meta: 'Page info', title: 'Browser tab title', description: 'Search engine description', main: 'Main' };
+const WORDS = {
+  meta: 'Page info', title: 'Browser tab title', description: 'Search engine description', main: 'Main',
+  'placeholder-event-3': 'No events message',
+};
+const EVENTS_LABEL = 'View Events / Add Events';
 
 const humanize = (s) => WORDS[s] || s.replace(/-(\d+)$/, ' $1').replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
 const keyParts = (key) => { const p = key.split('/'); return { section: p.at(-2), name: p.at(-1) }; };
@@ -152,19 +156,23 @@ async function loadPages() {
     name: id === 'site' ? 'Site-wide (footer)' : id === 'index' ? 'Home' : titles[id] || humanize(id.split('/').at(-1)),
   }));
 
-  $('page-nav').replaceChildren(...pages.map((p) => {
+  // The event manager sits right under the Events page, like a sub-page.
+  const link = (id, name, sub) => {
     const b = document.createElement('button');
-    b.className = `page-link${p.id.startsWith('programs/') ? ' sub' : ''}`;
-    b.textContent = p.name;
-    b.dataset.page = p.id;
-    b.addEventListener('click', () => openPage(p.id));
+    b.className = `page-link${sub ? ' sub' : ''}`;
+    b.textContent = name;
+    b.dataset.page = id;
+    b.addEventListener('click', () => openPage(id));
     return b;
-  }));
-  $('page-select').replaceChildren(new Option('Events & registrations', EVENTS), ...pages.map((p) => new Option(p.name, p.id)));
+  };
+  const entries = pages.flatMap((p) => (p.id === 'events'
+    ? [[p.id, p.name, false], [EVENTS, EVENTS_LABEL, true]]
+    : [[p.id, p.name, p.id.startsWith('programs/')]]));
+  $('page-nav').replaceChildren(...entries.map(([id, name, sub]) => link(id, name, sub)));
+  $('page-select').replaceChildren(...entries.map(([id, name, sub]) => new Option(sub ? `— ${name}` : name, id)));
 }
 
 $('page-select').addEventListener('change', (e) => openPage(e.target.value));
-$('events-link').addEventListener('click', () => openPage(EVENTS));
 
 async function openPage(id) {
   if (current && id !== current && isDirty() && !confirm('You have unsaved changes on this page. Leave without saving?')) {
@@ -174,11 +182,10 @@ async function openPage(id) {
   current = id;
   history.replaceState(null, '', `#${encodeURIComponent(id)}`);
   $('page-select').value = id;
-  $('events-link').classList.toggle('active', id === EVENTS);
   $('events-view').hidden = id !== EVENTS;
   $('pages-view').hidden = id === EVENTS;
+  document.querySelectorAll('.page-link').forEach((b) => b.classList.toggle('active', b.dataset.page === id));
   if (id === EVENTS) {
-    document.querySelectorAll('.page-link[data-page]').forEach((b) => b.classList.remove('active'));
     blocks = []; lists = []; deleted = [];
     refreshDirty();
     setStatus('');
@@ -188,7 +195,6 @@ async function openPage(id) {
   $('page-title').textContent = page?.name || id;
   $('page-view').href = pageUrl(id);
   $('page-select').value = id;
-  document.querySelectorAll('.page-link').forEach((b) => b.classList.toggle('active', b.dataset.page === id));
   $('filter').value = '';
   $('editor').innerHTML = '<p class="loading">Loading…</p>';
 
