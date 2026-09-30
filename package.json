@@ -1,0 +1,16 @@
+{
+  "name": "legacyx-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node cms/build.mjs",
+    "build:local": "CONTENT_SOURCE=local node cms/build.mjs",
+    "extract": "node cms/extract.mjs"
+  },
+  "dependencies": {
+    "parse5": "^7.3.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

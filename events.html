@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-<title>Events — Legacy X Jiu-Jitsu</title>
+<title data-cms="events/meta/title">Events — Legacy X Jiu-Jitsu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -474,8 +474,8 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
         <span>›</span>
         Events
       </div>
-      <h1 class="page-title">Upcoming<br/><em>Events.</em></h1>
-      <p class="page-subtitle">Competitions, seminars, open mats, and academy milestones. Stay connected with everything happening at Legacy X.</p>
+      <h1 class="page-title" data-cms="events/page-header/page-title">Upcoming<br/><em>Events.</em></h1>
+      <p class="page-subtitle" data-cms="events/page-header/page-subtitle">Competitions, seminars, open mats, and academy milestones. Stay connected with everything happening at Legacy X.</p>
     </div>
   </div>
 </div>
@@ -496,27 +496,27 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   <div class="events-inner">
 
     <!-- UPCOMING EVENTS -->
-    <div id="upcoming-events">
+    <div id="upcoming-events" data-cms-list="events/placeholder-event-2/event-card">
 
       <!-- FEATURED — NEXT UP -->
       <div class="featured-event" data-category="competition">
         <div class="featured-date-col">
-          <div class="featured-month">Oct</div>
-          <div class="featured-day">17</div>
-          <div class="featured-year">2026</div>
+          <div class="featured-month" data-cms="events/featured-next-up/featured-month">Oct</div>
+          <div class="featured-day" data-cms="events/featured-next-up/featured-day">17</div>
+          <div class="featured-year" data-cms="events/featured-next-up/featured-year">2026</div>
         </div>
         <div class="featured-body">
-          <div class="event-tag">
+          <div class="event-tag" data-cms="events/featured-next-up/event-tag">
             <span class="event-tag-dot"></span>
             Competition · Nogi Event
           </div>
-          <h2 class="event-title">Something Big Is Coming — Nogi Event</h2>
-          <div class="event-meta">
-            <div class="event-meta-item"><span class="event-meta-icon">🕐</span> Time TBA</div>
-            <div class="event-meta-item"><span class="event-meta-icon">📍</span> Location TBA</div>
-            <div class="event-meta-item"><span class="event-meta-icon">🥋</span> No-Gi</div>
+          <h2 class="event-title" data-cms="events/featured-next-up/event-title">Something Big Is Coming — Nogi Event</h2>
+          <div class="event-meta" data-cms-list="events/featured-next-up/event-meta">
+            <div class="event-meta-item" data-cms-item="0" data-cms-field="event-meta-item"><span class="event-meta-icon">🕐</span> Time TBA</div>
+            <div class="event-meta-item" data-cms-item="1" data-cms-field="event-meta-item"><span class="event-meta-icon">📍</span> Location TBA</div>
+            <div class="event-meta-item" data-cms-item="2" data-cms-field="event-meta-item"><span class="event-meta-icon">🥋</span> No-Gi</div>
           </div>
-          <p class="event-desc">Legacy X's first major Nogi event is coming October 17, 2026. More details including time, location, and registration information will be announced soon. Save the date.</p>
+          <p class="event-desc" data-cms="events/featured-next-up/event-desc">Legacy X's first major Nogi event is coming October 17, 2026. More details including time, location, and registration information will be announced soon. Save the date.</p>
         </div>
         <div class="featured-cta-col">
           <span class="event-badge">Next Up</span>
@@ -524,22 +524,22 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
       </div>
 
       <!-- PLACEHOLDER EVENT 2 -->
-      <div class="event-card" data-category="academy">
+      <div class="event-card" data-category="academy" data-cms-item="0">
         <div class="event-date-col">
-          <div class="event-month">TBA</div>
-          <div class="event-day">—</div>
-          <div class="event-year">2026</div>
+          <div class="event-month" data-cms-field="event-month">TBA</div>
+          <div class="event-day" data-cms-field="event-day">—</div>
+          <div class="event-year" data-cms-field="event-year">2026</div>
         </div>
         <div class="event-body">
-          <div class="event-tag purple">
+          <div class="event-tag purple" data-cms-field="event-tag">
             <span class="event-tag-dot"></span>
             Academy Event
           </div>
-          <h3 class="event-title">Belt Promotion Ceremony</h3>
+          <h3 class="event-title" data-cms-field="event-title">Belt Promotion Ceremony</h3>
           <div class="event-meta">
-            <div class="event-meta-item"><span class="event-meta-icon">📍</span> Legacy X Jiu-Jitsu — Woodstock, ON</div>
+            <div class="event-meta-item" data-cms-field="event-meta-item"><span class="event-meta-icon">📍</span> Legacy X Jiu-Jitsu — Woodstock, ON</div>
           </div>
-          <p class="event-desc">Legacy X's first belt promotion ceremony. Dates to be confirmed. All members and family are welcome to attend and celebrate our students' progress.</p>
+          <p class="event-desc" data-cms-field="event-desc">Legacy X's first belt promotion ceremony. Dates to be confirmed. All members and family are welcome to attend and celebrate our students' progress.</p>
         </div>
         <div class="event-action-col">
           <span class="event-badge purple-badge">Academy</span>
@@ -548,23 +548,23 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
       </div>
 
       <!-- PLACEHOLDER EVENT 3 -->
-      <div class="event-card" data-category="open-mat">
+      <div class="event-card" data-category="open-mat" data-cms-item="1">
         <div class="event-date-col">
-          <div class="event-month">TBA</div>
-          <div class="event-day">—</div>
-          <div class="event-year">2026</div>
+          <div class="event-month" data-cms-field="event-month">TBA</div>
+          <div class="event-day" data-cms-field="event-day">—</div>
+          <div class="event-year" data-cms-field="event-year">2026</div>
         </div>
         <div class="event-body">
-          <div class="event-tag">
+          <div class="event-tag" data-cms-field="event-tag">
             <span class="event-tag-dot"></span>
             Open Mat
           </div>
-          <h3 class="event-title">Legacy X Open Mat</h3>
+          <h3 class="event-title" data-cms-field="event-title">Legacy X Open Mat</h3>
           <div class="event-meta">
-            <div class="event-meta-item"><span class="event-meta-icon">📍</span> Legacy X Jiu-Jitsu — Woodstock, ON</div>
-            <div class="event-meta-item"><span class="event-meta-icon">🥋</span> Gi &amp; No-Gi</div>
+            <div class="event-meta-item" data-cms-field="event-meta-item"><span class="event-meta-icon">📍</span> Legacy X Jiu-Jitsu — Woodstock, ON</div>
+            <div class="event-meta-item" data-cms-field="event-meta-item-2"><span class="event-meta-icon">🥋</span> Gi &amp; No-Gi</div>
           </div>
-          <p class="event-desc">An open mat for Legacy X members and invited guests. All levels welcome. More details coming soon.</p>
+          <p class="event-desc" data-cms-field="event-desc">An open mat for Legacy X members and invited guests. All levels welcome. More details coming soon.</p>
         </div>
         <div class="event-action-col">
           <span class="event-badge">Open Mat</span>
@@ -576,9 +576,9 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 
     <!-- NO EVENTS STATE (hidden by default) -->
     <div class="events-empty" id="empty-state" style="display:none;">
-      <div class="empty-icon">📅</div>
-      <div class="empty-title">No events in this category yet.</div>
-      <p class="empty-sub">Check back soon or subscribe to our newsletter to be the first to know when new events are announced.</p>
+      <div class="empty-icon" data-cms="events/placeholder-event-3/empty-icon">📅</div>
+      <div class="empty-title" data-cms="events/placeholder-event-3/empty-title">No events in this category yet.</div>
+      <p class="empty-sub" data-cms="events/placeholder-event-3/empty-sub">Check back soon or subscribe to our newsletter to be the first to know when new events are announced.</p>
     </div>
 
   </div>
@@ -588,8 +588,8 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 <div class="newsletter-band">
   <div class="newsletter-inner">
     <div>
-      <h3 class="newsletter-headline">Never miss an event.</h3>
-      <p class="newsletter-sub">Subscribe to the Legacy X newsletter and be the first to know about upcoming competitions, seminars, open mats, and academy announcements.</p>
+      <h3 class="newsletter-headline" data-cms="events/newsletter/newsletter-headline">Never miss an event.</h3>
+      <p class="newsletter-sub" data-cms="events/newsletter/newsletter-sub">Subscribe to the Legacy X newsletter and be the first to know about upcoming competitions, seminars, open mats, and academy announcements.</p>
     </div>
     <div>
       <form class="newsletter-form" novalidate>
@@ -606,8 +606,8 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="nav-logo">Legacy <span class="x">X</span></div>
-      <p>Legacy X Jiu-Jitsu is a Brazilian Jiu-Jitsu academy in Woodstock, Ontario, offering structured BJJ classes for kids, teens, and adults of all experience levels.</p>
-      <p>Proudly serving Woodstock, Ingersoll, Innerkip, Norwich, Thamesford, and surrounding Oxford County communities.</p>
+      <p data-cms="site/footer/about-1">Legacy X Jiu-Jitsu is a Brazilian Jiu-Jitsu academy in Woodstock, Ontario, offering structured BJJ classes for kids, teens, and adults of all experience levels.</p>
+      <p data-cms="site/footer/about-2">Proudly serving Woodstock, Ingersoll, Innerkip, Norwich, Thamesford, and surrounding Oxford County communities.</p>
       <div class="footer-socials">
         <a href="https://www.instagram.com/legacyxjiujitsu" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.25"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
         <a href="https://www.facebook.com/legacyxjiujitsu" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3v3.2h2.8V22h3.4z"/></svg></a>
@@ -641,15 +641,15 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="tel:2263765784">(226) 376-5784</a></li>
-        <li><a href="mailto:info@legacyxjiujitsu.com">info@legacyxjiujitsu.com</a></li>
-        <li><a href="https://maps.google.com/?q=27+Bysham+Park+Drive+Woodstock+ON" target="_blank">27 Bysham Park Drive (Unit 1)<br/>Woodstock, ON, N4T 1P1</a></li>
+        <li><a href="tel:2263765784" data-cms="site/footer/phone">(226) 376-5784</a></li>
+        <li><a href="mailto:info@legacyxjiujitsu.com" data-cms="site/footer/email">info@legacyxjiujitsu.com</a></li>
+        <li><a href="https://maps.google.com/?q=27+Bysham+Park+Drive+Woodstock+ON" target="_blank" data-cms="site/footer/address">27 Bysham Park Drive (Unit 1)<br/>Woodstock, ON, N4T 1P1</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Legacy X Jiu-Jitsu. All rights reserved.</p>
-    <div class="footer-motto">Discipline · Confidence · Legacy</div>
+    <p data-cms="site/footer/copyright">© 2026 Legacy X Jiu-Jitsu. All rights reserved.</p>
+    <div class="footer-motto" data-cms="site/footer/motto">Discipline · Confidence · Legacy</div>
   </div>
 </footer>
 

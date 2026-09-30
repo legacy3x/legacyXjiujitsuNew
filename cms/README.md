@@ -1,0 +1,33 @@
+# Website content (CMS)
+
+Page text lives in Supabase and is edited at **/admin**. The HTML files in this repo are the
+design templates; the build fills in their text from the database.
+
+## How it works
+
+- Editable text in the HTML is tagged with `data-cms` attributes (see `cms/lib.mjs` for the format).
+- `npm run build` (Netlify) reads the content from Supabase and writes the finished site to `dist/`.
+- Admins sign in at `/admin`, edit, **Save**, then **Publish site**. Publish calls
+  `netlify/functions/publish.mjs`, which checks the user is in `cms_admins` and triggers a Netlify rebuild.
+- If Supabase can't be reached, the build fails and Netlify keeps the previous version live.
+
+## Netlify environment variables
+
+| Name | Used by |
+| --- | --- |
+| `SUPABASE_URL` | build, publish function |
+| `SUPABASE_ANON_KEY` | build, publish function, admin page (it's the public key) |
+| `NETLIFY_AUTH_TOKEN` | publish function — Netlify personal access token (any plan) |
+| `NETLIFY_BUILD_HOOK_URL` | publish function — optional; used instead of the token if set |
+| `RESEND_API_KEY`, `RESEND_SEGMENT_ID` | newsletter signup |
+
+## Changing the design or adding content
+
+- **Local preview without Supabase:** `npm run build:local` (uses `content/seed.json`) and open `dist/`.
+- **Text edits** belong in /admin, not in the HTML — the build overwrites tagged text with the database value.
+- **New page:** add the HTML file, run `node cms/annotate.mjs --write` (it only tags pages that aren't tagged yet),
+  then `node cms/extract.mjs` and run the updated `supabase/setup.sql` in Supabase. Re-running the SQL only
+  adds keys that don't exist yet; it never overwrites edits.
+- **New section on an existing page:** tag it by hand with `data-cms="page/section/name"` (or a
+  `data-cms-list` / `data-cms-item` / `data-cms-field` group), then run `extract.mjs` and the SQL as above.
+- Keys must stay stable: renaming a `data-cms` key disconnects it from its saved content.
