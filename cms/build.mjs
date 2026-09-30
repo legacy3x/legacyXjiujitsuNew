@@ -70,11 +70,10 @@ for (const rel of sourcePages()) {
 copyDir(path.join(ROOT, 'js'), path.join(DIST, 'js'));
 copyDir(path.join(ROOT, 'admin'), path.join(DIST, 'admin'));
 
-// Public connection details for the admin page (the anon key is meant to be public).
+// Public connection details for the admin and the live events pages (the anon key is meant to be public).
+const publicConfig = JSON.stringify({ supabaseUrl: SUPABASE_URL, supabaseAnonKey: SUPABASE_ANON_KEY });
 fs.mkdirSync(path.join(DIST, 'admin'), { recursive: true });
-fs.writeFileSync(
-  path.join(DIST, 'admin/config.js'),
-  `window.CMS_CONFIG = ${JSON.stringify({ supabaseUrl: SUPABASE_URL, supabaseAnonKey: SUPABASE_ANON_KEY })};\n`,
-);
+fs.writeFileSync(path.join(DIST, 'admin/config.js'), `window.CMS_CONFIG = ${publicConfig};\n`);
+fs.writeFileSync(path.join(DIST, 'js/site-config.js'), `window.SITE_CONFIG = ${publicConfig};\n`);
 
 console.log(`Built ${sourcePages().length} pages into dist/ from ${LOCAL ? 'content/seed.json' : 'Supabase'}.`);

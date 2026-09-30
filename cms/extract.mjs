@@ -26,13 +26,15 @@ for (const rel of sourcePages()) {
   const src = fs.readFileSync(path.join(ROOT, rel), 'utf8');
   const scanned = scan(src);
   const values = readValues(src, scanned);
-  const pageOf = (key) => (key.startsWith('site/') ? 'site' : page);
+  // A key belongs to the page named in it (event.html reuses some events/ keys).
+  const pageOf = (key) => (key.startsWith('site/') ? 'site' : key.split('/').slice(0, -2).join('/'));
 
   for (const b of scanned.blocks) {
     const value = dedent(values.blocks[b.key]);
     const prev = blocks.get(b.key);
     if (prev) {
       if (prev.value !== value) console.warn(`! ${b.key} differs on ${rel}; keeping the first value`);
+      if (pageOf(b.key) === page) prev.position = b.range[0]; // order it by its own page
       continue;
     }
     blocks.set(b.key, { page: pageOf(b.key), position: b.range[0], value });

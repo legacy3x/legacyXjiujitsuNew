@@ -1,6 +1,7 @@
 // Legacy X content editor. Signs in with Supabase Auth, edits cms_blocks / cms_items,
 // and asks Netlify to rebuild the site when the admin presses Publish.
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+import { mountEvents } from './events-admin.js';
 
 const cfg = window.CMS_CONFIG || {};
 const $ = (id) => document.getElementById(id);
@@ -25,6 +26,8 @@ let current = null;
 let blocks = []; // { key, position, value, original }
 let lists = []; // { key, position, fields: [], items: [{ id, tpl, fields, dirty }] }
 let deleted = [];
+let eventsUI;
+const EVENTS = '__events';
 
 // ── Status helpers ──
 function setStatus(text, kind = '') {
@@ -65,9 +68,10 @@ async function enterApp(session) {
   $('who').textContent = session.user.email;
   $('login').hidden = true;
   $('app').hidden = false;
+  eventsUI = mountEvents({ sb, root: $('events-view'), setStatus });
   await loadPages();
   const wanted = decodeURIComponent(location.hash.slice(1));
-  await openPage(pages.some((p) => p.id === wanted) ? wanted : 'index');
+  await openPage(wanted === EVENTS || pages.some((p) => p.id === wanted) ? wanted : 'index');
 }
 
 async function init() {
@@ -156,10 +160,11 @@ async function loadPages() {
     b.addEventListener('click', () => openPage(p.id));
     return b;
   }));
-  $('page-select').replaceChildren(...pages.map((p) => new Option(p.name, p.id)));
+  $('page-select').replaceChildren(new Option('Events & registrations', EVENTS), ...pages.map((p) => new Option(p.name, p.id)));
 }
 
 $('page-select').addEventListener('change', (e) => openPage(e.target.value));
+$('events-link').addEventListener('click', () => openPage(EVENTS));
 
 async function openPage(id) {
   if (current && id !== current && isDirty() && !confirm('You have unsaved changes on this page. Leave without saving?')) {
@@ -168,6 +173,17 @@ async function openPage(id) {
   }
   current = id;
   history.replaceState(null, '', `#${encodeURIComponent(id)}`);
+  $('page-select').value = id;
+  $('events-link').classList.toggle('active', id === EVENTS);
+  $('events-view').hidden = id !== EVENTS;
+  $('pages-view').hidden = id === EVENTS;
+  if (id === EVENTS) {
+    document.querySelectorAll('.page-link[data-page]').forEach((b) => b.classList.remove('active'));
+    blocks = []; lists = []; deleted = [];
+    refreshDirty();
+    setStatus('');
+    return eventsUI.show();
+  }
   const page = pages.find((p) => p.id === id);
   $('page-title').textContent = page?.name || id;
   $('page-view').href = pageUrl(id);

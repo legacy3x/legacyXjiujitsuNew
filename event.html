@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-<title data-cms="events/meta/title">Events — Legacy X Jiu-Jitsu</title>
+<title>Event — Legacy X Jiu-Jitsu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -118,7 +118,7 @@ nav {
   padding-top: 64px; background: var(--navy); position: relative; overflow: hidden;
 }
 .page-header::after {
-  content: 'EVENTS';
+  content: 'REGISTER';
   position: absolute; right: -10px; bottom: -20px;
   font-family: var(--ff-display); font-weight: 900;
   font-size: clamp(80px, 14vw, 180px);
@@ -323,6 +323,70 @@ nav {
 }
 .empty-sub { font-size: 16px; color: var(--muted); line-height: 1.7; max-width: 400px; margin: 0 auto; }
 
+/* ── EVENT PAGE ── */
+.ev-title { font-size: clamp(40px, 6vw, 72px); max-width: 900px; }
+.ev-section { background: var(--dark); padding: 64px 0 96px; }
+.ev-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: start; }
+.ev-photo[hidden] { display: none; }
+.ev-photo { width: 100%; max-height: 460px; object-fit: cover; display: block; margin-bottom: 32px; border-top: 3px solid var(--blue); }
+.ev-desc { font-size: 17px; line-height: 1.8; color: rgba(255,255,255,0.75); }
+.ev-desc p + p { margin-top: 16px; }
+.ev-box { margin-top: 36px; background: var(--navy); border-left: 3px solid var(--purple); padding: 24px 28px; }
+.ev-box h3 { font-family: var(--ff-display); font-weight: 800; font-size: 20px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+.ev-box div { font-size: 16px; line-height: 1.75; color: rgba(255,255,255,0.75); }
+.ev-side { position: sticky; top: 92px; }
+.ev-panel { background: var(--navy); border-top: 3px solid var(--blue); padding: 28px; }
+.ev-panel-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+.ev-price { font-family: var(--ff-display); font-weight: 900; font-size: 34px; text-transform: uppercase; }
+.ev-price small { font-size: 15px; font-weight: 600; color: var(--muted); letter-spacing: 1px; }
+.ev-notice { background: rgba(58,143,216,0.12); border: 1px solid rgba(58,143,216,0.35); padding: 12px 14px; font-size: 15px; line-height: 1.6; margin-bottom: 18px; }
+.ev-closed { font-size: 16px; line-height: 1.7; color: var(--muted); }
+.ev-closed strong { display: block; font-family: var(--ff-display); font-size: 22px; letter-spacing: 1px; text-transform: uppercase; color: var(--white); margin-bottom: 6px; }
+.ev-step { border: none; margin: 0 0 22px; padding: 0; }
+.ev-legend { font-family: var(--ff-display); font-weight: 800; font-size: 16px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; padding: 0; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.form-label { font-family: var(--ff-display); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+.form-input {
+  width: 100%; background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: var(--white);
+  font-family: var(--ff-body); font-size: 16px; padding: 12px 14px; outline: none; transition: border-color 0.2s;
+}
+.form-input:focus { border-color: var(--blue); }
+.form-input[aria-invalid="true"] { border-color: #e57373; }
+select.form-input option { color: #000; }
+input[type="date"].form-input { color-scheme: dark; }
+.ev-person { background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 14px 14px 2px; margin-bottom: 10px; }
+.ev-person-title { font-family: var(--ff-display); font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+.ev-option { display: flex; gap: 12px; align-items: flex-start; border: 1px solid var(--border); padding: 14px; margin-bottom: 8px; cursor: pointer; transition: border-color 0.2s; }
+.ev-option:has(input:checked) { border-color: var(--blue); background: rgba(58,143,216,0.08); }
+.ev-option input { margin-top: 4px; accent-color: var(--blue); }
+.ev-option strong { display: block; font-size: 16px; }
+.ev-option small { display: block; font-size: 14px; color: var(--muted); margin-top: 2px; line-height: 1.5; }
+.ev-etransfer { background: rgba(255,255,255,0.03); border-left: 3px solid var(--blue); padding: 14px 16px 4px; margin-top: 12px; }
+.ev-etransfer ol { padding-left: 18px; font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.8); margin-bottom: 12px; }
+.ev-etransfer li + li { margin-top: 6px; }
+.ev-total { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--border); padding-top: 14px; margin-bottom: 16px; font-family: var(--ff-display); text-transform: uppercase; letter-spacing: 1px; }
+.ev-total strong { font-size: 28px; }
+.ev-waiver { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.75); margin-bottom: 16px; cursor: pointer; }
+.ev-waiver input { margin-top: 4px; accent-color: var(--blue); flex-shrink: 0; }
+.ev-waiver a { color: var(--blue); text-decoration: underline; }
+.ev-error { color: #e57373; font-size: 15px; min-height: 1.4em; margin-bottom: 10px; }
+.ev-submit { width: 100%; border: none; cursor: pointer; font-size: 15px; padding: 16px; }
+.ev-submit:disabled { opacity: 0.6; cursor: default; }
+.ev-done { text-align: center; padding: 10px 0; }
+.ev-done-icon { width: 56px; height: 56px; margin: 0 auto 14px; border-radius: 50%; background: var(--blue); display: grid; place-items: center; font-size: 28px; font-weight: 700; }
+.ev-done h3 { font-family: var(--ff-display); font-weight: 900; font-size: 28px; text-transform: uppercase; margin-bottom: 10px; }
+.ev-done p { font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.75); }
+@media (max-width: 960px) {
+  .ev-inner { grid-template-columns: 1fr; }
+  .ev-side { position: static; }
+}
+@media (max-width: 600px) {
+  .ev-inner { padding: 0 16px; }
+  .ev-panel { padding: 22px 18px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+}
+
 /* ── NEWSLETTER BAND ── */
 .newsletter-band { background: var(--navy); border-top: 1px solid var(--border); }
 .newsletter-inner {
@@ -471,48 +535,126 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   </div>
 </nav>
 
-<!-- ── PAGE HEADER ── -->
+<!-- ── EVENT HEADER ── -->
 <div class="page-header">
   <div class="page-header-inner">
     <div class="page-header-text">
       <div class="breadcrumb">
         <a href="index.html">Home</a>
         <span>›</span>
-        Events
+        <a href="events.html">Events</a>
+        <span>›</span>
+        <em id="ev-crumb" style="font-style:normal;">Event</em>
       </div>
-      <h1 class="page-title" data-cms="events/page-header/page-title">Upcoming<br/><em>Events.</em></h1>
-      <p class="page-subtitle" data-cms="events/page-header/page-subtitle">Competitions, seminars, open mats, and academy milestones. Stay connected with everything happening at Legacy X.</p>
+      <div class="event-tag" id="ev-tag"><span class="event-tag-dot"></span><span id="ev-category">Event</span></div>
+      <h1 class="page-title ev-title" id="ev-title">Loading…</h1>
+      <div class="event-meta" id="ev-meta"></div>
     </div>
   </div>
 </div>
 
-<!-- ── FILTER BAR ── -->
-<div class="filter-bar">
-  <div class="filter-inner">
-    <button class="filter-btn active" onclick="filterEvents('all', this)">All Events</button>
-    <button class="filter-btn" onclick="filterEvents('competition', this)">Competition</button>
-    <button class="filter-btn" onclick="filterEvents('seminar', this)">Seminars</button>
-    <button class="filter-btn" onclick="filterEvents('open-mat', this)">Open Mats</button>
-    <button class="filter-btn" onclick="filterEvents('academy', this)">Academy</button>
-  </div>
-</div>
-
-<!-- ── EVENTS LIST ── -->
-<section id="events-list">
-  <div class="events-inner">
-
-    <!-- UPCOMING EVENTS — loaded live from the database by js/events.js -->
-    <div id="upcoming-events" aria-live="polite">
-      <p class="events-loading">Loading events…</p>
+<!-- ── EVENT DETAILS & REGISTRATION ── -->
+<section class="ev-section">
+  <div class="ev-inner">
+    <div class="ev-main">
+      <img id="ev-photo" class="ev-photo" alt="" hidden/>
+      <div class="ev-desc" id="ev-desc"></div>
+      <div class="ev-box" id="ev-instructions-box" hidden>
+        <h3>Before you come</h3>
+        <div id="ev-instructions"></div>
+      </div>
     </div>
 
-    <!-- NO EVENTS STATE (hidden by default) -->
-    <div class="events-empty" id="empty-state" style="display:none;">
-      <div class="empty-icon" data-cms="events/placeholder-event-3/empty-icon">📅</div>
-      <div class="empty-title" data-cms="events/placeholder-event-3/empty-title">No events in this category yet.</div>
-      <p class="empty-sub" data-cms="events/placeholder-event-3/empty-sub">Check back soon or subscribe to our newsletter to be the first to know when new events are announced.</p>
-    </div>
+    <aside class="ev-side" id="register">
+      <div class="ev-panel">
+        <div class="ev-panel-head">
+          <div class="ev-price" id="ev-price"></div>
+          <div class="event-spots" id="ev-spots"></div>
+        </div>
+        <div class="ev-notice" id="ev-notice" role="status" hidden></div>
 
+        <!-- Registration closed / not open / sold out -->
+        <div class="ev-closed" id="reg-closed" hidden></div>
+
+        <!-- Registration form -->
+        <form id="reg-form" novalidate hidden>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;"/>
+
+          <div class="ev-step">
+            <label class="form-label" for="quantity">Number of people</label>
+            <select class="form-input" id="quantity" name="quantity"></select>
+          </div>
+
+          <fieldset class="ev-step">
+            <legend class="ev-legend">Who's attending</legend>
+            <div id="attendees"></div>
+          </fieldset>
+
+          <fieldset class="ev-step">
+            <legend class="ev-legend">Your details</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="first_name">First name</label>
+                <input class="form-input" id="first_name" name="first_name" autocomplete="given-name" required/>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="last_name">Last name</label>
+                <input class="form-input" id="last_name" name="last_name" autocomplete="family-name" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="reg_email">Email</label>
+              <input class="form-input" id="reg_email" name="email" type="email" autocomplete="email" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone</label>
+              <input class="form-input" id="phone" name="phone" type="tel" autocomplete="tel" required/>
+            </div>
+          </fieldset>
+
+          <fieldset class="ev-step" id="payment-step" hidden>
+            <legend class="ev-legend">Payment</legend>
+            <label class="ev-option">
+              <input type="radio" name="payment_method" value="etransfer" checked/>
+              <span><strong>Interac e-Transfer</strong><small>Send the payment from your bank, then enter the confirmation code.</small></span>
+            </label>
+            <label class="ev-option">
+              <input type="radio" name="payment_method" value="stripe"/>
+              <span><strong>Credit or debit card</strong><small>Pay securely with Stripe.</small></span>
+            </label>
+            <div class="ev-etransfer" id="etransfer-box">
+              <ol>
+                <li>Send <strong id="etransfer-amount">$0</strong> by Interac e-Transfer to <strong>info@legacyxjiujitsu.com</strong>. Auto-deposit is on, so no security question is needed.</li>
+                <li>Enter the confirmation code from your bank below to finish your registration.</li>
+              </ol>
+              <div class="form-group">
+                <label class="form-label" for="etransfer_code">e-Transfer confirmation code</label>
+                <input class="form-input" id="etransfer_code" name="etransfer_code" autocomplete="off"/>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="ev-total" id="total-row" hidden>
+            <span>Total</span><strong id="total">$0</strong>
+          </div>
+
+          <label class="ev-waiver">
+            <input type="checkbox" id="waiver" name="waiver" required/>
+            <span>I have read and agree to the <a href="terms.html" target="_blank">Terms &amp; Conditions</a>, and I accept the waiver and release of liability on behalf of everyone listed above.</span>
+          </label>
+
+          <div class="ev-error" id="reg-error" role="alert"></div>
+          <button class="event-btn ev-submit" type="submit" id="reg-submit">Complete registration</button>
+        </form>
+
+        <!-- Done -->
+        <div class="ev-done" id="reg-done" hidden>
+          <div class="ev-done-icon">✓</div>
+          <h3 id="done-title">You're registered!</h3>
+          <p id="done-text"></p>
+        </div>
+      </div>
+    </aside>
   </div>
 </section>
 
@@ -587,7 +729,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 
 <script src="js/site-config.js"></script>
 <script src="js/events-common.js"></script>
-<script src="js/events.js"></script>
+<script src="js/event.js"></script>
 
 <script src="js/newsletter.js"></script>
 

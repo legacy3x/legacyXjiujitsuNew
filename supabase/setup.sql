@@ -166,21 +166,14 @@ insert into public.cms_blocks (key, page, position, value) values
   ('etiquette/culture/p-3', 'etiquette', 22908, 'If you ever have questions or concerns about mat etiquette, <strong>speak with an instructor.</strong> We would rather address something early than let a small issue grow into a bigger problem.'),
   ('etiquette/cta/cta-headline', 'etiquette', 25016, 'Ready to train<br/>the right way?'),
   ('etiquette/cta/cta-sub', 'etiquette', 25113, 'Your first class is free. Come experience a culture built on respect, discipline, and genuine community — and see what Legacy X is all about.'),
+  ('events/newsletter/newsletter-headline', 'events', 22748, 'Never miss an event.'),
+  ('events/newsletter/newsletter-sub', 'events', 22850, 'Subscribe to the Legacy X newsletter and be the first to know about upcoming competitions, seminars, open mats, and academy announcements.'),
   ('events/meta/title', 'events', 192, 'Events — Legacy X Jiu-Jitsu'),
-  ('events/page-header/page-title', 'events', 20542, 'Upcoming<br/><em>Events.</em>'),
-  ('events/page-header/page-subtitle', 'events', 20652, 'Competitions, seminars, open mats, and academy milestones. Stay connected with everything happening at Legacy X.'),
-  ('events/featured-next-up/featured-month', 'events', 21776, 'Oct'),
-  ('events/featured-next-up/featured-day', 'events', 21870, '17'),
-  ('events/featured-next-up/featured-year', 'events', 21965, '2026'),
-  ('events/featured-next-up/event-tag', 'events', 22118, '<span class="event-tag-dot"></span>
-Competition · Nogi Event'),
-  ('events/featured-next-up/event-title', 'events', 22289, 'Something Big Is Coming — Nogi Event'),
-  ('events/featured-next-up/event-desc', 'events', 22954, 'Legacy X''s first major Nogi event is coming October 17, 2026. More details including time, location, and registration information will be announced soon. Save the date.'),
-  ('events/placeholder-event-3/empty-icon', 'events', 26124, '📅'),
-  ('events/placeholder-event-3/empty-title', 'events', 26214, 'No events in this category yet.'),
-  ('events/placeholder-event-3/empty-sub', 'events', 26327, 'Check back soon or subscribe to our newsletter to be the first to know when new events are announced.'),
-  ('events/newsletter/newsletter-headline', 'events', 26652, 'Never miss an event.'),
-  ('events/newsletter/newsletter-sub', 'events', 26754, 'Subscribe to the Legacy X newsletter and be the first to know about upcoming competitions, seminars, open mats, and academy announcements.'),
+  ('events/page-header/page-title', 'events', 20937, 'Upcoming<br/><em>Events.</em>'),
+  ('events/page-header/page-subtitle', 'events', 21047, 'Competitions, seminars, open mats, and academy milestones. Stay connected with everything happening at Legacy X.'),
+  ('events/placeholder-event-3/empty-icon', 'events', 22220, '📅'),
+  ('events/placeholder-event-3/empty-title', 'events', 22310, 'No events in this category yet.'),
+  ('events/placeholder-event-3/empty-sub', 'events', 22423, 'Check back soon or subscribe to our newsletter to be the first to know when new events are announced.'),
   ('faq/meta/title', 'faq', 189, 'FAQ — Legacy X Jiu-Jitsu'),
   ('faq/page-header/page-title', 'faq', 17488, 'Frequently<br/><em>Asked Questions.</em>'),
   ('faq/page-header/page-subtitle', 'faq', 17604, 'Everything you need to know before stepping on the mat for the first time. Don''t see your question? Reach out — we''re happy to help.'),
@@ -498,8 +491,6 @@ insert into public.cms_lists (key, page, position, fields) values
   ('corporate/programs/programs-list', 'corporate', 24832, array['program-row-num', 'program-row-title', 'program-row-desc', 'program-row-tag']::text[]),
   ('etiquette/rules/rules-grid', 'etiquette', 17949, array['rule-number', 'rule-icon', 'rule-title', 'rule-body']::text[]),
   ('etiquette/culture/culture-right', 'etiquette', 23217, array['culture-block-title', 'culture-block-body']::text[]),
-  ('events/placeholder-event-2/event-card', 'events', 23302, array['event-month', 'event-day', 'event-year', 'event-tag', 'event-title', 'event-meta-item', 'event-desc', 'event-meta-item-2']::text[]),
-  ('events/featured-next-up/event-meta', 'events', 22429, array['event-meta-item']::text[]),
   ('faq/faq-list/faq-list', 'faq', 19169, array['faq-q-text', 'p']::text[]),
   ('index/programs/programs-grid', 'index', 26726, array['program-icon', 'program-age', 'program-name', 'program-desc']::text[]),
   ('index/why-legacy-x/why-left', 'index', 30394, array['why-intro']::text[]),
@@ -638,21 +629,6 @@ select * from (values
   ('etiquette/culture/culture-right', 3, 3, '{"culture-block-title":"Open door policy","culture-block-body":"If something feels off — unsafe, disrespectful, or out of place — bring it to an instructor. This academy is only as strong as the trust we build together."}'::jsonb)
 ) v(list_key, tpl, sort, fields)
 where not exists (select 1 from public.cms_items where list_key = 'etiquette/culture/culture-right');
-
-insert into public.cms_items (list_key, tpl, sort, fields)
-select * from (values
-  ('events/placeholder-event-2/event-card', 0, 0, '{"event-month":"TBA","event-day":"—","event-year":"2026","event-tag":"<span class=\"event-tag-dot\"></span>\nAcademy Event","event-title":"Belt Promotion Ceremony","event-meta-item":"<span class=\"event-meta-icon\">📍</span> Legacy X Jiu-Jitsu — Woodstock, ON","event-desc":"Legacy X''s first belt promotion ceremony. Dates to be confirmed. All members and family are welcome to attend and celebrate our students'' progress."}'::jsonb),
-  ('events/placeholder-event-2/event-card', 1, 1, '{"event-month":"TBA","event-day":"—","event-year":"2026","event-tag":"<span class=\"event-tag-dot\"></span>\nOpen Mat","event-title":"Legacy X Open Mat","event-meta-item":"<span class=\"event-meta-icon\">📍</span> Legacy X Jiu-Jitsu — Woodstock, ON","event-meta-item-2":"<span class=\"event-meta-icon\">🥋</span> Gi & No-Gi","event-desc":"An open mat for Legacy X members and invited guests. All levels welcome. More details coming soon."}'::jsonb)
-) v(list_key, tpl, sort, fields)
-where not exists (select 1 from public.cms_items where list_key = 'events/placeholder-event-2/event-card');
-
-insert into public.cms_items (list_key, tpl, sort, fields)
-select * from (values
-  ('events/featured-next-up/event-meta', 0, 0, '{"event-meta-item":"<span class=\"event-meta-icon\">🕐</span> Time TBA"}'::jsonb),
-  ('events/featured-next-up/event-meta', 1, 1, '{"event-meta-item":"<span class=\"event-meta-icon\">📍</span> Location TBA"}'::jsonb),
-  ('events/featured-next-up/event-meta', 2, 2, '{"event-meta-item":"<span class=\"event-meta-icon\">🥋</span> No-Gi"}'::jsonb)
-) v(list_key, tpl, sort, fields)
-where not exists (select 1 from public.cms_items where list_key = 'events/featured-next-up/event-meta');
 
 insert into public.cms_items (list_key, tpl, sort, fields)
 select * from (values

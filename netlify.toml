@@ -4,6 +4,7 @@
 
 [functions]
   directory = "netlify/functions"
+  node_bundler = "esbuild"
 
 # The admin should never be cached, so edits to it show up right away.
 [[headers]]

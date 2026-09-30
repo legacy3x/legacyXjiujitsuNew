@@ -19,7 +19,19 @@ design templates; the build fills in their text from the database.
 | `SUPABASE_ANON_KEY` | build, publish function, admin page (it's the public key) |
 | `NETLIFY_AUTH_TOKEN` | publish function — Netlify personal access token (any plan) |
 | `NETLIFY_BUILD_HOOK_URL` | publish function — optional; used instead of the token if set |
-| `RESEND_API_KEY`, `RESEND_SEGMENT_ID` | newsletter signup |
+| `RESEND_API_KEY`, `RESEND_SEGMENT_ID` | newsletter signup, event registrants |
+| `RESEND_EVENTS_SEGMENT_ID` | optional — put event registrants in their own Resend segment |
+| `SUPABASE_SERVICE_ROLE_KEY` | event registration functions (secret — Functions scope only) |
+| `STRIPE_SECRET_KEY` | card payments for events |
+| `STRIPE_WEBHOOK_SECRET` | confirms card payments (`/api/stripe-webhook`) |
+
+## Events
+
+Events are **not** part of the page text above: they live in the `events` table (see `supabase/events.sql`)
+and are managed under **Events & registrations** in /admin. The Events page and `event.html` read them live,
+so event changes don't need Publish. Registration goes through `netlify/functions/register.mjs`, which uses a
+database function (`create_registration`) that locks the event row so capacity can't be oversold.
+Card payments use Stripe Checkout; e-Transfers are marked paid by an admin after the money arrives.
 
 ## Changing the design or adding content
 

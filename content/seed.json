@@ -415,6 +415,16 @@
       "position": 25113,
       "value": "Your first class is free. Come experience a culture built on respect, discipline, and genuine community — and see what Legacy X is all about."
     },
+    "events/newsletter/newsletter-headline": {
+      "page": "events",
+      "position": 22748,
+      "value": "Never miss an event."
+    },
+    "events/newsletter/newsletter-sub": {
+      "page": "events",
+      "position": 22850,
+      "value": "Subscribe to the Legacy X newsletter and be the first to know about upcoming competitions, seminars, open mats, and academy announcements."
+    },
     "events/meta/title": {
       "page": "events",
       "position": 192,
@@ -422,68 +432,28 @@
     },
     "events/page-header/page-title": {
       "page": "events",
-      "position": 20542,
+      "position": 20937,
       "value": "Upcoming<br/><em>Events.</em>"
     },
     "events/page-header/page-subtitle": {
       "page": "events",
-      "position": 20652,
+      "position": 21047,
       "value": "Competitions, seminars, open mats, and academy milestones. Stay connected with everything happening at Legacy X."
-    },
-    "events/featured-next-up/featured-month": {
-      "page": "events",
-      "position": 21776,
-      "value": "Oct"
-    },
-    "events/featured-next-up/featured-day": {
-      "page": "events",
-      "position": 21870,
-      "value": "17"
-    },
-    "events/featured-next-up/featured-year": {
-      "page": "events",
-      "position": 21965,
-      "value": "2026"
-    },
-    "events/featured-next-up/event-tag": {
-      "page": "events",
-      "position": 22118,
-      "value": "<span class=\"event-tag-dot\"></span>\nCompetition · Nogi Event"
-    },
-    "events/featured-next-up/event-title": {
-      "page": "events",
-      "position": 22289,
-      "value": "Something Big Is Coming — Nogi Event"
-    },
-    "events/featured-next-up/event-desc": {
-      "page": "events",
-      "position": 22954,
-      "value": "Legacy X's first major Nogi event is coming October 17, 2026. More details including time, location, and registration information will be announced soon. Save the date."
     },
     "events/placeholder-event-3/empty-icon": {
       "page": "events",
-      "position": 26124,
+      "position": 22220,
       "value": "📅"
     },
     "events/placeholder-event-3/empty-title": {
       "page": "events",
-      "position": 26214,
+      "position": 22310,
       "value": "No events in this category yet."
     },
     "events/placeholder-event-3/empty-sub": {
       "page": "events",
-      "position": 26327,
+      "position": 22423,
       "value": "Check back soon or subscribe to our newsletter to be the first to know when new events are announced."
-    },
-    "events/newsletter/newsletter-headline": {
-      "page": "events",
-      "position": 26652,
-      "value": "Never miss an event."
-    },
-    "events/newsletter/newsletter-sub": {
-      "page": "events",
-      "position": 26754,
-      "value": "Subscribe to the Legacy X newsletter and be the first to know about upcoming competitions, seminars, open mats, and academy announcements."
     },
     "faq/meta/title": {
       "page": "faq",
@@ -2361,66 +2331,6 @@
           "fields": {
             "culture-block-title": "Open door policy",
             "culture-block-body": "If something feels off — unsafe, disrespectful, or out of place — bring it to an instructor. This academy is only as strong as the trust we build together."
-          }
-        }
-      ]
-    },
-    "events/placeholder-event-2/event-card": {
-      "page": "events",
-      "position": 23302,
-      "items": [
-        {
-          "tpl": 0,
-          "sort": 0,
-          "fields": {
-            "event-month": "TBA",
-            "event-day": "—",
-            "event-year": "2026",
-            "event-tag": "<span class=\"event-tag-dot\"></span>\nAcademy Event",
-            "event-title": "Belt Promotion Ceremony",
-            "event-meta-item": "<span class=\"event-meta-icon\">📍</span> Legacy X Jiu-Jitsu — Woodstock, ON",
-            "event-desc": "Legacy X's first belt promotion ceremony. Dates to be confirmed. All members and family are welcome to attend and celebrate our students' progress."
-          }
-        },
-        {
-          "tpl": 1,
-          "sort": 1,
-          "fields": {
-            "event-month": "TBA",
-            "event-day": "—",
-            "event-year": "2026",
-            "event-tag": "<span class=\"event-tag-dot\"></span>\nOpen Mat",
-            "event-title": "Legacy X Open Mat",
-            "event-meta-item": "<span class=\"event-meta-icon\">📍</span> Legacy X Jiu-Jitsu — Woodstock, ON",
-            "event-meta-item-2": "<span class=\"event-meta-icon\">🥋</span> Gi & No-Gi",
-            "event-desc": "An open mat for Legacy X members and invited guests. All levels welcome. More details coming soon."
-          }
-        }
-      ]
-    },
-    "events/featured-next-up/event-meta": {
-      "page": "events",
-      "position": 22429,
-      "items": [
-        {
-          "tpl": 0,
-          "sort": 0,
-          "fields": {
-            "event-meta-item": "<span class=\"event-meta-icon\">🕐</span> Time TBA"
-          }
-        },
-        {
-          "tpl": 1,
-          "sort": 1,
-          "fields": {
-            "event-meta-item": "<span class=\"event-meta-icon\">📍</span> Location TBA"
-          }
-        },
-        {
-          "tpl": 2,
-          "sort": 2,
-          "fields": {
-            "event-meta-item": "<span class=\"event-meta-icon\">🥋</span> No-Gi"
           }
         }
       ]
