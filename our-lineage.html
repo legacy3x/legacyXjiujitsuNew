@@ -101,6 +101,15 @@ nav {
   display: inline-block;
 }
 .nav-cta:hover { background: var(--blue); }
+
+.nav-actions { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+.nav-portal {
+  font-family: var(--ff-display); font-weight: 700; font-size: 15px;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--white);
+  padding: 9px 20px; border: 1px solid var(--blue); transition: background 0.2s;
+}
+.nav-portal:hover { background: var(--blue); text-decoration: none; }
+.mobile-nav .mobile-portal { margin-top: 16px; border: 1px solid var(--blue); text-align: center; padding: 15px; }
 .nav-mobile-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
 .nav-mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--white); }
 .mobile-nav {
@@ -411,7 +420,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 
 /* ── MOBILE ── */
 @media (max-width: 900px) {
-  .nav-links, .nav-cta { display: none; }
+  .nav-links, .nav-cta, .nav-actions { display: none; }
   .nav-mobile-toggle { display: flex; }
   /* Straighten chain to single column on mobile */
   .chain::before { left: 28px; transform: none; }
@@ -432,6 +441,14 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   .footer-inner { grid-template-columns: 1fr; }
   .chain-card { padding: 20px; }
 }
+
+/* Full nav needs ~1140px; switch to the menu button below that */
+@media (max-width: 1140px) {
+  .nav-links, .nav-actions { display: none; }
+  .nav-mobile-toggle { display: flex; }
+}
+/* Let the open mobile menu scroll when it's taller than the screen */
+.mobile-nav.open { max-height: calc(100vh - 68px); max-height: calc(100dvh - 68px); overflow-y: auto; overscroll-behavior: contain; }
 </style>
 </head>
 <body>
@@ -468,7 +485,10 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
       </li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <a href="https://legacy-x-jiujitsu.gymdesk.com/signup" target="_blank" class="nav-cta">Try a Free Class</a>
+    <div class="nav-actions">
+      <a href="https://legacy-x-jiujitsu.gymdesk.com/login" target="_blank" class="nav-portal">Member Portal</a>
+      <a href="https://legacy-x-jiujitsu.gymdesk.com/signup" target="_blank" class="nav-cta">Try a Free Class</a>
+    </div>
     <div class="nav-mobile-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('open')">
       <span></span><span></span><span></span>
     </div>
@@ -489,6 +509,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
     <a href="our-lineage.html" style="padding-left:36px;font-size:16px;color:var(--muted);">&#8627; Our Lineage</a>
     <a href="etiquette.html" style="padding-left:36px;font-size:16px;color:var(--muted);">&#8627; Dojo Etiquette</a>
     <a href="contact.html">Contact</a>
+    <a href="https://legacy-x-jiujitsu.gymdesk.com/login" target="_blank" class="mobile-portal">Member Portal</a>
     <a href="https://legacy-x-jiujitsu.gymdesk.com/signup" target="_blank" class="mobile-cta">Try a Free Class</a>
   </div>
 </nav>
