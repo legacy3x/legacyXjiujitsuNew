@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <title data-cms="index/meta/title">Legacy X Jiu-Jitsu — Woodstock, Ontario</title>
+<link rel="preload" as="image" href="images/hero-jiujitsu.webp" fetchpriority="high"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -191,7 +192,7 @@ nav {
   padding: 0;
   position: relative;
   overflow: hidden;
-  background: var(--dark);
+  background: var(--dark) url('images/hero-jiujitsu.webp') 70% center / cover no-repeat;
 }
 
 .hero-bg {
@@ -199,8 +200,17 @@ nav {
   inset: 0;
   background:
     linear-gradient(160deg, rgba(58,143,216,0.12) 0%, transparent 50%),
+    linear-gradient(to right, rgba(13,18,32,0.9) 0%, rgba(13,18,32,0.55) 45%, rgba(13,18,32,0.15) 100%),
     linear-gradient(to top, rgba(13,18,32,0.98) 0%, rgba(13,18,32,0.5) 60%, rgba(13,18,32,0.3) 100%);
   z-index: 1;
+}
+@media (max-width: 700px) {
+  /* Text spans the full width on phones, so darken the photo evenly. */
+  #hero { background-position: 62% center; }
+  .hero-bg {
+    background:
+      linear-gradient(to top, rgba(13,18,32,0.98) 0%, rgba(13,18,32,0.7) 55%, rgba(13,18,32,0.55) 100%);
+  }
 }
 
 /* Diagonal X graphic in background */

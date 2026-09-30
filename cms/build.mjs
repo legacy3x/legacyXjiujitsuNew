@@ -68,6 +68,7 @@ for (const rel of sourcePages()) {
   fs.writeFileSync(out, render(fs.readFileSync(path.join(ROOT, rel), 'utf8'), content));
 }
 copyDir(path.join(ROOT, 'js'), path.join(DIST, 'js'));
+copyDir(path.join(ROOT, 'images'), path.join(DIST, 'images'));
 copyDir(path.join(ROOT, 'admin'), path.join(DIST, 'admin'));
 
 // Public connection details for the admin and the live events pages (the anon key is meant to be public).
