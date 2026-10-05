@@ -197,83 +197,53 @@
     },
     "contact/page-header/page-title": {
       "page": "contact",
-      "position": 18833,
+      "position": 17537,
       "value": "Get in<br/><em>Touch.</em>"
     },
     "contact/page-header/page-subtitle": {
       "page": "contact",
-      "position": 18939,
+      "position": 17643,
       "value": "Have a question about programs, membership, or anything else? Reach out — we're happy to help. Your first class is always free."
     },
     "contact/join-band/join-band-text": {
       "page": "contact",
-      "position": 19243,
+      "position": 17947,
       "value": "Want to visit and train with us?"
     },
     "contact/left-info/info-tag": {
       "page": "contact",
-      "position": 19638,
+      "position": 18342,
       "value": "Find us"
     },
     "contact/left-info/info-headline": {
       "page": "contact",
-      "position": 19725,
+      "position": 18429,
       "value": "Visit <em>Legacy X.</em>"
     },
     "contact/right-form/form-headline": {
       "page": "contact",
-      "position": 21335,
+      "position": 20039,
       "value": "Send us a message."
     },
     "contact/right-form/form-sub": {
       "page": "contact",
-      "position": 21426,
+      "position": 20130,
       "value": "Fill out the form below and we'll get back to you within one business day."
     },
     "contact/right-form/form-success-icon": {
       "page": "contact",
-      "position": 23041,
+      "position": 21981,
       "value": "✅"
     },
     "contact/right-form/form-success-title": {
       "page": "contact",
-      "position": 23138,
+      "position": 22078,
       "value": "Message Sent."
     },
     "contact/right-form/form-success-sub": {
       "page": "contact",
-      "position": 23241,
+      "position": 22181,
       "value": "Thanks for reaching out. We'll get back to you within one business day. See you on the mats."
-    },
-    "contact/map/map-placeholder-icon": {
-      "page": "contact",
-      "position": 23573,
-      "value": "📍"
-    },
-    "contact/map/map-placeholder-text": {
-      "page": "contact",
-      "position": 23664,
-      "value": "27 Bysham Park Drive, Woodstock ON"
-    },
-    "contact/map/map-address-item": {
-      "page": "contact",
-      "position": 23978,
-      "value": "<strong>Legacy X Jiu-Jitsu</strong>"
-    },
-    "contact/map/map-address-item-2": {
-      "page": "contact",
-      "position": 24136,
-      "value": "27 Bysham Park Drive, Unit 1"
-    },
-    "contact/map/map-address-item-3": {
-      "page": "contact",
-      "position": 24287,
-      "value": "Woodstock, ON, N4T 1P1"
-    },
-    "contact/map/map-address-item-4": {
-      "page": "contact",
-      "position": 24432,
-      "value": "<a href=\"tel:2263765784\" style=\"color:var(--blue);\">(226) 376-5784</a>"
     },
     "corporate/meta/title": {
       "page": "corporate",
@@ -2022,7 +1992,7 @@
     },
     "contact/left-info/info-block": {
       "page": "contact",
-      "position": 19762,
+      "position": 18466,
       "items": [
         {
           "tpl": 0,

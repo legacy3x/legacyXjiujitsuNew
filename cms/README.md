@@ -19,7 +19,8 @@ design templates; the build fills in their text from the database.
 | `SUPABASE_ANON_KEY` | build, publish function, admin page (it's the public key) |
 | `NETLIFY_AUTH_TOKEN` | publish function — Netlify personal access token (any plan) |
 | `NETLIFY_BUILD_HOOK_URL` | publish function — optional; used instead of the token if set |
-| `RESEND_API_KEY`, `RESEND_SEGMENT_ID` | newsletter signup, event registrants |
+| `RESEND_API_KEY`, `RESEND_SEGMENT_ID` | newsletter signup, event registrants, contact form email |
+| `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` | optional — contact form recipient (default info@legacyxjiujitsu.com) and sender |
 | `RESEND_EVENTS_SEGMENT_ID` | optional — put event registrants in their own Resend segment |
 | `SUPABASE_SERVICE_ROLE_KEY` | event registration functions (secret — Functions scope only) |
 | `STRIPE_SECRET_KEY` | card payments for events |

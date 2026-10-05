@@ -35,3 +35,25 @@ export async function addRegistrant(reg) {
     console.error('resend: could not add registrant', err.message);
   }
 }
+
+// Sends a plain-text email. `from` must be on a domain verified in Resend; until
+// legacyxjiujitsu.com is verified we fall back to Resend's shared sender, which only
+// delivers to the Resend account's own address.
+export async function sendEmail({ to, subject, text, replyTo }) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) throw new Error('RESEND_API_KEY is not set');
+  const from = process.env.CONTACT_FROM_EMAIL || 'Legacy X Website <website@legacyxjiujitsu.com>';
+
+  const send = (sender) => fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ from: sender, to: [to], reply_to: replyTo, subject, text }),
+  });
+
+  let res = await send(from);
+  if (res.status === 403) res = await send('Legacy X Website <onboarding@resend.dev>');
+  if (!res.ok) {
+    const detail = await res.json().catch(() => ({}));
+    throw new Error(`Resend ${res.status}: ${detail.message || 'unknown error'}`);
+  }
+}

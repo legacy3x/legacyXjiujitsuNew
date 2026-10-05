@@ -284,6 +284,9 @@ nav {
   transition: background 0.2s;
 }
 .form-submit:hover { background: var(--blue); }
+.form-submit:disabled { opacity: 0.6; cursor: default; }
+.form-error { color: #e57373; font-size: 15px; line-height: 1.6; min-height: 1.6em; }
+.form-error a { color: var(--blue); text-decoration: underline; }
 
 /* Success state */
 .form-success {
@@ -297,45 +300,6 @@ nav {
   text-transform: uppercase; color: var(--white); margin-bottom: 12px;
 }
 .form-success-sub { font-size: 16px; color: var(--muted); line-height: 1.7; }
-
-/* ── MAP SECTION ── */
-#map-section { background: var(--navy); }
-.map-wrap {
-  width: 100%; height: 400px; background: var(--dark);
-  display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden;
-}
-.map-placeholder {
-  text-align: center;
-}
-.map-placeholder-icon { font-size: 48px; margin-bottom: 16px; opacity: 0.4; }
-.map-placeholder-text {
-  font-family: var(--ff-display); font-weight: 700; font-size: 18px;
-  text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 20px;
-}
-.map-btn {
-  font-family: var(--ff-display); font-weight: 700; font-size: 14px;
-  letter-spacing: 2px; text-transform: uppercase;
-  background: var(--blue); color: var(--white);
-  padding: 14px 32px; display: inline-block; transition: background 0.2s;
-}
-.map-btn:hover { background: var(--purple); }
-
-/* Address overlay bar */
-.map-address-bar {
-  background: var(--navy); border-top: 1px solid var(--border);
-  padding: 20px 24px;
-  display: flex; align-items: center; justify-content: center; gap: 32px;
-  flex-wrap: wrap;
-}
-.map-address-item {
-  display: flex; align-items: center; gap: 10px;
-  font-size: 15px; color: var(--muted);
-}
-.map-address-item strong { color: var(--white); font-weight: 600; }
-.map-address-dot {
-  width: 6px; height: 6px; border-radius: 50%; background: var(--border); flex-shrink: 0;
-}
 
 /* ── FOOTER ── */
 footer { background: var(--dark); border-top: 1px solid var(--border); }
@@ -380,8 +344,6 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   .form-group.full { grid-column: span 1; }
   .contact-form-wrap { padding: 32px 24px; }
   .footer-inner { grid-template-columns: 1fr; }
-  .map-address-bar { flex-direction: column; gap: 12px; align-items: flex-start; padding: 20px 24px; }
-  .map-address-dot { display: none; }
 }
 
 /* Full nav needs ~1140px; switch to the menu button below that */
@@ -539,8 +501,10 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
             <label class="form-label" for="message">Message</label>
             <textarea class="form-textarea" id="message" name="message" placeholder="Tell us a bit about yourself — what program you're interested in, any questions you have, or just say hello." required></textarea>
           </div>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;"/>
           <div class="form-group full">
-            <button class="form-submit" type="button" onclick="submitForm()">Send Message</button>
+            <p class="form-error" id="form-error" role="alert"></p>
+            <button class="form-submit" type="button" id="form-submit" onclick="submitForm()">Send Message</button>
           </div>
         </div>
       </div>
@@ -552,28 +516,6 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- ── MAP ── -->
-<section id="map-section">
-  <div class="map-wrap">
-    <div class="map-placeholder">
-      <div class="map-placeholder-icon" data-cms="contact/map/map-placeholder-icon">📍</div>
-      <p class="map-placeholder-text" data-cms="contact/map/map-placeholder-text">27 Bysham Park Drive, Woodstock ON</p>
-      <a href="https://maps.google.com/?q=27+Bysham+Park+Drive+Woodstock+ON" target="_blank" class="map-btn">
-        Open in Google Maps
-      </a>
-    </div>
-  </div>
-  <div class="map-address-bar">
-    <div class="map-address-item" data-cms="contact/map/map-address-item"><strong>Legacy X Jiu-Jitsu</strong></div>
-    <div class="map-address-dot"></div>
-    <div class="map-address-item" data-cms="contact/map/map-address-item-2">27 Bysham Park Drive, Unit 1</div>
-    <div class="map-address-dot"></div>
-    <div class="map-address-item" data-cms="contact/map/map-address-item-3">Woodstock, ON, N4T 1P1</div>
-    <div class="map-address-dot"></div>
-    <div class="map-address-item" data-cms="contact/map/map-address-item-4"><a href="tel:2263765784" style="color:var(--blue);">(226) 376-5784</a></div>
   </div>
 </section>
 
@@ -630,16 +572,41 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 </footer>
 
 <script>
-function submitForm() {
-  const name    = document.getElementById('name').value.trim();
-  const email   = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-  if (!name || !email || !message) {
-    alert('Please fill in your name, email, and message before sending.');
-    return;
+// Sends the message to /api/contact, which emails it to the academy.
+async function submitForm() {
+  const value = (id) => document.getElementById(id).value.trim();
+  const error = document.getElementById('form-error');
+  const button = document.getElementById('form-submit');
+  const fail = (html) => { error.innerHTML = html; };
+  error.textContent = '';
+
+  if (!value('name') || !value('email') || !value('message')) {
+    return fail('Please fill in your name, email, and message before sending.');
   }
-  document.getElementById('form-container').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
+  if (!document.getElementById('email').checkValidity()) {
+    return fail('Please enter a valid email address.');
+  }
+
+  button.disabled = true;
+  button.textContent = 'Sending…';
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: value('name'), email: value('email'), phone: value('phone'),
+        message: value('message'), website: value('website'),
+      }),
+    });
+    if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || '');
+    document.getElementById('form-container').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  } catch (err) {
+    fail((err.message ? err.message + ' ' : "Sorry, your message couldn't be sent. ")
+      + 'You can also email us at <a href="mailto:info@legacyxjiujitsu.com">info@legacyxjiujitsu.com</a>.');
+    button.disabled = false;
+    button.textContent = 'Send Message';
+  }
 }
 </script>
 
