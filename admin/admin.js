@@ -16,6 +16,8 @@ const PAGE_ORDER = [
 const WORDS = {
   meta: 'Page info', title: 'Browser tab title', description: 'Search engine description', main: 'Main',
   'placeholder-event-3': 'No events message',
+  mosaic: 'Gallery photos', 'mosaic-photo': 'Photo', 'mosaic-cell-label': 'Caption',
+  'mosaic-placeholder-text': 'Placeholder text (shown when there is no photo)',
 };
 const EVENTS_LABEL = 'View Events / Add Events';
 
@@ -236,6 +238,84 @@ function textarea(value, onInput) {
   return t;
 }
 
+// ── Photo fields ──
+// A field named "...-photo" holds an <img> tag (or nothing). Photos are shrunk in the
+// browser before upload so large phone pictures don't slow the site down.
+const PHOTO_FIELD = /-photo$/;
+const PHOTO_BUCKET = 'site-photos';
+const photoSrc = (html) => html.match(/<img[^>]*\ssrc="([^"]+)"/)?.[1] || '';
+
+async function shrinkImage(file, maxSide = 1600) {
+  const bitmap = await createImageBitmap(file);
+  const scale = Math.min(1, maxSide / Math.max(bitmap.width, bitmap.height));
+  const canvas = document.createElement('canvas');
+  canvas.width = Math.round(bitmap.width * scale);
+  canvas.height = Math.round(bitmap.height * scale);
+  canvas.getContext('2d').drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+  const blob = await new Promise((res) => canvas.toBlob(res, 'image/webp', 0.82));
+  if (blob) return { blob, ext: 'webp', type: 'image/webp' };
+  // Browsers that can't write WebP fall back to JPEG.
+  const jpeg = await new Promise((res) => canvas.toBlob(res, 'image/jpeg', 0.85));
+  return { blob: jpeg, ext: 'jpg', type: 'image/jpeg' };
+}
+
+function photoField(value, onChange) {
+  const wrap = document.createElement('div');
+  wrap.className = 'photo-field';
+  const img = document.createElement('img');
+  img.alt = '';
+  const side = document.createElement('div');
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'image/*';
+  input.hidden = true;
+  const pick = document.createElement('button');
+  pick.type = 'button';
+  pick.className = 'btn btn-sm';
+  const remove = document.createElement('button');
+  remove.type = 'button';
+  remove.className = 'btn btn-sm btn-danger';
+  remove.textContent = 'Remove photo';
+  const note = document.createElement('small');
+
+  const show = (src) => {
+    img.hidden = !src;
+    if (src) img.src = src;
+    remove.hidden = !src;
+    pick.textContent = src ? 'Replace photo' : 'Upload photo';
+  };
+  show(photoSrc(value));
+
+  pick.addEventListener('click', () => input.click());
+  remove.addEventListener('click', () => { onChange(''); show(''); note.textContent = 'Photo removed — save to apply.'; });
+  input.addEventListener('change', async () => {
+    const file = input.files[0];
+    input.value = '';
+    if (!file) return;
+    if (!file.type.startsWith('image/')) { note.textContent = 'Please choose an image file.'; return; }
+    pick.disabled = true;
+    note.textContent = 'Uploading…';
+    try {
+      const { blob, ext, type } = await shrinkImage(file);
+      const path = `${crypto.randomUUID()}.${ext}`;
+      const up = await sb.storage.from(PHOTO_BUCKET).upload(path, blob, { contentType: type, cacheControl: '31536000' });
+      if (up.error) throw new Error(up.error.message);
+      const url = sb.storage.from(PHOTO_BUCKET).getPublicUrl(path).data.publicUrl;
+      onChange(`<img src="${url}" alt="" loading="lazy"/>`);
+      show(url);
+      note.textContent = 'Photo uploaded — save, then Publish site.';
+    } catch (err) {
+      note.textContent = `Upload failed — ${err.message}`;
+    } finally {
+      pick.disabled = false;
+    }
+  });
+
+  side.append(pick, ' ', remove, input, note);
+  wrap.append(img, side);
+  return wrap;
+}
+
 function renderEditor() {
   const entries = [
     ...blocks.map((b) => ({ type: 'block', position: b.position, key: b.key, ref: b })),
@@ -298,8 +378,10 @@ function renderItem(l, it, i) {
   const head = document.createElement('div');
   head.className = 'item-head';
   const title = document.createElement('strong');
-  const firstField = Object.values(it.fields)[0] || '';
-  title.textContent = `${i + 1}. ${plain(it.fields[l.fields[0]] ?? firstField).slice(0, 60) || 'Item'}`;
+  // Name the card after its first text field (skipping photo fields).
+  const textNames = [...l.fields, ...Object.keys(it.fields)].filter((k) => !PHOTO_FIELD.test(k) && it.fields[k]);
+  const labelName = textNames.find((k) => /label|name|title|summary|q-text/.test(k)) || textNames[0];
+  title.textContent = `${i + 1}. ${plain(it.fields[labelName] || '').slice(0, 60) || 'Item'}`;
   head.append(title);
 
   const act = (label, fn, extra = '') => {
@@ -328,13 +410,16 @@ function renderItem(l, it, i) {
 
   const order = [...l.fields, ...Object.keys(it.fields).filter((k) => !l.fields.includes(k))];
   for (const name of order) {
-    if (!(name in it.fields)) continue;
+    const isPhoto = PHOTO_FIELD.test(name);
+    if (!(name in it.fields) && !isPhoto) continue;
     const f = document.createElement('div');
     f.className = 'item-field';
     const label = document.createElement('label');
     label.textContent = humanize(name);
-    const t = textarea(it.fields[name], (v, el) => { it.fields[name] = v; it.dirty = true; el.classList.add('dirty'); });
-    f.append(label, t);
+    const control = isPhoto
+      ? photoField(it.fields[name] || '', (v) => { it.fields[name] = v; it.dirty = true; refreshDirty(); })
+      : textarea(it.fields[name], (v, el) => { it.fields[name] = v; it.dirty = true; el.classList.add('dirty'); });
+    f.append(label, control);
     card.append(f);
   }
   card.dataset.search = Object.values(it.fields).join(' ').toLowerCase();

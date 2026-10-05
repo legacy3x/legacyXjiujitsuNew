@@ -467,87 +467,87 @@
     },
     "index/hero/hero-eyebrow": {
       "page": "index",
-      "position": 26086,
+      "position": 26369,
       "value": "Woodstock, Ontario"
     },
     "index/hero/hero-headline": {
       "page": "index",
-      "position": 26182,
+      "position": 26465,
       "value": "Build your<br/>\nlegacy<br/>\n<span class=\"accent\">on the mat.</span>"
     },
     "index/hero/hero-sub": {
       "page": "index",
-      "position": 26334,
+      "position": 26617,
       "value": "World-class Jiu-Jitsu training for all levels. Join our community and transform your life through martial arts — no experience needed."
     },
     "index/programs/section-tag": {
       "page": "index",
-      "position": 26962,
+      "position": 27245,
       "value": "What we offer"
     },
     "index/programs/section-headline": {
       "page": "index",
-      "position": 27060,
+      "position": 27343,
       "value": "Programs built<br/>for <em>every level.</em>"
     },
     "index/why-legacy-x/section-tag": {
       "page": "index",
-      "position": 30772,
+      "position": 31055,
       "value": "Why Legacy X"
     },
     "index/why-legacy-x/section-headline": {
       "page": "index",
-      "position": 30873,
+      "position": 31156,
       "value": "Built on<br/>the right<br/><em>foundation.</em>"
     },
     "index/testimonials/section-tag": {
       "page": "index",
-      "position": 34744,
+      "position": 35027,
       "value": "From our community"
     },
     "index/testimonials/section-headline": {
       "page": "index",
-      "position": 34847,
+      "position": 35130,
       "value": "What members say."
     },
     "index/testimonials/testimonial-text": {
       "page": "index",
-      "position": 35145,
+      "position": 35428,
       "value": "\"Having trained with Francis for years, I can say firsthand that his technical knowledge is only matched by his integrity as a person. He has created an environment that is technical, safe, and completely ego-free. You’re not just joining a gym—you’re becoming part of a community led by one of the best in the business. I couldn’t be prouder to see him open the doors at Legacy X. Woodstock is lucky to have him!\""
     },
     "index/testimonials/testimonial-meta": {
       "page": "index",
-      "position": 35649,
+      "position": 35932,
       "value": "Rain Plaff · Black Belt"
     },
     "index/gallery/section-tag": {
       "page": "index",
-      "position": 37892,
+      "position": 38175,
       "value": "On the mats"
     },
     "index/gallery/section-headline": {
       "page": "index",
-      "position": 37983,
+      "position": 38266,
       "value": "Legacy X <em>in motion.</em>"
     },
     "index/cta-band/cta-headline": {
       "page": "index",
-      "position": 39637,
+      "position": 40275,
       "value": "Your first class<br/>is on us."
     },
     "index/cta-band/cta-sub": {
       "page": "index",
-      "position": 39732,
+      "position": 40370,
       "value": "No experience needed. No commitment required. Come see what Legacy X is about — bring a friend and train for free together."
     },
     "index/newsletter/newsletter-headline": {
       "page": "index",
-      "position": 40228,
+      "position": 40866,
       "value": "Stay in the loop."
     },
     "index/newsletter/newsletter-sub": {
       "page": "index",
-      "position": 40326,
+      "position": 40964,
       "value": "Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox. No spam, ever."
     },
     "instructors/meta/title": {
@@ -2334,7 +2334,7 @@
     },
     "index/programs/programs-grid": {
       "page": "index",
-      "position": 27266,
+      "position": 27549,
       "items": [
         {
           "tpl": 0,
@@ -2400,7 +2400,7 @@
     },
     "index/why-legacy-x/why-left": {
       "page": "index",
-      "position": 30934,
+      "position": 31217,
       "items": [
         {
           "tpl": 0,
@@ -2420,7 +2420,7 @@
     },
     "index/why-legacy-x/why-items": {
       "page": "index",
-      "position": 31499,
+      "position": 31782,
       "items": [
         {
           "tpl": 0,
@@ -2457,7 +2457,7 @@
     },
     "index/why-legacy-x/why-right": {
       "page": "index",
-      "position": 33619,
+      "position": 33902,
       "items": [
         {
           "tpl": 0,
@@ -2487,7 +2487,7 @@
     },
     "index/testimonials/testimonials-grid": {
       "page": "index",
-      "position": 35712,
+      "position": 35995,
       "items": [
         {
           "tpl": 0,
@@ -2517,12 +2517,13 @@
     },
     "index/gallery/mosaic": {
       "page": "index",
-      "position": 38164,
+      "position": 38447,
       "items": [
         {
           "tpl": 0,
           "sort": 0,
           "fields": {
+            "mosaic-photo": "",
             "mosaic-placeholder-text": "BJJ",
             "mosaic-cell-label": "Adult Class"
           }
@@ -2531,6 +2532,7 @@
           "tpl": 1,
           "sort": 1,
           "fields": {
+            "mosaic-photo": "",
             "mosaic-placeholder-text": "GI",
             "mosaic-cell-label": "Drilling"
           }
@@ -2539,6 +2541,7 @@
           "tpl": 2,
           "sort": 2,
           "fields": {
+            "mosaic-photo": "",
             "mosaic-placeholder-text": "X",
             "mosaic-cell-label": "Legacy X"
           }
@@ -2547,6 +2550,7 @@
           "tpl": 3,
           "sort": 3,
           "fields": {
+            "mosaic-photo": "",
             "mosaic-placeholder-text": "KIDS",
             "mosaic-cell-label": "Kids Program"
           }
@@ -2555,6 +2559,7 @@
           "tpl": 4,
           "sort": 4,
           "fields": {
+            "mosaic-photo": "",
             "mosaic-placeholder-text": "ROLL",
             "mosaic-cell-label": "Live Rolling"
           }

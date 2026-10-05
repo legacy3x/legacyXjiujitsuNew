@@ -669,6 +669,11 @@ section { position: relative; }
   grid-row: span 2;
 }
 
+/* Photo uploaded in the admin (Home → Gallery). Empty until one is added. */
+.mosaic-photo { position: absolute; inset: 0; }
+.mosaic-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mosaic-photo:not(:empty) ~ .mosaic-placeholder-text { display: none; }
+
 .mosaic-cell-label {
   position: relative;
   z-index: 2;
@@ -1253,22 +1258,27 @@ footer {
   <div style="max-width:1200px;margin:0 auto;padding:0 24px 100px;">
     <div class="mosaic" data-cms-list="index/gallery/mosaic">
       <div class="mosaic-cell tall" data-cms-item="0">
+        <div class="mosaic-photo" data-cms-field="mosaic-photo"></div>
         <div class="mosaic-placeholder-text" data-cms-field="mosaic-placeholder-text">BJJ</div>
         <div class="mosaic-cell-label" data-cms-field="mosaic-cell-label">Adult Class</div>
       </div>
       <div class="mosaic-cell" data-cms-item="1">
+        <div class="mosaic-photo" data-cms-field="mosaic-photo"></div>
         <div class="mosaic-placeholder-text" data-cms-field="mosaic-placeholder-text">GI</div>
         <div class="mosaic-cell-label" data-cms-field="mosaic-cell-label">Drilling</div>
       </div>
       <div class="mosaic-cell" data-cms-item="2">
+        <div class="mosaic-photo" data-cms-field="mosaic-photo"></div>
         <div class="mosaic-placeholder-text" data-cms-field="mosaic-placeholder-text">X</div>
         <div class="mosaic-cell-label" data-cms-field="mosaic-cell-label">Legacy X</div>
       </div>
       <div class="mosaic-cell" data-cms-item="3">
+        <div class="mosaic-photo" data-cms-field="mosaic-photo"></div>
         <div class="mosaic-placeholder-text" data-cms-field="mosaic-placeholder-text">KIDS</div>
         <div class="mosaic-cell-label" data-cms-field="mosaic-cell-label">Kids Program</div>
       </div>
       <div class="mosaic-cell" data-cms-item="4">
+        <div class="mosaic-photo" data-cms-field="mosaic-photo"></div>
         <div class="mosaic-placeholder-text" data-cms-field="mosaic-placeholder-text">ROLL</div>
         <div class="mosaic-cell-label" data-cms-field="mosaic-cell-label">Live Rolling</div>
       </div>

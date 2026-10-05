@@ -109,6 +109,11 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .empty { color: var(--muted); font-size: 14px; padding: 6px 0 10px; }
 .loading { color: var(--muted); padding: 40px 0; }
 
+/* ── Photo fields ── */
+.photo-field { display: flex; gap: 14px; align-items: flex-start; flex-wrap: wrap; }
+.photo-field img { width: 180px; height: 120px; object-fit: cover; border: 1px solid var(--border); background: var(--dark); }
+.photo-field small { display: block; color: var(--muted); font-size: 12px; margin-top: 8px; min-height: 1.4em; }
+
 /* ── Events manager ── */
 .table-wrap { overflow-x: auto; border: 1px solid var(--border); }
 table.data { width: 100%; border-collapse: collapse; font-size: 14px; }
