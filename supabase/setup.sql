@@ -142,17 +142,17 @@ insert into public.cms_blocks (key, page, position, value) values
   ('corporate/hero/hero-eyebrow', 'corporate', 17800, 'Corporate Wellness · Woodstock, Ontario'),
   ('corporate/hero/hero-title', 'corporate', 17910, 'Build a stronger<br/>team <em>on the mat.</em>'),
   ('corporate/hero/hero-sub', 'corporate', 18023, 'Brazilian Jiu-Jitsu is a structured environment where your people develop focus, resilience, and genuine team connection — while learning one of the world''s most effective martial arts. No experience required.'),
-  ('corporate/what-it-is/section-tag', 'corporate', 18681, 'What it is'),
-  ('corporate/what-it-is/section-headline', 'corporate', 18780, 'A performance<br/>benefit, not a <em>gym discount.</em>'),
-  ('corporate/what-it-is/p', 'corporate', 18923, 'Legacy X Jiu-Jitsu offers corporate wellness programs for businesses and organizations in Woodstock and the surrounding area. Programs can include <strong>sponsored employee training</strong>, <strong>executive sessions</strong>, <strong>team-building experiences</strong>, and <strong>private corporate classes</strong> — all designed for beginners and customizable around team size, schedule, and goals.'),
-  ('corporate/what-it-is/p-2', 'corporate', 19378, 'Most wellness spending buys access to equipment. Jiu-Jitsu asks something of the participant and gives back across multiple areas your organization already cares about — physical health, focus, resilience, and team culture.'),
-  ('corporate/what-it-is/p-3', 'corporate', 19651, 'The mat is a place where rank means nothing on day one, everyone is a beginner at something, and the only way to improve is through the people around you. That culture is the reason it transfers.'),
-  ('corporate/benefits/section-tag', 'corporate', 20067, 'Why it works'),
-  ('corporate/benefits/section-headline', 'corporate', 20166, 'What your team<br/>actually <em>develops.</em>'),
-  ('corporate/programs/section-tag', 'corporate', 23173, 'Program types'),
-  ('corporate/programs/section-headline', 'corporate', 23273, 'Five ways to<br/>work with <em>Legacy X.</em>'),
-  ('corporate/cta-band/cta-headline', 'corporate', 26650, 'Build a program<br/>for your team.'),
-  ('corporate/cta-band/cta-sub', 'corporate', 26753, 'Tell us the shape of your organization and what you want to achieve. No prior Jiu-Jitsu experience required from anyone on your team.'),
+  ('corporate/what-it-is/section-tag', 'corporate', 18622, 'What it is'),
+  ('corporate/what-it-is/section-headline', 'corporate', 18721, 'A performance<br/>benefit, not a <em>gym discount.</em>'),
+  ('corporate/what-it-is/p', 'corporate', 18864, 'Legacy X Jiu-Jitsu offers corporate wellness programs for businesses and organizations in Woodstock and the surrounding area. Programs can include <strong>sponsored employee training</strong>, <strong>executive sessions</strong>, <strong>team-building experiences</strong>, and <strong>private corporate classes</strong> — all designed for beginners and customizable around team size, schedule, and goals.'),
+  ('corporate/what-it-is/p-2', 'corporate', 19319, 'Most wellness spending buys access to equipment. Jiu-Jitsu asks something of the participant and gives back across multiple areas your organization already cares about — physical health, focus, resilience, and team culture.'),
+  ('corporate/what-it-is/p-3', 'corporate', 19592, 'The mat is a place where rank means nothing on day one, everyone is a beginner at something, and the only way to improve is through the people around you. That culture is the reason it transfers.'),
+  ('corporate/benefits/section-tag', 'corporate', 20008, 'Why it works'),
+  ('corporate/benefits/section-headline', 'corporate', 20107, 'What your team<br/>actually <em>develops.</em>'),
+  ('corporate/programs/section-tag', 'corporate', 23114, 'Program types'),
+  ('corporate/programs/section-headline', 'corporate', 23214, 'Five ways to<br/>work with <em>Legacy X.</em>'),
+  ('corporate/cta-band/cta-headline', 'corporate', 26591, 'Build a program<br/>for your team.'),
+  ('corporate/cta-band/cta-sub', 'corporate', 26694, 'Tell us the shape of your organization and what you want to achieve. No prior Jiu-Jitsu experience required from anyone on your team.'),
   ('etiquette/meta/title', 'etiquette', 195, 'Dojo Etiquette — Legacy X Jiu-Jitsu'),
   ('etiquette/page-header/page-title', 'etiquette', 16995, 'Mat Rules &amp;<br/><em>Code of Conduct.</em>'),
   ('etiquette/page-header/page-subtitle', 'etiquette', 17122, 'Following these guidelines shows respect for the art, the academy, and every person you train with.'),
@@ -303,12 +303,12 @@ legacy<br/>
   ('programs/newsletter/newsletter-headline', 'programs', 27757, 'Stay in the loop.'),
   ('programs/newsletter/newsletter-sub', 'programs', 27858, 'Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox.'),
   ('schedule/meta/title', 'schedule', 194, 'Schedule — Legacy X Jiu-Jitsu'),
-  ('schedule/page-header/page-title', 'schedule', 15956, 'Class<br/><em>Schedule.</em>'),
-  ('schedule/page-header/page-subtitle', 'schedule', 16065, 'All classes are held at 27 Bysham Park Drive, Woodstock ON. Your first class is always free — just show up.'),
-  ('schedule/gymdesk-schedule/schedule-tag', 'schedule', 18178, 'Live Schedule'),
-  ('schedule/gymdesk-schedule/schedule-headline', 'schedule', 18289, 'Find your <em>class.</em>'),
-  ('schedule/cta/cta-headline', 'schedule', 18795, 'First class<br/>is free.'),
-  ('schedule/cta/cta-sub', 'schedule', 18882, 'No experience needed. No commitment required. Pick a class from the schedule above and just show up — we''ll take care of the rest.'),
+  ('schedule/page-header/page-title', 'schedule', 14875, 'Class<br/><em>Schedule.</em>'),
+  ('schedule/page-header/page-subtitle', 'schedule', 14984, 'All classes are held at 27 Bysham Park Drive, Woodstock ON. Your first class is always free — just show up.'),
+  ('schedule/gymdesk-schedule/schedule-tag', 'schedule', 15337, 'Live Schedule'),
+  ('schedule/gymdesk-schedule/schedule-headline', 'schedule', 15448, 'Find your <em>class.</em>'),
+  ('schedule/cta/cta-headline', 'schedule', 15954, 'First class<br/>is free.'),
+  ('schedule/cta/cta-sub', 'schedule', 16041, 'No experience needed. No commitment required. Pick a class from the schedule above and just show up — we''ll take care of the rest.'),
   ('terms/meta/title', 'terms', 191, 'Terms & Conditions — Legacy X Jiu-Jitsu'),
   ('terms/page-header/page-title', 'terms', 15068, 'Terms &amp;<br/><em>Conditions.</em>'),
   ('terms/page-header/page-meta', 'terms', 15174, 'Last updated: April 2026'),
@@ -483,8 +483,8 @@ insert into public.cms_lists (key, page, position, fields) values
   ('about/values/values-grid', 'about', 28926, array['value-icon', 'value-name', 'value-desc']::text[]),
   ('about/oja/oja-visual', 'about', 33303, array['oja-stat-num', 'oja-stat-label']::text[]),
   ('contact/left-info/info-block', 'contact', 19762, array['info-block-label', 'info-block-value', 'info-block-sub']::text[]),
-  ('corporate/benefits/benefits-grid', 'corporate', 20317, array['benefit-num', 'benefit-title', 'benefit-desc']::text[]),
-  ('corporate/programs/programs-list', 'corporate', 23423, array['program-row-num', 'program-row-title', 'program-row-desc', 'program-row-tag']::text[]),
+  ('corporate/benefits/benefits-grid', 'corporate', 20258, array['benefit-num', 'benefit-title', 'benefit-desc']::text[]),
+  ('corporate/programs/programs-list', 'corporate', 23364, array['program-row-num', 'program-row-title', 'program-row-desc', 'program-row-tag']::text[]),
   ('etiquette/rules/rules-grid', 'etiquette', 17949, array['rule-number', 'rule-icon', 'rule-title', 'rule-body']::text[]),
   ('etiquette/culture/culture-right', 'etiquette', 23217, array['culture-block-title', 'culture-block-body']::text[]),
   ('faq/faq-list/faq-list', 'faq', 19169, array['faq-q-text', 'p']::text[]),
@@ -498,7 +498,6 @@ insert into public.cms_lists (key, page, position, fields) values
   ('our-lineage/what-lineage-means/meaning-right', 'our-lineage', 30458, array['meaning-block-title', 'meaning-block-body']::text[]),
   ('privacy/policy-body/policy-body', 'privacy', 16075, array['section-num', 'section-title', 'p', 'li', 'li-2', 'li-3', 'li-4', 'li-5', 'p-2']::text[]),
   ('programs/programs-grid/programs-overview-grid', 'programs', 19082, array['prog-icon', 'prog-tag', 'prog-name', 'prog-desc', 'prog-detail', 'prog-detail-2', 'prog-detail-3']::text[]),
-  ('schedule/quick-info/quick-band-inner', 'schedule', 16335, array['quick-icon', 'quick-label', 'quick-value']::text[]),
   ('terms/terms-body/terms-body', 'terms', 16126, array['section-num', 'section-title', 'p', 'li', 'li-2', 'li-3', 'li-4', 'p-2']::text[]),
   ('programs/adult-jiu-jitsu/what-you-ll-learn/curriculum-grid', 'programs/adult-jiu-jitsu', 25636, array['curr-num', 'curr-name', 'curr-desc']::text[]),
   ('programs/adult-jiu-jitsu/gi-no-gi/split-grid', 'programs/adult-jiu-jitsu', 27836, array['split-tag', 'split-name', 'split-desc', 'li', 'li-2', 'li-3']::text[]),
@@ -722,16 +721,6 @@ select * from (values
   ('programs/programs-grid/programs-overview-grid', 5, 5, '{"prog-icon":"🎯","prog-tag":"All levels · 1-on-1","prog-name":"Private Lessons","prog-desc":"Work directly with Coach Francis in a one-on-one setting tailored entirely to your goals, questions, and areas of focus. Whether you''re accelerating your fundamentals, preparing for competition, or fixing a specific problem in your game — private lessons deliver results faster than group classes alone.","prog-detail":"<span class=\"prog-detail-icon\">✅</span> Available to all levels","prog-detail-2":"<span class=\"prog-detail-icon\">💬</span> Fully customized to your goals"}'::jsonb)
 ) v(list_key, tpl, sort, fields)
 where not exists (select 1 from public.cms_items where list_key = 'programs/programs-grid/programs-overview-grid');
-
-insert into public.cms_items (list_key, tpl, sort, fields)
-select * from (values
-  ('schedule/quick-info/quick-band-inner', 0, 0, '{"quick-icon":"📅","quick-label":"Class Days","quick-value":"Tuesday & Thursday"}'::jsonb),
-  ('schedule/quick-info/quick-band-inner', 1, 1, '{"quick-icon":"🥋","quick-label":"Adults · 16+","quick-value":"7:00 PM – 8:00 PM"}'::jsonb),
-  ('schedule/quick-info/quick-band-inner', 2, 2, '{"quick-icon":"🧒","quick-label":"Little Warriors · 4–6","quick-value":"6:00 PM – 6:35 PM"}'::jsonb),
-  ('schedule/quick-info/quick-band-inner', 3, 3, '{"quick-icon":"👦","quick-label":"Juniors & Next Gen · 7–15","quick-value":"6:00 PM – 6:45 PM"}'::jsonb),
-  ('schedule/quick-info/quick-band-inner', 4, 4, '{"quick-icon":"📍","quick-label":"Location","quick-value":"Woodstock, ON"}'::jsonb)
-) v(list_key, tpl, sort, fields)
-where not exists (select 1 from public.cms_items where list_key = 'schedule/quick-info/quick-band-inner');
 
 insert into public.cms_items (list_key, tpl, sort, fields)
 select * from (values

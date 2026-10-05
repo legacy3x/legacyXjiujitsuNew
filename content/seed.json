@@ -297,57 +297,57 @@
     },
     "corporate/what-it-is/section-tag": {
       "page": "corporate",
-      "position": 18681,
+      "position": 18622,
       "value": "What it is"
     },
     "corporate/what-it-is/section-headline": {
       "page": "corporate",
-      "position": 18780,
+      "position": 18721,
       "value": "A performance<br/>benefit, not a <em>gym discount.</em>"
     },
     "corporate/what-it-is/p": {
       "page": "corporate",
-      "position": 18923,
+      "position": 18864,
       "value": "Legacy X Jiu-Jitsu offers corporate wellness programs for businesses and organizations in Woodstock and the surrounding area. Programs can include <strong>sponsored employee training</strong>, <strong>executive sessions</strong>, <strong>team-building experiences</strong>, and <strong>private corporate classes</strong> — all designed for beginners and customizable around team size, schedule, and goals."
     },
     "corporate/what-it-is/p-2": {
       "page": "corporate",
-      "position": 19378,
+      "position": 19319,
       "value": "Most wellness spending buys access to equipment. Jiu-Jitsu asks something of the participant and gives back across multiple areas your organization already cares about — physical health, focus, resilience, and team culture."
     },
     "corporate/what-it-is/p-3": {
       "page": "corporate",
-      "position": 19651,
+      "position": 19592,
       "value": "The mat is a place where rank means nothing on day one, everyone is a beginner at something, and the only way to improve is through the people around you. That culture is the reason it transfers."
     },
     "corporate/benefits/section-tag": {
       "page": "corporate",
-      "position": 20067,
+      "position": 20008,
       "value": "Why it works"
     },
     "corporate/benefits/section-headline": {
       "page": "corporate",
-      "position": 20166,
+      "position": 20107,
       "value": "What your team<br/>actually <em>develops.</em>"
     },
     "corporate/programs/section-tag": {
       "page": "corporate",
-      "position": 23173,
+      "position": 23114,
       "value": "Program types"
     },
     "corporate/programs/section-headline": {
       "page": "corporate",
-      "position": 23273,
+      "position": 23214,
       "value": "Five ways to<br/>work with <em>Legacy X.</em>"
     },
     "corporate/cta-band/cta-headline": {
       "page": "corporate",
-      "position": 26650,
+      "position": 26591,
       "value": "Build a program<br/>for your team."
     },
     "corporate/cta-band/cta-sub": {
       "page": "corporate",
-      "position": 26753,
+      "position": 26694,
       "value": "Tell us the shape of your organization and what you want to achieve. No prior Jiu-Jitsu experience required from anyone on your team."
     },
     "etiquette/meta/title": {
@@ -1002,32 +1002,32 @@
     },
     "schedule/page-header/page-title": {
       "page": "schedule",
-      "position": 15956,
+      "position": 14875,
       "value": "Class<br/><em>Schedule.</em>"
     },
     "schedule/page-header/page-subtitle": {
       "page": "schedule",
-      "position": 16065,
+      "position": 14984,
       "value": "All classes are held at 27 Bysham Park Drive, Woodstock ON. Your first class is always free — just show up."
     },
     "schedule/gymdesk-schedule/schedule-tag": {
       "page": "schedule",
-      "position": 18178,
+      "position": 15337,
       "value": "Live Schedule"
     },
     "schedule/gymdesk-schedule/schedule-headline": {
       "page": "schedule",
-      "position": 18289,
+      "position": 15448,
       "value": "Find your <em>class.</em>"
     },
     "schedule/cta/cta-headline": {
       "page": "schedule",
-      "position": 18795,
+      "position": 15954,
       "value": "First class<br/>is free."
     },
     "schedule/cta/cta-sub": {
       "page": "schedule",
-      "position": 18882,
+      "position": 16041,
       "value": "No experience needed. No commitment required. Pick a class from the schedule above and just show up — we'll take care of the rest."
     },
     "terms/meta/title": {
@@ -2054,7 +2054,7 @@
     },
     "corporate/benefits/benefits-grid": {
       "page": "corporate",
-      "position": 20317,
+      "position": 20258,
       "items": [
         {
           "tpl": 0,
@@ -2114,7 +2114,7 @@
     },
     "corporate/programs/programs-list": {
       "page": "corporate",
-      "position": 23423,
+      "position": 23364,
       "items": [
         {
           "tpl": 0,
@@ -2828,57 +2828,6 @@
             "prog-desc": "Work directly with Coach Francis in a one-on-one setting tailored entirely to your goals, questions, and areas of focus. Whether you're accelerating your fundamentals, preparing for competition, or fixing a specific problem in your game — private lessons deliver results faster than group classes alone.",
             "prog-detail": "<span class=\"prog-detail-icon\">✅</span> Available to all levels",
             "prog-detail-2": "<span class=\"prog-detail-icon\">💬</span> Fully customized to your goals"
-          }
-        }
-      ]
-    },
-    "schedule/quick-info/quick-band-inner": {
-      "page": "schedule",
-      "position": 16335,
-      "items": [
-        {
-          "tpl": 0,
-          "sort": 0,
-          "fields": {
-            "quick-icon": "📅",
-            "quick-label": "Class Days",
-            "quick-value": "Tuesday & Thursday"
-          }
-        },
-        {
-          "tpl": 1,
-          "sort": 1,
-          "fields": {
-            "quick-icon": "🥋",
-            "quick-label": "Adults · 16+",
-            "quick-value": "7:00 PM – 8:00 PM"
-          }
-        },
-        {
-          "tpl": 2,
-          "sort": 2,
-          "fields": {
-            "quick-icon": "🧒",
-            "quick-label": "Little Warriors · 4–6",
-            "quick-value": "6:00 PM – 6:35 PM"
-          }
-        },
-        {
-          "tpl": 3,
-          "sort": 3,
-          "fields": {
-            "quick-icon": "👦",
-            "quick-label": "Juniors & Next Gen · 7–15",
-            "quick-value": "6:00 PM – 6:45 PM"
-          }
-        },
-        {
-          "tpl": 4,
-          "sort": 4,
-          "fields": {
-            "quick-icon": "📍",
-            "quick-label": "Location",
-            "quick-value": "Woodstock, ON"
           }
         }
       ]

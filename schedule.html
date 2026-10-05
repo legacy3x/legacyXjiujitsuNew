@@ -142,30 +142,6 @@ nav {
 .page-title em { font-style: italic; color: var(--blue); }
 .page-subtitle { font-size: 19px; line-height: 1.7; color: var(--muted); max-width: 560px; }
 
-/* ── QUICK INFO BAND ── */
-.quick-band {
-  background: var(--navy); border-bottom: 1px solid var(--border);
-}
-.quick-band-inner {
-  max-width: 1200px; margin: 0 auto; padding: 0 24px;
-  display: flex; align-items: stretch;
-}
-.quick-item {
-  flex: 1; padding: 24px 28px;
-  border-right: 1px solid var(--border);
-  display: flex; align-items: center; gap: 16px;
-}
-.quick-item:last-child { border-right: none; }
-.quick-icon { font-size: 22px; flex-shrink: 0; }
-.quick-label {
-  font-family: var(--ff-display); font-size: 11px; font-weight: 700;
-  letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px;
-}
-.quick-value {
-  font-family: var(--ff-display); font-weight: 800; font-size: 17px;
-  text-transform: uppercase; letter-spacing: 0.5px; color: var(--white); line-height: 1.2;
-}
-
 /* ── GYMDESK SCHEDULE SECTION ── */
 #schedule-section {
   background: var(--dark);
@@ -269,17 +245,12 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 @media (max-width: 900px) {
   .nav-links, .nav-cta, .nav-actions { display: none; }
   .nav-mobile-toggle { display: flex; }
-  .quick-band-inner { flex-wrap: wrap; }
-  .quick-item { flex: 1 1 45%; border-bottom: 1px solid var(--border); }
-  .quick-item:nth-child(2n) { border-right: none; }
-  .quick-item:last-child { flex-basis: 100%; }
   .schedule-header { flex-direction: column; align-items: flex-start; }
   .gymdesk-widget-wrap { padding: 24px 20px; }
   .cta-inner { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 600px) {
-  .quick-item { flex: 1 1 100%; border-right: none; }
   .footer-inner { grid-template-columns: 1fr; }
 }
 
@@ -365,47 +336,6 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
     </div>
     <h1 class="page-title" data-cms="schedule/page-header/page-title">Class<br/><em>Schedule.</em></h1>
     <p class="page-subtitle" data-cms="schedule/page-header/page-subtitle">All classes are held at 27 Bysham Park Drive, Woodstock ON. Your first class is always free — just show up.</p>
-  </div>
-</div>
-
-<!-- ── QUICK INFO ── -->
-<div class="quick-band">
-  <div class="quick-band-inner" data-cms-list="schedule/quick-info/quick-band-inner">
-    <div class="quick-item" data-cms-item="0">
-      <div class="quick-icon" data-cms-field="quick-icon">📅</div>
-      <div>
-        <div class="quick-label" data-cms-field="quick-label">Class Days</div>
-        <div class="quick-value" data-cms-field="quick-value">Tuesday &amp; Thursday</div>
-      </div>
-    </div>
-    <div class="quick-item" data-cms-item="1">
-      <div class="quick-icon" data-cms-field="quick-icon">🥋</div>
-      <div>
-        <div class="quick-label" data-cms-field="quick-label">Adults · 16+</div>
-        <div class="quick-value" data-cms-field="quick-value">7:00 PM – 8:00 PM</div>
-      </div>
-    </div>
-    <div class="quick-item" data-cms-item="2">
-      <div class="quick-icon" data-cms-field="quick-icon">🧒</div>
-      <div>
-        <div class="quick-label" data-cms-field="quick-label">Little Warriors · 4–6</div>
-        <div class="quick-value" data-cms-field="quick-value">6:00 PM – 6:35 PM</div>
-      </div>
-    </div>
-    <div class="quick-item" data-cms-item="3">
-      <div class="quick-icon" data-cms-field="quick-icon">👦</div>
-      <div>
-        <div class="quick-label" data-cms-field="quick-label">Juniors &amp; Next Gen · 7–15</div>
-        <div class="quick-value" data-cms-field="quick-value">6:00 PM – 6:45 PM</div>
-      </div>
-    </div>
-    <div class="quick-item" data-cms-item="4">
-      <div class="quick-icon" data-cms-field="quick-icon">📍</div>
-      <div>
-        <div class="quick-label" data-cms-field="quick-label">Location</div>
-        <div class="quick-value" data-cms-field="quick-value">Woodstock, ON</div>
-      </div>
-    </div>
   </div>
 </div>
 
