@@ -418,7 +418,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
     <!-- SIDEBAR -->
     <div class="faq-sidebar">
       <p class="sidebar-tag" data-cms="faq/sidebar/sidebar-tag">Jump to</p>
-      <nav class="sidebar-nav">
+      <div class="sidebar-nav" role="navigation" aria-label="FAQ topics">
         <button class="sidebar-link active" onclick="scrollToFaq('q1', this)">Getting Started</button>
         <button class="sidebar-link" onclick="scrollToFaq('q2', this)">First Class</button>
         <button class="sidebar-link" onclick="scrollToFaq('q3', this)">Safety</button>
@@ -427,7 +427,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
         <button class="sidebar-link" onclick="scrollToFaq('q6', this)">Free Trial</button>
         <button class="sidebar-link" onclick="scrollToFaq('q7', this)">Gi vs No-Gi</button>
         <button class="sidebar-link" onclick="scrollToFaq('q8', this)">Competition</button>
-      </nav>
+      </div>
 
       <div class="sidebar-cta">
         <p class="sidebar-cta-text" data-cms="faq/sidebar/sidebar-cta-text">
