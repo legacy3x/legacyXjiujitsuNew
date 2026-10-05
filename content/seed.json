@@ -497,87 +497,87 @@
     },
     "index/hero/hero-eyebrow": {
       "page": "index",
-      "position": 25546,
+      "position": 26086,
       "value": "Woodstock, Ontario"
     },
     "index/hero/hero-headline": {
       "page": "index",
-      "position": 25642,
+      "position": 26182,
       "value": "Build your<br/>\nlegacy<br/>\n<span class=\"accent\">on the mat.</span>"
     },
     "index/hero/hero-sub": {
       "page": "index",
-      "position": 25794,
+      "position": 26334,
       "value": "World-class Jiu-Jitsu training for all levels. Join our community and transform your life through martial arts — no experience needed."
     },
     "index/programs/section-tag": {
       "page": "index",
-      "position": 26422,
+      "position": 26962,
       "value": "What we offer"
     },
     "index/programs/section-headline": {
       "page": "index",
-      "position": 26520,
+      "position": 27060,
       "value": "Programs built<br/>for <em>every level.</em>"
     },
     "index/why-legacy-x/section-tag": {
       "page": "index",
-      "position": 30232,
+      "position": 30772,
       "value": "Why Legacy X"
     },
     "index/why-legacy-x/section-headline": {
       "page": "index",
-      "position": 30333,
+      "position": 30873,
       "value": "Built on<br/>the right<br/><em>foundation.</em>"
     },
     "index/testimonials/section-tag": {
       "page": "index",
-      "position": 34204,
+      "position": 34744,
       "value": "From our community"
     },
     "index/testimonials/section-headline": {
       "page": "index",
-      "position": 34307,
+      "position": 34847,
       "value": "What members say."
     },
     "index/testimonials/testimonial-text": {
       "page": "index",
-      "position": 34605,
+      "position": 35145,
       "value": "\"Having trained with Francis for years, I can say firsthand that his technical knowledge is only matched by his integrity as a person. He has created an environment that is technical, safe, and completely ego-free. You’re not just joining a gym—you’re becoming part of a community led by one of the best in the business. I couldn’t be prouder to see him open the doors at Legacy X. Woodstock is lucky to have him!\""
     },
     "index/testimonials/testimonial-meta": {
       "page": "index",
-      "position": 35109,
+      "position": 35649,
       "value": "Rain Plaff · Black Belt"
     },
     "index/gallery/section-tag": {
       "page": "index",
-      "position": 37352,
+      "position": 37892,
       "value": "On the mats"
     },
     "index/gallery/section-headline": {
       "page": "index",
-      "position": 37443,
+      "position": 37983,
       "value": "Legacy X <em>in motion.</em>"
     },
     "index/cta-band/cta-headline": {
       "page": "index",
-      "position": 39097,
+      "position": 39637,
       "value": "Your first class<br/>is on us."
     },
     "index/cta-band/cta-sub": {
       "page": "index",
-      "position": 39192,
+      "position": 39732,
       "value": "No experience needed. No commitment required. Come see what Legacy X is about — bring a friend and train for free together."
     },
     "index/newsletter/newsletter-headline": {
       "page": "index",
-      "position": 39688,
+      "position": 40228,
       "value": "Stay in the loop."
     },
     "index/newsletter/newsletter-sub": {
       "page": "index",
-      "position": 39786,
+      "position": 40326,
       "value": "Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox. No spam, ever."
     },
     "instructors/meta/title": {
@@ -967,32 +967,32 @@
     },
     "programs/page-header/page-title": {
       "page": "programs",
-      "position": 18746,
+      "position": 18004,
       "value": "Six programs.<br/><em>One standard.</em>"
     },
     "programs/page-header/page-subtitle": {
       "page": "programs",
-      "position": 18867,
+      "position": 18125,
       "value": "Every program at Legacy X is built on the same foundation — real Brazilian Jiu-Jitsu, taught with care, regardless of age, experience, or goal. Find the right fit for you."
     },
     "programs/free-trial-band/trial-headline": {
       "page": "programs",
-      "position": 27992,
+      "position": 27168,
       "value": "Not sure which<br/>program is right?"
     },
     "programs/free-trial-band/trial-sub": {
       "page": "programs",
-      "position": 28107,
+      "position": 27283,
       "value": "Try a class for free — no commitment, no experience needed. Come see Legacy X for yourself and we'll help point you in the right direction."
     },
     "programs/newsletter/newsletter-headline": {
       "page": "programs",
-      "position": 28581,
+      "position": 27757,
       "value": "Stay in the loop."
     },
     "programs/newsletter/newsletter-sub": {
       "page": "programs",
-      "position": 28682,
+      "position": 27858,
       "value": "Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox."
     },
     "schedule/meta/title": {
@@ -2407,7 +2407,7 @@
     },
     "index/programs/programs-grid": {
       "page": "index",
-      "position": 26726,
+      "position": 27266,
       "items": [
         {
           "tpl": 0,
@@ -2473,7 +2473,7 @@
     },
     "index/why-legacy-x/why-left": {
       "page": "index",
-      "position": 30394,
+      "position": 30934,
       "items": [
         {
           "tpl": 0,
@@ -2493,7 +2493,7 @@
     },
     "index/why-legacy-x/why-items": {
       "page": "index",
-      "position": 30959,
+      "position": 31499,
       "items": [
         {
           "tpl": 0,
@@ -2530,7 +2530,7 @@
     },
     "index/why-legacy-x/why-right": {
       "page": "index",
-      "position": 33079,
+      "position": 33619,
       "items": [
         {
           "tpl": 0,
@@ -2560,7 +2560,7 @@
     },
     "index/testimonials/testimonials-grid": {
       "page": "index",
-      "position": 35172,
+      "position": 35712,
       "items": [
         {
           "tpl": 0,
@@ -2590,7 +2590,7 @@
     },
     "index/gallery/mosaic": {
       "page": "index",
-      "position": 37624,
+      "position": 38164,
       "items": [
         {
           "tpl": 0,
@@ -2798,7 +2798,7 @@
     },
     "programs/programs-grid/programs-overview-grid": {
       "page": "programs",
-      "position": 19824,
+      "position": 19082,
       "items": [
         {
           "tpl": 0,
@@ -2837,8 +2837,20 @@
           }
         },
         {
-          "tpl": 3,
+          "tpl": 4,
           "sort": 3,
+          "fields": {
+            "prog-icon": "🏆",
+            "prog-tag": "Intermediate–Advanced · Gi & No-Gi",
+            "prog-name": "Competition",
+            "prog-desc": "Structured preparation for IBJJF/OJA-sanctioned events and open tournaments. This program covers competition strategy, drilling under fatigue, live rounds with intensity, and the mental preparation needed to perform under pressure.",
+            "prog-detail": "<span class=\"prog-detail-icon\">🏅</span> OJA registration required to compete",
+            "prog-detail-2": "<span class=\"prog-detail-icon\">✅</span> Some prior training recommended"
+          }
+        },
+        {
+          "tpl": 3,
+          "sort": 4,
           "fields": {
             "prog-icon": "🏅",
             "prog-tag": "55+ · All levels · Low impact",
@@ -2847,18 +2859,6 @@
             "prog-detail": "<span class=\"prog-detail-icon\">✅</span> Modified pacing and partner work",
             "prog-detail-2": "<span class=\"prog-detail-icon\">🧠</span> Focus on movement, health & longevity",
             "prog-detail-3": "<span class=\"prog-detail-icon\">💬</span> No prior experience required"
-          }
-        },
-        {
-          "tpl": 4,
-          "sort": 4,
-          "fields": {
-            "prog-icon": "🏆",
-            "prog-tag": "Intermediate–Advanced · Gi & No-Gi",
-            "prog-name": "Competition",
-            "prog-desc": "Structured preparation for IBJJF/OJA-sanctioned events and open tournaments. This program covers competition strategy, drilling under fatigue, live rounds with intensity, and the mental preparation needed to perform under pressure.",
-            "prog-detail": "<span class=\"prog-detail-icon\">🏅</span> OJA registration required to compete",
-            "prog-detail-2": "<span class=\"prog-detail-icon\">✅</span> Some prior training recommended"
           }
         },
         {

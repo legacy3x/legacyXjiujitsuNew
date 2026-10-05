@@ -265,20 +265,6 @@ nav {
   border: 1px solid rgba(106,63,166,0.3); padding: 4px 10px;
 }
 
-/* ── FULL-WIDTH FEATURE CARD ── */
-.prog-card.wide {
-  grid-column: span 3;
-  flex-direction: row;
-}
-.prog-card.wide .prog-card-top {
-  flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;
-}
-.prog-card.wide .prog-card-bottom {
-  flex-direction: column; justify-content: center; align-items: flex-start;
-  border-top: none; border-left: 1px solid var(--border);
-  padding: 36px 40px; min-width: 240px;
-}
-
 /* ── FREE TRIAL BAND ── */
 .trial-band {
   background: var(--purple); position: relative; overflow: hidden;
@@ -371,16 +357,12 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   .nav-links, .nav-cta, .nav-actions { display: none; }
   .nav-mobile-toggle { display: flex; }
   .programs-overview-grid { grid-template-columns: 1fr 1fr; }
-  .prog-card.wide { grid-column: span 2; flex-direction: column; }
-  .prog-card.wide .prog-card-top { grid-template-columns: 1fr; gap: 20px; }
-  .prog-card.wide .prog-card-bottom { border-left: none; border-top: 1px solid var(--border); flex-direction: row; }
   .trial-inner { grid-template-columns: 1fr; }
   .newsletter-inner { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 600px) {
   .programs-overview-grid { grid-template-columns: 1fr; }
-  .prog-card.wide { grid-column: span 1; }
   .footer-inner { grid-template-columns: 1fr; }
   .filter-inner { gap: 0; }
 }
@@ -538,27 +520,6 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
         </div>
       </div>
 
-      <!-- Jiu-Jitsu Over 55 — wide card -->
-      <div class="prog-card wide featured" data-category="specialty" data-cms-item="3">
-        <div class="prog-card-top">
-          <div>
-            <div class="prog-icon" data-cms-field="prog-icon">🏅</div>
-            <div class="prog-tag" data-cms-field="prog-tag">55+ · All levels · Low impact</div>
-            <h2 class="prog-name" data-cms-field="prog-name">Jiu-Jitsu Over 55</h2>
-            <p class="prog-desc" data-cms-field="prog-desc">Jiu-Jitsu is for every body and every age. This program is designed specifically around the needs, pace, and goals of practitioners 55 and older — prioritizing movement quality, longevity, joint health, and staying active. You'll work on the same foundational principles as our adult program, adapted to train smart and stay on the mats for years to come.</p>
-          </div>
-          <div class="prog-details" style="margin-top:8px;">
-            <div class="prog-detail" data-cms-field="prog-detail"><span class="prog-detail-icon">✅</span> Modified pacing and partner work</div>
-            <div class="prog-detail" data-cms-field="prog-detail-2"><span class="prog-detail-icon">🧠</span> Focus on movement, health &amp; longevity</div>
-            <div class="prog-detail" data-cms-field="prog-detail-3"><span class="prog-detail-icon">💬</span> No prior experience required</div>
-          </div>
-        </div>
-        <div class="prog-card-bottom">
-          <a href="programs/jiu-jitsu-over-55.html" class="prog-link">Learn more <span class="prog-link-arrow">→</span></a>
-          <span class="prog-badge">New Program</span>
-        </div>
-      </div>
-
       <!-- Competition -->
       <div class="prog-card" data-category="adults" data-cms-item="4">
         <div class="prog-card-top">
@@ -573,6 +534,25 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
         </div>
         <div class="prog-card-bottom">
           <a href="programs/competition.html" class="prog-link">Learn more <span class="prog-link-arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- Jiu-Jitsu Over 55 -->
+      <div class="prog-card featured" data-category="specialty" data-cms-item="3">
+        <div class="prog-card-top">
+          <div class="prog-icon" data-cms-field="prog-icon">🏅</div>
+          <div class="prog-tag" data-cms-field="prog-tag">55+ · All levels · Low impact</div>
+          <h2 class="prog-name" data-cms-field="prog-name">Jiu-Jitsu Over 55</h2>
+          <p class="prog-desc" data-cms-field="prog-desc">Jiu-Jitsu is for every body and every age. This program is designed specifically around the needs, pace, and goals of practitioners 55 and older — prioritizing movement quality, longevity, joint health, and staying active. You'll work on the same foundational principles as our adult program, adapted to train smart and stay on the mats for years to come.</p>
+          <div class="prog-details">
+            <div class="prog-detail" data-cms-field="prog-detail"><span class="prog-detail-icon">✅</span> Modified pacing and partner work</div>
+            <div class="prog-detail" data-cms-field="prog-detail-2"><span class="prog-detail-icon">🧠</span> Focus on movement, health &amp; longevity</div>
+            <div class="prog-detail" data-cms-field="prog-detail-3"><span class="prog-detail-icon">💬</span> No prior experience required</div>
+          </div>
+        </div>
+        <div class="prog-card-bottom">
+          <a href="programs/jiu-jitsu-over-55.html" class="prog-link">Learn more <span class="prog-link-arrow">→</span></a>
+          <span class="prog-badge">New Program</span>
         </div>
       </div>
 
