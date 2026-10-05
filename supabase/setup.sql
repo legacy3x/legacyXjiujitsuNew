@@ -139,20 +139,20 @@ insert into public.cms_blocks (key, page, position, value) values
   ('contact/map/map-address-item-3', 'contact', 24287, 'Woodstock, ON, N4T 1P1'),
   ('contact/map/map-address-item-4', 'contact', 24432, '<a href="tel:2263765784" style="color:var(--blue);">(226) 376-5784</a>'),
   ('corporate/meta/title', 'corporate', 195, 'Corporate Wellness — Legacy X Jiu-Jitsu'),
-  ('corporate/hero/hero-eyebrow', 'corporate', 18121, 'Corporate Wellness · Woodstock, Ontario'),
-  ('corporate/hero/hero-title', 'corporate', 18231, 'Build a stronger<br/>team <em>on the mat.</em>'),
-  ('corporate/hero/hero-sub', 'corporate', 18344, 'Brazilian Jiu-Jitsu is a structured environment where your people develop focus, resilience, and genuine team connection — while learning one of the world''s most effective martial arts. No experience required.'),
-  ('corporate/what-it-is/section-tag', 'corporate', 20090, 'What it is'),
-  ('corporate/what-it-is/section-headline', 'corporate', 20189, 'A performance<br/>benefit, not a <em>gym discount.</em>'),
-  ('corporate/what-it-is/p', 'corporate', 20332, 'Legacy X Jiu-Jitsu offers corporate wellness programs for businesses and organizations in Woodstock and the surrounding area. Programs can include <strong>sponsored employee training</strong>, <strong>executive sessions</strong>, <strong>team-building experiences</strong>, and <strong>private corporate classes</strong> — all designed for beginners and customizable around team size, schedule, and goals.'),
-  ('corporate/what-it-is/p-2', 'corporate', 20787, 'Most wellness spending buys access to equipment. Jiu-Jitsu asks something of the participant and gives back across multiple areas your organization already cares about — physical health, focus, resilience, and team culture.'),
-  ('corporate/what-it-is/p-3', 'corporate', 21060, 'The mat is a place where rank means nothing on day one, everyone is a beginner at something, and the only way to improve is through the people around you. That culture is the reason it transfers.'),
-  ('corporate/benefits/section-tag', 'corporate', 21476, 'Why it works'),
-  ('corporate/benefits/section-headline', 'corporate', 21575, 'What your team<br/>actually <em>develops.</em>'),
-  ('corporate/programs/section-tag', 'corporate', 24582, 'Program types'),
-  ('corporate/programs/section-headline', 'corporate', 24682, 'Five ways to<br/>work with <em>Legacy X.</em>'),
-  ('corporate/cta-band/cta-headline', 'corporate', 28059, 'Build a program<br/>for your team.'),
-  ('corporate/cta-band/cta-sub', 'corporate', 28162, 'Tell us the shape of your organization and what you want to achieve. No prior Jiu-Jitsu experience required from anyone on your team.'),
+  ('corporate/hero/hero-eyebrow', 'corporate', 17800, 'Corporate Wellness · Woodstock, Ontario'),
+  ('corporate/hero/hero-title', 'corporate', 17910, 'Build a stronger<br/>team <em>on the mat.</em>'),
+  ('corporate/hero/hero-sub', 'corporate', 18023, 'Brazilian Jiu-Jitsu is a structured environment where your people develop focus, resilience, and genuine team connection — while learning one of the world''s most effective martial arts. No experience required.'),
+  ('corporate/what-it-is/section-tag', 'corporate', 18681, 'What it is'),
+  ('corporate/what-it-is/section-headline', 'corporate', 18780, 'A performance<br/>benefit, not a <em>gym discount.</em>'),
+  ('corporate/what-it-is/p', 'corporate', 18923, 'Legacy X Jiu-Jitsu offers corporate wellness programs for businesses and organizations in Woodstock and the surrounding area. Programs can include <strong>sponsored employee training</strong>, <strong>executive sessions</strong>, <strong>team-building experiences</strong>, and <strong>private corporate classes</strong> — all designed for beginners and customizable around team size, schedule, and goals.'),
+  ('corporate/what-it-is/p-2', 'corporate', 19378, 'Most wellness spending buys access to equipment. Jiu-Jitsu asks something of the participant and gives back across multiple areas your organization already cares about — physical health, focus, resilience, and team culture.'),
+  ('corporate/what-it-is/p-3', 'corporate', 19651, 'The mat is a place where rank means nothing on day one, everyone is a beginner at something, and the only way to improve is through the people around you. That culture is the reason it transfers.'),
+  ('corporate/benefits/section-tag', 'corporate', 20067, 'Why it works'),
+  ('corporate/benefits/section-headline', 'corporate', 20166, 'What your team<br/>actually <em>develops.</em>'),
+  ('corporate/programs/section-tag', 'corporate', 23173, 'Program types'),
+  ('corporate/programs/section-headline', 'corporate', 23273, 'Five ways to<br/>work with <em>Legacy X.</em>'),
+  ('corporate/cta-band/cta-headline', 'corporate', 26650, 'Build a program<br/>for your team.'),
+  ('corporate/cta-band/cta-sub', 'corporate', 26753, 'Tell us the shape of your organization and what you want to achieve. No prior Jiu-Jitsu experience required from anyone on your team.'),
   ('etiquette/meta/title', 'etiquette', 195, 'Dojo Etiquette — Legacy X Jiu-Jitsu'),
   ('etiquette/page-header/page-title', 'etiquette', 16995, 'Mat Rules &amp;<br/><em>Code of Conduct.</em>'),
   ('etiquette/page-header/page-subtitle', 'etiquette', 17122, 'Following these guidelines shows respect for the art, the academy, and every person you train with.'),
@@ -483,9 +483,8 @@ insert into public.cms_lists (key, page, position, fields) values
   ('about/values/values-grid', 'about', 28926, array['value-icon', 'value-name', 'value-desc']::text[]),
   ('about/oja/oja-visual', 'about', 33303, array['oja-stat-num', 'oja-stat-label']::text[]),
   ('contact/left-info/info-block', 'contact', 19762, array['info-block-label', 'info-block-value', 'info-block-sub']::text[]),
-  ('corporate/hero/hero-right', 'corporate', 18902, array['hero-block-num', 'hero-block-label']::text[]),
-  ('corporate/benefits/benefits-grid', 'corporate', 21726, array['benefit-num', 'benefit-title', 'benefit-desc']::text[]),
-  ('corporate/programs/programs-list', 'corporate', 24832, array['program-row-num', 'program-row-title', 'program-row-desc', 'program-row-tag']::text[]),
+  ('corporate/benefits/benefits-grid', 'corporate', 20317, array['benefit-num', 'benefit-title', 'benefit-desc']::text[]),
+  ('corporate/programs/programs-list', 'corporate', 23423, array['program-row-num', 'program-row-title', 'program-row-desc', 'program-row-tag']::text[]),
   ('etiquette/rules/rules-grid', 'etiquette', 17949, array['rule-number', 'rule-icon', 'rule-title', 'rule-body']::text[]),
   ('etiquette/culture/culture-right', 'etiquette', 23217, array['culture-block-title', 'culture-block-body']::text[]),
   ('faq/faq-list/faq-list', 'faq', 19169, array['faq-q-text', 'p']::text[]),
@@ -574,15 +573,6 @@ select * from (values
   ('contact/left-info/info-block', 2, 2, '{"info-block-label":"📍 Address","info-block-value":"27 Bysham Park Drive<br/>Unit 1<br/>Woodstock, ON, N4T 1P1"}'::jsonb)
 ) v(list_key, tpl, sort, fields)
 where not exists (select 1 from public.cms_items where list_key = 'contact/left-info/info-block');
-
-insert into public.cms_items (list_key, tpl, sort, fields)
-select * from (values
-  ('corporate/hero/hero-right', 0, 0, '{"hero-block-num":"0","hero-block-label":"Experience required to start"}'::jsonb),
-  ('corporate/hero/hero-right', 1, 1, '{"hero-block-num":"6","hero-block-label":"Programs available"}'::jsonb),
-  ('corporate/hero/hero-right', 2, 2, '{"hero-block-num":"1<span>hr</span>","hero-block-label":"Intro session — complimentary"}'::jsonb),
-  ('corporate/hero/hero-right', 3, 3, '{"hero-block-num":"2<span>×</span>","hero-block-label":"Weekly training recommended"}'::jsonb)
-) v(list_key, tpl, sort, fields)
-where not exists (select 1 from public.cms_items where list_key = 'corporate/hero/hero-right');
 
 insert into public.cms_items (list_key, tpl, sort, fields)
 select * from (values

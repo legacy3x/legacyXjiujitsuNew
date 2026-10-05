@@ -282,72 +282,72 @@
     },
     "corporate/hero/hero-eyebrow": {
       "page": "corporate",
-      "position": 18121,
+      "position": 17800,
       "value": "Corporate Wellness · Woodstock, Ontario"
     },
     "corporate/hero/hero-title": {
       "page": "corporate",
-      "position": 18231,
+      "position": 17910,
       "value": "Build a stronger<br/>team <em>on the mat.</em>"
     },
     "corporate/hero/hero-sub": {
       "page": "corporate",
-      "position": 18344,
+      "position": 18023,
       "value": "Brazilian Jiu-Jitsu is a structured environment where your people develop focus, resilience, and genuine team connection — while learning one of the world's most effective martial arts. No experience required."
     },
     "corporate/what-it-is/section-tag": {
       "page": "corporate",
-      "position": 20090,
+      "position": 18681,
       "value": "What it is"
     },
     "corporate/what-it-is/section-headline": {
       "page": "corporate",
-      "position": 20189,
+      "position": 18780,
       "value": "A performance<br/>benefit, not a <em>gym discount.</em>"
     },
     "corporate/what-it-is/p": {
       "page": "corporate",
-      "position": 20332,
+      "position": 18923,
       "value": "Legacy X Jiu-Jitsu offers corporate wellness programs for businesses and organizations in Woodstock and the surrounding area. Programs can include <strong>sponsored employee training</strong>, <strong>executive sessions</strong>, <strong>team-building experiences</strong>, and <strong>private corporate classes</strong> — all designed for beginners and customizable around team size, schedule, and goals."
     },
     "corporate/what-it-is/p-2": {
       "page": "corporate",
-      "position": 20787,
+      "position": 19378,
       "value": "Most wellness spending buys access to equipment. Jiu-Jitsu asks something of the participant and gives back across multiple areas your organization already cares about — physical health, focus, resilience, and team culture."
     },
     "corporate/what-it-is/p-3": {
       "page": "corporate",
-      "position": 21060,
+      "position": 19651,
       "value": "The mat is a place where rank means nothing on day one, everyone is a beginner at something, and the only way to improve is through the people around you. That culture is the reason it transfers."
     },
     "corporate/benefits/section-tag": {
       "page": "corporate",
-      "position": 21476,
+      "position": 20067,
       "value": "Why it works"
     },
     "corporate/benefits/section-headline": {
       "page": "corporate",
-      "position": 21575,
+      "position": 20166,
       "value": "What your team<br/>actually <em>develops.</em>"
     },
     "corporate/programs/section-tag": {
       "page": "corporate",
-      "position": 24582,
+      "position": 23173,
       "value": "Program types"
     },
     "corporate/programs/section-headline": {
       "page": "corporate",
-      "position": 24682,
+      "position": 23273,
       "value": "Five ways to<br/>work with <em>Legacy X.</em>"
     },
     "corporate/cta-band/cta-headline": {
       "page": "corporate",
-      "position": 28059,
+      "position": 26650,
       "value": "Build a program<br/>for your team."
     },
     "corporate/cta-band/cta-sub": {
       "page": "corporate",
-      "position": 28162,
+      "position": 26753,
       "value": "Tell us the shape of your organization and what you want to achieve. No prior Jiu-Jitsu experience required from anyone on your team."
     },
     "etiquette/meta/title": {
@@ -2052,47 +2052,9 @@
         }
       ]
     },
-    "corporate/hero/hero-right": {
-      "page": "corporate",
-      "position": 18902,
-      "items": [
-        {
-          "tpl": 0,
-          "sort": 0,
-          "fields": {
-            "hero-block-num": "0",
-            "hero-block-label": "Experience required to start"
-          }
-        },
-        {
-          "tpl": 1,
-          "sort": 1,
-          "fields": {
-            "hero-block-num": "6",
-            "hero-block-label": "Programs available"
-          }
-        },
-        {
-          "tpl": 2,
-          "sort": 2,
-          "fields": {
-            "hero-block-num": "1<span>hr</span>",
-            "hero-block-label": "Intro session — complimentary"
-          }
-        },
-        {
-          "tpl": 3,
-          "sort": 3,
-          "fields": {
-            "hero-block-num": "2<span>×</span>",
-            "hero-block-label": "Weekly training recommended"
-          }
-        }
-      ]
-    },
     "corporate/benefits/benefits-grid": {
       "page": "corporate",
-      "position": 21726,
+      "position": 20317,
       "items": [
         {
           "tpl": 0,
@@ -2152,7 +2114,7 @@
     },
     "corporate/programs/programs-list": {
       "page": "corporate",
-      "position": 24832,
+      "position": 23423,
       "items": [
         {
           "tpl": 0,

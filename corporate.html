@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <title data-cms="corporate/meta/title">Corporate Wellness — Legacy X Jiu-Jitsu</title>
+<link rel="preload" as="image" href="images/corporate-meeting.webp" fetchpriority="high"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -114,8 +115,12 @@ nav {
 
 /* ── HERO ── */
 .hero {
-  background: var(--navy); position: relative; overflow: hidden;
-  padding: 96px 0 80px;
+  /* Photo with a navy overlay, darker on the left where the headline sits */
+  background:
+    linear-gradient(to right, rgba(13,18,32,0.94) 0%, rgba(20,27,54,0.82) 48%, rgba(26,35,70,0.5) 100%),
+    var(--navy) url('images/corporate-meeting.webp') center / cover no-repeat;
+  position: relative; overflow: hidden;
+  padding: 128px 0 112px;
 }
 .hero::after {
   content: 'CORP';
@@ -126,9 +131,9 @@ nav {
 }
 .hero-inner {
   max-width: 1200px; margin: 0 auto; padding: 0 24px;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
   position: relative; z-index: 1;
 }
+.hero-inner > div { max-width: 640px; }
 .hero-eyebrow {
   font-family: var(--ff-display); font-size: 12px; font-weight: 700;
   letter-spacing: 3px; text-transform: uppercase; color: var(--blue); margin-bottom: 20px;
@@ -160,21 +165,6 @@ nav {
   display: inline-block; transition: border-color 0.2s, color 0.2s;
 }
 .btn-outline:hover { border-color: var(--white); }
-
-/* Hero right — visual blocks */
-.hero-right { display: flex; flex-direction: column; gap: 3px; }
-.hero-block {
-  background: rgba(255,255,255,0.05); padding: 28px 32px;
-  border-left: 4px solid transparent; transition: border-color 0.2s;
-}
-.hero-block:hover { border-left-color: var(--blue); }
-.hero-block.accent { border-left-color: var(--purple); }
-.hero-block-num {
-  font-family: var(--ff-display); font-weight: 900; font-size: 42px;
-  line-height: 1; color: var(--white); letter-spacing: -1px;
-}
-.hero-block-num span { color: var(--blue); }
-.hero-block-label { font-size: 14px; color: var(--muted); margin-top: 6px; }
 
 /* ── WHAT IT IS ── */
 #what { background: var(--dark); padding: 96px 0; }
@@ -310,9 +300,9 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 @media (max-width: 900px) {
   .nav-links, .nav-cta, .nav-actions { display: none; }
   .nav-mobile-toggle { display: flex; }
-  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
-  .hero-right { flex-direction: row; flex-wrap: wrap; }
-  .hero-block { flex: 1 1 45%; }
+  .hero { padding: 104px 0 80px; background:
+    linear-gradient(rgba(13,18,32,0.88), rgba(20,27,54,0.86)),
+    var(--navy) url('images/corporate-meeting.webp') center / cover no-repeat; }
   .what-inner { grid-template-columns: 1fr; gap: 48px; }
   .benefits-grid { grid-template-columns: 1fr 1fr; }
   .program-row { grid-template-columns: 1fr; gap: 12px; }
@@ -323,7 +313,6 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 @media (max-width: 600px) {
   .benefits-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
-  .hero-right { flex-direction: column; }
 }
 
 /* Full nav needs ~1140px; switch to the menu button below that */
@@ -408,24 +397,6 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
       <div class="hero-actions">
         <a href="https://rgatexas.com/corporate-wellness/#corporate-form" target="_blank" class="btn-primary">Build a Program for Your Team</a>
         <a href="contact.html" class="btn-outline">Contact Us</a>
-      </div>
-    </div>
-    <div class="hero-right" data-cms-list="corporate/hero/hero-right">
-      <div class="hero-block accent" data-cms-item="0">
-        <div class="hero-block-num" data-cms-field="hero-block-num">0</div>
-        <div class="hero-block-label" data-cms-field="hero-block-label">Experience required to start</div>
-      </div>
-      <div class="hero-block" data-cms-item="1">
-        <div class="hero-block-num" data-cms-field="hero-block-num">6</div>
-        <div class="hero-block-label" data-cms-field="hero-block-label">Programs available</div>
-      </div>
-      <div class="hero-block" data-cms-item="2">
-        <div class="hero-block-num" data-cms-field="hero-block-num">1<span>hr</span></div>
-        <div class="hero-block-label" data-cms-field="hero-block-label">Intro session — complimentary</div>
-      </div>
-      <div class="hero-block" data-cms-item="3">
-        <div class="hero-block-num" data-cms-field="hero-block-num">2<span>×</span></div>
-        <div class="hero-block-label" data-cms-field="hero-block-label">Weekly training recommended</div>
       </div>
     </div>
   </div>
