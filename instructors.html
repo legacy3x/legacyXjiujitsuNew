@@ -181,6 +181,11 @@ nav {
   z-index: 2;
 }
 
+/* Instructor photo uploaded in the admin (Instructors page). Empty until one is added. */
+.instructor-photo { position: absolute; inset: 0; z-index: 3; }
+.instructor-photo:empty { display: none; }
+.instructor-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block; }
+
 /* Belt stripe beneath photo */
 .coach-belt-bar { display: flex; height: 8px; }
 .coach-belt-bar span { flex: 1; }
@@ -498,6 +503,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
     <div class="head-coach" id="francis">
       <div class="coach-photo-col">
         <div class="photo-placeholder">
+          <div class="instructor-photo" data-cms="instructors/head-coach-francis-yanga/coach-photo"></div>
           <div class="photo-initials" data-cms="instructors/head-coach-francis-yanga/photo-initials">FY</div>
           <div class="photo-add-note" data-cms="instructors/head-coach-francis-yanga/photo-add-note">Photo coming soon</div>
         </div>
@@ -551,6 +557,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
     <div class="instructor-card" id="brandon">
       <div class="card-photo-col">
         <div class="card-photo-placeholder">
+          <div class="instructor-photo" data-cms="instructors/brandon-colvin/coach-photo"></div>
           <div class="card-initials" data-cms="instructors/brandon-colvin/card-initials">BC</div>
           <div class="card-add-note" data-cms="instructors/brandon-colvin/card-add-note">Photo coming soon</div>
         </div>

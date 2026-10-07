@@ -17,6 +17,7 @@ const WORDS = {
   meta: 'Page info', title: 'Browser tab title', description: 'Search engine description', main: 'Main',
   'placeholder-event-3': 'No events message',
   mosaic: 'Gallery photos', 'mosaic-photo': 'Photo', 'mosaic-cell-label': 'Caption',
+  'coach-photo': 'Instructor photo',
   'mosaic-placeholder-text': 'Placeholder text (shown when there is no photo)',
 };
 const EVENTS_LABEL = 'View Events / Add Events';
@@ -259,7 +260,16 @@ async function shrinkImage(file, maxSide = 1600) {
   return { blob: jpeg, ext: 'jpg', type: 'image/jpeg' };
 }
 
-function photoField(value, onChange) {
+// Recommended photo shape for each kind of photo field, shown under the upload button.
+function photoHint(key) {
+  if (key.startsWith('instructors/')) {
+    return 'Best: a portrait (upright) photo, 3:4 shape — at least 900 × 1200 px — with the face in the upper third. Also used on the About and program pages.';
+  }
+  if (key.includes('mosaic')) return 'Best: at least 1200 px wide. The first box is tall (portrait works best); the others are wide.';
+  return 'Best: at least 1200 px on the long side.';
+}
+
+function photoField(value, onChange, hint = '') {
   const wrap = document.createElement('div');
   wrap.className = 'photo-field';
   const img = document.createElement('img');
@@ -285,6 +295,7 @@ function photoField(value, onChange) {
     pick.textContent = src ? 'Replace photo' : 'Upload photo';
   };
   show(photoSrc(value));
+  note.textContent = hint;
 
   pick.addEventListener('click', () => input.click());
   remove.addEventListener('click', () => { onChange(''); show(''); note.textContent = 'Photo removed — save to apply.'; });
@@ -344,6 +355,11 @@ function renderBlock(b, name) {
   wrap.className = 'block';
   const label = document.createElement('label');
   label.textContent = humanize(name);
+  if (PHOTO_FIELD.test(name)) {
+    wrap.append(label, photoField(b.value, (v) => { b.value = v; refreshDirty(); }, photoHint(b.key)));
+    wrap.dataset.search = label.textContent.toLowerCase();
+    return wrap;
+  }
   const t = textarea(b.value, (v, el) => { b.value = v; el.classList.toggle('dirty', v !== b.original); });
   wrap.append(label, t);
   wrap.dataset.search = `${label.textContent} ${b.value}`.toLowerCase();
@@ -417,7 +433,7 @@ function renderItem(l, it, i) {
     const label = document.createElement('label');
     label.textContent = humanize(name);
     const control = isPhoto
-      ? photoField(it.fields[name] || '', (v) => { it.fields[name] = v; it.dirty = true; refreshDirty(); })
+      ? photoField(it.fields[name] || '', (v) => { it.fields[name] = v; it.dirty = true; refreshDirty(); }, photoHint(l.key))
       : textarea(it.fields[name], (v, el) => { it.fields[name] = v; it.dirty = true; el.classList.add('dirty'); });
     f.append(label, control);
     card.append(f);

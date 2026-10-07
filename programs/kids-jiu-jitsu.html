@@ -290,8 +290,12 @@ nav {
 .coach-photo {
   background: linear-gradient(160deg, var(--purple) 0%, var(--navy) 100%);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  min-height: 300px; position: relative;
+  min-height: 300px; position: relative; overflow: hidden;
 }
+/* Instructor photo uploaded in the admin (Instructors page). Empty until one is added. */
+.instructor-photo { position: absolute; inset: 0; z-index: 3; }
+.instructor-photo:empty { display: none; }
+.instructor-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block; }
 .coach-initials {
   font-family: var(--ff-display); font-weight: 900; font-size: 96px;
   color: rgba(255,255,255,0.9); letter-spacing: 2px; line-height: 1;
@@ -731,6 +735,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 
     <div class="coach-card">
       <div class="coach-photo">
+        <div class="instructor-photo" data-cms="instructors/brandon-colvin/coach-photo"></div>
         <div class="coach-initials" data-cms="programs/kids-jiu-jitsu/coach/coach-initials">BC</div>
         <div class="coach-belt brown"><span></span></div>
       </div>
