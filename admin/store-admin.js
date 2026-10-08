@@ -131,13 +131,23 @@ export function mountStore({ sb, root, setStatus }) {
       say('Looking up your Printful stores…');
       const { stores } = await api('stores');
       const todo = [];
+      // Stores connected to Shopify, Etsy etc. can't be read or ordered from through the API — skip them.
+      const skipped = [];
       for (const s of stores) {
-        for (let offset = 0; ; offset += 100) {
-          say(`Reading products from ${s.name}…`);
-          const page = await api('products', { store_id: s.id, offset });
-          todo.push(...page.products.filter((p) => !p.ignored).map((p) => ({ store: s, product: p })));
-          if (offset + 100 >= page.total) break;
+        try {
+          for (let offset = 0; ; offset += 100) {
+            say(`Reading products from ${s.name}…`);
+            const page = await api('products', { store_id: s.id, offset });
+            todo.push(...page.products.filter((p) => !p.ignored).map((p) => ({ store: s, product: p })));
+            if (offset + 100 >= page.total) break;
+          }
+        } catch (err) {
+          console.error('store skipped', s.name, err);
+          skipped.push(`${s.name}${s.type ? ` (${s.type})` : ''}`);
         }
+      }
+      if (skipped.length === stores.length) {
+        throw new Error(`none of your Printful stores can be used here: ${skipped.join(', ')}. The website needs a Printful store of the type "Manual order platform / API".`);
       }
       let failed = 0;
       for (const [i, { store, product }] of todo.entries()) {
@@ -149,7 +159,8 @@ export function mountStore({ sb, root, setStatus }) {
           console.error('sync failed', product.name, err);
         }
       }
-      setStatus(`Synced ${todo.length - failed} product${todo.length - failed === 1 ? '' : 's'} from ${stores.length} store${stores.length === 1 ? '' : 's'}${failed ? ` (${failed} failed — try again)` : ''}.`, failed ? 'warn' : 'ok');
+      const used = stores.length - skipped.length;
+      setStatus(`Synced ${todo.length - failed} product${todo.length - failed === 1 ? '' : 's'} from ${used} store${used === 1 ? '' : 's'}${failed ? ` (${failed} failed — try again)` : ''}${skipped.length ? `. Skipped ${skipped.join(', ')} — not a "Manual order platform / API" store` : ''}.`, failed || skipped.length ? 'warn' : 'ok');
       await showProducts();
     } catch (err) {
       setStatus(`Sync failed — ${err.message}`, 'err');
