@@ -13,7 +13,7 @@ const FULFILLMENT = {
 };
 const PAYMENT = { paid: ['Paid', 'on'], pending: ['Not paid', 'off'], cancelled: ['Abandoned', 'off'] };
 
-export function mountStore({ sb, root, setStatus }) {
+export function mountStore({ sb, root, setStatus, shrinkImage }) {
   let tab = 'products';
   let products = [];
   let storeFilter = '';
@@ -66,7 +66,7 @@ export function mountStore({ sb, root, setStatus }) {
             ${sellable ? '' : '<div class="sub warn">No retail price set in Printful — it can\'t be sold yet.</div>'}</td>
           <td>${sellable ? esc(price) : '—'}</td>
           <td><label class="check"><input type="checkbox" data-act="live" ${p.live ? 'checked' : ''} ${sellable ? '' : 'disabled'}/> <span class="pill ${p.live ? 'on' : 'off'}">${p.live ? 'Live' : 'Hidden'}</span></label></td>
-          <td class="actions"><button class="btn btn-sm" data-act="describe">Description</button> <button class="btn btn-sm btn-danger" data-act="remove">Remove</button></td>
+          <td class="actions"><button class="btn btn-sm" data-act="describe">Details &amp; photos</button> <button class="btn btn-sm btn-danger" data-act="remove">Remove</button></td>
         </tr>`;
     }).join('');
 
@@ -110,7 +110,81 @@ export function mountStore({ sb, root, setStatus }) {
           <textarea class="field-input" id="st-desc" rows="8">${esc(p.description)}</textarea>
           <small>Shown on the product page. Leave a blank line between paragraphs.</small></div>
         <div class="form-actions" style="margin-top:14px;"><button class="btn btn-primary" id="st-save">Save description</button></div>
+        <div class="field full" style="margin-top:28px;"><label>Extra photos</label>
+          <div id="st-photos" style="display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 12px;"></div>
+          <input type="file" id="st-photo-file" accept="image/*" multiple hidden/>
+          <button class="btn" id="st-photo-add" type="button">Add photos</button>
+          <small>Shown as small pictures under the main photo on the product page, in this order. The main photo still comes from Printful and changes with the colour picked. Square photos, about 1200 × 1200, look best. Saved as soon as you add, move or remove one.</small></div>
       </div>`);
+
+    // Extra photos: stored in the site-photos bucket, their addresses saved on the product.
+    const savePhotos = async (next) => {
+      const { error } = await sb.from('store_products').update({ photos: next }).eq('id', p.id);
+      if (error) { setStatus(`Photos not saved — ${error.message}. Has supabase/add-store-photos.sql been run?`, 'err'); return false; }
+      p.photos = next;
+      drawPhotos();
+      return true;
+    };
+    const drawPhotos = () => {
+      const list = p.photos || [];
+      const box = body.querySelector('#st-photos');
+      box.innerHTML = list.length ? list.map((src, i) => `
+        <div data-i="${i}" style="width:112px;">
+          <img src="${esc(src)}" alt="" style="width:112px;height:112px;object-fit:cover;background:#f4f5f7;display:block;"/>
+          <div style="display:flex;gap:4px;margin-top:4px;">
+            <button class="btn btn-sm" type="button" data-move="-1" title="Move earlier" aria-label="Move photo ${i + 1} earlier"${i === 0 ? ' disabled' : ''}>←</button>
+            <button class="btn btn-sm" type="button" data-move="1" title="Move later" aria-label="Move photo ${i + 1} later"${i === list.length - 1 ? ' disabled' : ''}>→</button>
+            <button class="btn btn-sm btn-danger" type="button" data-del title="Remove" aria-label="Remove photo ${i + 1}">✕</button>
+          </div>
+        </div>`).join('') : '<span class="sub">No extra photos yet.</span>';
+    };
+    drawPhotos();
+    body.querySelector('#st-photos').addEventListener('click', async (e) => {
+      const btn = e.target.closest('button');
+      if (!btn) return;
+      const i = Number(btn.closest('[data-i]').dataset.i);
+      const next = [...(p.photos || [])];
+      if (btn.dataset.move) {
+        const j = i + Number(btn.dataset.move);
+        [next[i], next[j]] = [next[j], next[i]];
+        await savePhotos(next);
+      } else if (confirm('Remove this photo from the product page?')) {
+        const [gone] = next.splice(i, 1);
+        if (await savePhotos(next)) {
+          const path = gone.split('/site-photos/')[1];
+          if (path) sb.storage.from('site-photos').remove([decodeURIComponent(path)]); // tidy up; fine if it fails
+          setStatus('Photo removed.', 'ok');
+        }
+      }
+    });
+    const addBtn = body.querySelector('#st-photo-add');
+    const fileInput = body.querySelector('#st-photo-file');
+    addBtn.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', async () => {
+      const files = [...fileInput.files];
+      fileInput.value = '';
+      if (!files.length) return;
+      addBtn.disabled = true;
+      const next = [...(p.photos || [])];
+      let failed = 0;
+      for (const [n, file] of files.entries()) {
+        setStatus(`Uploading photo ${n + 1} of ${files.length}…`);
+        try {
+          const { blob, ext, type } = await shrinkImage(file);
+          const path = `store/${p.id}/${Date.now()}-${n}.${ext}`;
+          const up = await sb.storage.from('site-photos').upload(path, blob, { contentType: type, cacheControl: '31536000' });
+          if (up.error) throw up.error;
+          next.push(sb.storage.from('site-photos').getPublicUrl(path).data.publicUrl);
+        } catch (err) {
+          failed++;
+          console.error('photo upload failed', file.name, err);
+        }
+      }
+      addBtn.disabled = false;
+      if (next.length === (p.photos || []).length) return setStatus('Upload failed — please try again with a JPG or PNG photo.', 'err');
+      if (await savePhotos(next)) setStatus(`${files.length - failed} photo${files.length - failed === 1 ? '' : 's'} added${failed ? ` (${failed} failed)` : ''}.`, failed ? 'warn' : 'ok');
+    });
+
     body.querySelector('#st-back').addEventListener('click', () => renderProducts());
     body.querySelector('#st-save').addEventListener('click', async () => {
       const description = body.querySelector('#st-desc').value.trim();

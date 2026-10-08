@@ -6,6 +6,7 @@
   let product = null;
   let variants = [];
   const choice = { color: null, size: null };
+  let shown = 0; // which photo is in the big frame (0 = the chosen colour's own photo)
 
   const unique = (key) => [...new Set(variants.map((v) => v[key]).filter(Boolean))];
   // The variant matching the current colour + size (either may not apply to this product).
@@ -38,15 +39,23 @@
     options('size', 'Size');
     const v = current();
     $('pd-price').textContent = v ? money(v.price_cents, v.currency) : '';
-    const img = v?.image || product.thumbnail_url;
-    if (img) { $('pd-image').src = img; $('pd-image').alt = product.name; $('pd-image').hidden = false; }
+    // First photo follows the chosen colour; the rest are the extra photos added in the admin.
+    const photos = [v?.image || product.thumbnail_url, ...(product.photos || [])].filter(Boolean);
+    if (shown >= photos.length) shown = 0;
+    if (photos.length) { $('pd-image').src = photos[shown]; $('pd-image').alt = product.name; $('pd-image').hidden = false; }
+    $('pd-thumbs').hidden = photos.length < 2;
+    $('pd-thumbs').innerHTML = photos.length < 2 ? '' : photos.map((src, i) =>
+      `<button type="button" class="pd-thumb${i === shown ? ' active' : ''}" data-photo="${i}" aria-label="Photo ${i + 1} of ${photos.length}"${i === shown ? ' aria-current="true"' : ''}><img src="${esc(src)}" alt="" loading="lazy"/></button>`).join('');
     $('pd-add').disabled = !v;
     $('pd-add').textContent = v ? 'Add to cart' : 'Unavailable';
   }
 
   $('pd-body').addEventListener('click', (e) => {
+    const thumb = e.target.closest('.pd-thumb');
+    if (thumb) { shown = Number(thumb.dataset.photo); render(); return; }
     const b = e.target.closest('.pd-option');
     if (!b || b.disabled) return;
+    shown = 0; // a new colour or size shows that option's own photo
     choice[b.dataset.key] = b.dataset.value;
     // If the other option no longer fits, move it to one that does.
     if (!current()) {

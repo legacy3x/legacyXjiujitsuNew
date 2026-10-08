@@ -43,6 +43,8 @@ and `store-cart.html` read live products straight from the database. Checkout pr
 (`netlify/lib/store.mjs`), takes payment with Stripe Checkout, and the Stripe webhook then creates the Printful
 order(s) — as drafts unless "send automatically" is on in the store settings. One Printful order is created
 per Printful store in the cart.
+Extra product photos are uploaded in the admin (**Details & photos**) to the `site-photos` bucket and saved in
+`store_products.photos` (`supabase/add-store-photos.sql`); a re-sync leaves them alone.
 
 ## Changing the design or adding content
 

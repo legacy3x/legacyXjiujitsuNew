@@ -80,7 +80,7 @@ async function enterApp(session) {
   $('login').hidden = true;
   $('app').hidden = false;
   eventsUI = mountEvents({ sb, root: $('events-view'), setStatus });
-  storeUI = mountStore({ sb, root: $('store-view'), setStatus });
+  storeUI = mountStore({ sb, root: $('store-view'), setStatus, shrinkImage });
   await loadPages();
   const wanted = decodeURIComponent(location.hash.slice(1));
   await openPage([EVENTS, STORE].includes(wanted) || pages.some((p) => p.id === wanted) ? wanted : 'index');

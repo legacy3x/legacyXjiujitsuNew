@@ -411,6 +411,13 @@ input[type="date"].form-input { color-scheme: dark; }
 .pd { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
 .pd-media { background: #f4f5f7; aspect-ratio: 1; border-top: 3px solid var(--blue); }
 .pd-media img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.pd-gallery { min-width: 0; }
+.pd-thumbs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 10px; }
+.pd-thumbs[hidden] { display: none; }
+.pd-thumb { padding: 0; background: #f4f5f7; border: 2px solid transparent; aspect-ratio: 1; cursor: pointer; overflow: hidden; }
+.pd-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pd-thumb:hover { border-color: rgba(58,143,216,0.6); }
+.pd-thumb.active { border-color: var(--blue); }
 .pd-price { font-family: var(--ff-display); font-weight: 900; font-size: 38px; margin-bottom: 24px; }
 .pd-group { margin-bottom: 22px; }
 .pd-label { font-family: var(--ff-display); font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; display: block; }
@@ -637,7 +644,10 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 <section class="shop-section">
   <div class="shop-inner">
     <div class="pd" id="pd-body" hidden>
-      <div class="pd-media"><img id="pd-image" alt="" hidden/></div>
+      <div class="pd-gallery">
+        <div class="pd-media"><img id="pd-image" alt="" hidden/></div>
+        <div class="pd-thumbs" id="pd-thumbs" hidden></div>
+      </div>
       <div class="pd-info">
         <div class="pd-price" id="pd-price"></div>
         <div class="pd-group" id="pd-color" hidden></div>

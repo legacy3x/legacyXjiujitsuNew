@@ -22,6 +22,8 @@ create table if not exists public.store_products (
   created_at          timestamptz not null default now(),
   unique (printful_store_id, printful_product_id)
 );
+-- Extra photos added in the admin, shown on the product page: ["https://…", …]
+alter table public.store_products add column if not exists photos jsonb not null default '[]'::jsonb;
 create index if not exists store_products_live_idx on public.store_products (live, sort);
 
 -- ── Orders placed on the website ──
