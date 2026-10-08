@@ -24,7 +24,8 @@ design templates; the build fills in their text from the database.
 | `RESEND_EVENTS_SEGMENT_ID` | optional — put event registrants in their own Resend segment |
 | `SUPABASE_SERVICE_ROLE_KEY` | event registration functions (secret — Functions scope only) |
 | `STRIPE_SECRET_KEY` | card payments for events |
-| `STRIPE_WEBHOOK_SECRET` | confirms card payments (`/api/stripe-webhook`) |
+| `STRIPE_WEBHOOK_SECRET` | confirms card payments for events and store orders (`/api/stripe-webhook`) |
+| `PRINTFUL_API_KEY` | store: product sync, shipping rates, orders (secret — Functions scope only) |
 
 ## Events
 
@@ -33,6 +34,15 @@ and are managed under **Events & registrations** in /admin. The Events page and 
 so event changes don't need Publish. Registration goes through `netlify/functions/register.mjs`, which uses a
 database function (`create_registration`) that locks the event row so capacity can't be oversold.
 Card payments use Stripe Checkout; e-Transfers are marked paid by an admin after the money arrives.
+
+## Store
+
+Products come from Printful and live in `store_products` (see `supabase/store.sql`); the admin's
+**Store: Products & Orders** section syncs them and chooses which are live. `store.html`, `store-product.html`
+and `store-cart.html` read live products straight from the database. Checkout prices the cart on the server
+(`netlify/lib/store.mjs`), takes payment with Stripe Checkout, and the Stripe webhook then creates the Printful
+order(s) — as drafts unless "send automatically" is on in the store settings. One Printful order is created
+per Printful store in the cart.
 
 ## Changing the design or adding content
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-<title>Event — Legacy X Jiu-Jitsu</title>
+<title>Cart — Legacy X Jiu-Jitsu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -118,7 +118,7 @@ nav {
   padding-top: 64px; background: var(--navy); position: relative; overflow: hidden;
 }
 .page-header::after {
-  content: 'REGISTER';
+  content: 'CART';
   position: absolute; right: -10px; bottom: -20px;
   font-family: var(--ff-display); font-weight: 900;
   font-size: clamp(80px, 14vw, 180px);
@@ -387,6 +387,87 @@ input[type="date"].form-input { color-scheme: dark; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
 }
 
+/* ── STORE ── */
+[hidden] { display: none !important; }
+.cart-link {
+  font-family: var(--ff-display); font-weight: 700; font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
+  border: 1px solid var(--blue); padding: 11px 20px; display: inline-flex; align-items: center; gap: 10px; transition: background 0.2s;
+}
+.cart-link:hover { background: var(--blue); }
+.cart-link span { background: var(--blue); min-width: 24px; height: 24px; padding: 0 6px; display: inline-grid; place-items: center; font-size: 13px; letter-spacing: 0; }
+.cart-link:hover span { background: var(--white); color: var(--blue); }
+.shop-section { background: var(--dark); padding: 64px 0 96px; }
+.shop-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 3px; }
+.shop-card { background: var(--navy); border-top: 3px solid var(--border); display: flex; flex-direction: column; transition: border-color 0.2s, background 0.2s; }
+.shop-card:hover { border-top-color: var(--blue); background: #1f2d5a; }
+.shop-card-img { aspect-ratio: 1; background: #f4f5f7; overflow: hidden; }
+.shop-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.shop-card-body { padding: 20px 22px 24px; }
+.shop-card-name { font-family: var(--ff-display); font-weight: 800; font-size: 22px; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.1; margin-bottom: 8px; }
+.shop-card-price { font-family: var(--ff-display); font-weight: 700; font-size: 17px; letter-spacing: 1px; color: var(--blue); }
+
+/* Product page */
+.pd { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.pd-media { background: #f4f5f7; aspect-ratio: 1; border-top: 3px solid var(--blue); }
+.pd-media img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.pd-price { font-family: var(--ff-display); font-weight: 900; font-size: 38px; margin-bottom: 24px; }
+.pd-group { margin-bottom: 22px; }
+.pd-label { font-family: var(--ff-display); font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; display: block; }
+.pd-label strong { color: var(--white); }
+.pd-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.pd-option {
+  font-family: var(--ff-display); font-weight: 700; font-size: 15px; letter-spacing: 1px; text-transform: uppercase;
+  background: transparent; color: var(--white); border: 1px solid var(--border); padding: 10px 16px; min-width: 52px; cursor: pointer; transition: border-color 0.2s, background 0.2s;
+}
+.pd-option:hover:not(:disabled) { border-color: var(--blue); }
+.pd-option.active { border-color: var(--blue); background: rgba(58,143,216,0.15); }
+.pd-option:disabled { opacity: 0.3; cursor: default; text-decoration: line-through; }
+.pd-qty { width: 90px; }
+.pd-add { border: none; cursor: pointer; font-size: 15px; padding: 17px 44px; }
+.pd-add:disabled { opacity: 0.5; cursor: default; }
+.pd-added { margin-top: 16px; background: rgba(58,143,216,0.12); border: 1px solid rgba(58,143,216,0.35); padding: 12px 14px; font-size: 15px; }
+.pd-added a { color: var(--blue); text-decoration: underline; }
+.pd-desc { margin-top: 32px; font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.75); }
+.pd-desc p + p { margin-top: 14px; }
+.pd-note { margin-top: 24px; font-size: 14px; line-height: 1.7; color: var(--muted); }
+
+/* Cart + checkout */
+.cart { display: grid; grid-template-columns: 1fr 380px; gap: 48px; align-items: start; }
+.cart-line { display: grid; grid-template-columns: 96px 1fr auto; gap: 18px; align-items: center; background: var(--navy); padding: 16px; margin-bottom: 3px; }
+.cart-line-img { width: 96px; height: 96px; background: #f4f5f7; }
+.cart-line-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cart-line-name { font-family: var(--ff-display); font-weight: 800; font-size: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+.cart-line-variant { font-size: 14px; color: var(--muted); margin: 2px 0 10px; }
+.cart-line-qty { display: flex; align-items: center; gap: 6px; }
+.cart-line-qty button { background: transparent; color: var(--white); border: 1px solid var(--border); width: 30px; height: 30px; font-size: 16px; cursor: pointer; }
+.cart-line-qty button:hover:not(:disabled) { border-color: var(--blue); }
+.cart-line-qty button:disabled { opacity: 0.3; cursor: default; }
+.cart-line-qty span { min-width: 28px; text-align: center; font-weight: 600; }
+.cart-line-qty .cart-line-remove { width: auto; padding: 0 10px; font-size: 13px; color: var(--muted); margin-left: 8px; }
+.cart-line-total { font-family: var(--ff-display); font-weight: 800; font-size: 20px; }
+.co-form { margin-top: 36px; background: var(--navy); border-top: 3px solid var(--border); padding: 28px; position: relative; }
+.co-title { font-family: var(--ff-display); font-weight: 800; font-size: 20px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px; }
+.cart-summary { background: var(--navy); border-top: 3px solid var(--blue); padding: 28px; position: sticky; top: 92px; }
+.sum-row { display: flex; justify-content: space-between; gap: 16px; font-size: 16px; padding: 8px 0; color: rgba(255,255,255,0.8); }
+.sum-days { font-size: 13px; color: var(--muted); padding-bottom: 6px; }
+.sum-total { border-top: 1px solid var(--border); margin-top: 8px; padding-top: 16px; align-items: baseline; font-family: var(--ff-display); text-transform: uppercase; letter-spacing: 1px; color: var(--white); }
+.sum-total strong { font-size: 30px; }
+.sum-total small { display: block; font-size: 12px; color: var(--muted); letter-spacing: 1px; }
+.ev-done a { color: var(--blue); text-decoration: underline; }
+@media (max-width: 960px) {
+  .pd { grid-template-columns: 1fr; gap: 32px; }
+  .cart { grid-template-columns: 1fr; }
+  .cart-summary { position: static; }
+}
+@media (max-width: 600px) {
+  .shop-inner { padding: 0 16px; }
+  .cart-line { grid-template-columns: 72px 1fr; }
+  .cart-line-img { width: 72px; height: 72px; }
+  .cart-line-total { grid-column: 2; }
+  .co-form, .cart-summary { padding: 22px 18px; }
+}
+
 /* ── NEWSLETTER BAND ── */
 .newsletter-band { background: var(--navy); border-top: 1px solid var(--border); }
 .newsletter-inner {
@@ -495,7 +576,7 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
       <li><a href="corporate.html">Corporate</a></li>
       <li><a href="schedule.html">Schedule</a></li>
       <li><a href="instructors.html">Instructors</a></li>
-      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="events.html">Events</a></li>
       <li class="nav-has-dropdown">
         <a href="about.html">About</a>
         <div class="dropdown">
@@ -535,126 +616,107 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
   </div>
 </nav>
 
-<!-- ── EVENT HEADER ── -->
+<!-- ── PAGE HEADER ── -->
 <div class="page-header">
   <div class="page-header-inner">
     <div class="page-header-text">
       <div class="breadcrumb">
         <a href="index.html">Home</a>
         <span>›</span>
-        <a href="events.html">Events</a>
+        <a href="store.html">Store</a>
         <span>›</span>
-        <em id="ev-crumb" style="font-style:normal;">Event</em>
+        Cart
       </div>
-      <div class="event-tag" id="ev-tag"><span class="event-tag-dot"></span><span id="ev-category">Event</span></div>
-      <h1 class="page-title ev-title" id="ev-title">Loading…</h1>
-      <div class="event-meta" id="ev-meta"></div>
+      <h1 class="page-title">Your<br/><em>cart.</em></h1>
     </div>
+    <a href="store-cart.html" class="cart-link">Cart <span data-cart-count>0</span></a>
   </div>
 </div>
 
-<!-- ── EVENT DETAILS & REGISTRATION ── -->
-<section class="ev-section">
-  <div class="ev-inner">
-    <div class="ev-main">
-      <img id="ev-photo" class="ev-photo" alt="" hidden/>
-      <div class="ev-desc" id="ev-desc"></div>
-      <div class="ev-box" id="ev-instructions-box" hidden>
-        <h3>Before you come</h3>
-        <div id="ev-instructions"></div>
-      </div>
+<!-- ── CART & CHECKOUT ── -->
+<section class="shop-section">
+  <div class="shop-inner">
+    <div class="ev-notice" id="cart-notice" role="status" hidden></div>
+    <p class="events-loading" id="cart-loading">Loading your cart…</p>
+    <div class="events-empty" id="cart-empty" hidden>
+      <div class="empty-icon">🥋</div>
+      <div class="empty-title">Your cart is empty.</div>
+      <p class="empty-sub">Have a look through the store and add something you like.</p>
+      <p style="margin-top:24px;"><a class="event-btn" href="store.html">Back to the store</a></p>
     </div>
 
-    <aside class="ev-side" id="register">
-      <div class="ev-panel">
-        <div class="ev-panel-head">
-          <div class="ev-price" id="ev-price"></div>
-          <div class="event-spots" id="ev-spots"></div>
-        </div>
-        <div class="ev-notice" id="ev-notice" role="status" hidden></div>
+    <div class="cart" id="cart-main" hidden>
+      <div>
+        <div id="cart-lines"></div>
 
-        <!-- Registration closed / not open / sold out -->
-        <div class="ev-closed" id="reg-closed" hidden></div>
-
-        <!-- Registration form -->
-        <form id="reg-form" novalidate hidden>
-          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;"/>
-
-          <div class="ev-step">
-            <label class="form-label" for="quantity">Number of people</label>
-            <select class="form-input" id="quantity" name="quantity"></select>
+        <form class="co-form" id="co-form" novalidate>
+          <h2 class="co-title">Shipping details</h2>
+          <input type="text" id="co-website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;"/>
+          <div class="form-group">
+            <label class="form-label" for="co-name">Full name</label>
+            <input class="form-input" id="co-name" autocomplete="name" required/>
           </div>
-
-          <fieldset class="ev-step">
-            <legend class="ev-legend">Who's attending</legend>
-            <div id="attendees"></div>
-          </fieldset>
-
-          <fieldset class="ev-step">
-            <legend class="ev-legend">Your details</legend>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="first_name">First name</label>
-                <input class="form-input" id="first_name" name="first_name" autocomplete="given-name" required/>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="last_name">Last name</label>
-                <input class="form-input" id="last_name" name="last_name" autocomplete="family-name" required/>
-              </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="co-email">Email</label>
+              <input class="form-input" id="co-email" type="email" autocomplete="email" required/>
             </div>
             <div class="form-group">
-              <label class="form-label" for="reg_email">Email</label>
-              <input class="form-input" id="reg_email" name="email" type="email" autocomplete="email" required/>
+              <label class="form-label" for="co-phone">Phone</label>
+              <input class="form-input" id="co-phone" type="tel" autocomplete="tel"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="co-country">Country</label>
+              <select class="form-input" id="co-country" autocomplete="country"></select>
+            </div>
+            <div class="form-group" id="co-state-wrap" hidden>
+              <label class="form-label" for="co-state">Province / State</label>
+              <select class="form-input" id="co-state" autocomplete="address-level1"></select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="co-address1">Street address</label>
+            <input class="form-input" id="co-address1" autocomplete="address-line1" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="co-address2">Apartment, unit, etc. (optional)</label>
+            <input class="form-input" id="co-address2" autocomplete="address-line2"/>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="co-city">City</label>
+              <input class="form-input" id="co-city" autocomplete="address-level2" required/>
             </div>
             <div class="form-group">
-              <label class="form-label" for="phone">Phone</label>
-              <input class="form-input" id="phone" name="phone" type="tel" autocomplete="tel" required/>
+              <label class="form-label" for="co-zip">Postal / ZIP code</label>
+              <input class="form-input" id="co-zip" autocomplete="postal-code" required/>
             </div>
-          </fieldset>
-
-          <fieldset class="ev-step" id="payment-step" hidden>
-            <legend class="ev-legend">Payment</legend>
-            <label class="ev-option">
-              <input type="radio" name="payment_method" value="etransfer" checked/>
-              <span><strong>Interac e-Transfer</strong><small>Send the payment from your bank, then enter the confirmation code.</small></span>
-            </label>
-            <label class="ev-option">
-              <input type="radio" name="payment_method" value="stripe"/>
-              <span><strong>Credit or debit card</strong><small>Pay securely with Stripe.</small></span>
-            </label>
-            <div class="ev-etransfer" id="etransfer-box">
-              <ol>
-                <li>Send <strong id="etransfer-amount">$0</strong> by Interac e-Transfer to <strong>info@legacyxjiujitsu.com</strong>. Auto-deposit is on, so no security question is needed.</li>
-                <li>Enter the confirmation code from your bank below to finish your registration.</li>
-              </ol>
-              <div class="form-group">
-                <label class="form-label" for="etransfer_code">e-Transfer confirmation code</label>
-                <input class="form-input" id="etransfer_code" name="etransfer_code" autocomplete="off"/>
-              </div>
-            </div>
-          </fieldset>
-
-          <div class="ev-total" id="total-row" hidden>
-            <span>Total</span><strong id="total">$0</strong>
           </div>
-
-          <label class="ev-waiver">
-            <input type="checkbox" id="waiver" name="waiver" required/>
-            <span>I have read and agree to the <a href="terms.html" target="_blank">Terms &amp; Conditions</a>, and I accept the waiver and release of liability on behalf of everyone listed above.</span>
-          </label>
-
-          <div class="ev-error" id="reg-error" role="alert"></div>
-          <button class="event-btn ev-submit" type="submit" id="reg-submit">Complete registration</button>
+          <button class="event-btn ghost" id="co-quote" type="button" style="cursor:pointer;">Calculate shipping</button>
         </form>
-
-        <!-- Done -->
-        <div class="ev-done" id="reg-done" hidden>
-          <div class="ev-done-icon">✓</div>
-          <h3 id="done-title">You're registered!</h3>
-          <p id="done-text"></p>
-        </div>
       </div>
-    </aside>
+
+      <aside class="cart-summary">
+        <h2 class="co-title">Order summary</h2>
+        <div class="sum-row"><span>Subtotal</span><span id="sum-subtotal"></span></div>
+        <div class="sum-row"><span>Shipping</span><span id="sum-shipping"></span></div>
+        <div class="sum-days" id="sum-days"></div>
+        <div class="sum-row" id="sum-tax-row" hidden><span id="sum-tax-label">Tax</span><span id="sum-tax"></span></div>
+        <div class="sum-row sum-total"><span>Total<small id="sum-total-note"></small></span><strong id="sum-total"></strong></div>
+        <div class="ev-error" id="co-error" role="alert" style="margin-top:14px;"></div>
+        <button class="event-btn ev-submit" id="co-pay" type="submit" form="co-form" disabled>Pay with card</button>
+        <p class="pd-note">Enter your address and press <strong>Calculate shipping</strong> to see your total. Payment is handled securely by Stripe.</p>
+      </aside>
+    </div>
+
+    <div class="ev-done" id="cart-done" hidden>
+      <div class="ev-done-icon">✓</div>
+      <h3>Thank you for your order!</h3>
+      <p>Your order <strong id="done-order"></strong> is paid and on its way to being made. We'll email you when it ships.</p>
+      <p style="margin-top:20px;"><a href="store.html">Back to the store</a></p>
+    </div>
   </div>
 </section>
 
@@ -662,8 +724,8 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 <div class="newsletter-band">
   <div class="newsletter-inner">
     <div>
-      <h3 class="newsletter-headline" data-cms="events/newsletter/newsletter-headline">Never miss an event.</h3>
-      <p class="newsletter-sub" data-cms="events/newsletter/newsletter-sub">Subscribe to the Legacy X newsletter and be the first to know about upcoming competitions, seminars, open mats, and academy announcements.</p>
+      <h3 class="newsletter-headline">Stay in the loop.</h3>
+      <p class="newsletter-sub">Subscribe to the Legacy X newsletter for new gear drops, events, and academy announcements.</p>
     </div>
     <div>
       <form class="newsletter-form" novalidate>
@@ -729,8 +791,8 @@ footer { background: var(--dark); border-top: 1px solid var(--border); }
 </footer>
 
 <script src="js/site-config.js"></script>
-<script src="js/events-common.js"></script>
-<script src="js/event.js"></script>
+<script src="js/store-common.js"></script>
+<script src="js/store-cart.js"></script>
 
 <script src="js/newsletter.js"></script>
 

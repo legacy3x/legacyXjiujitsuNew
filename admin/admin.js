@@ -2,6 +2,7 @@
 // and asks Netlify to rebuild the site when the admin presses Publish.
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 import { mountEvents } from './events-admin.js';
+import { mountStore } from './store-admin.js';
 
 const cfg = window.CMS_CONFIG || {};
 const $ = (id) => document.getElementById(id);
@@ -34,7 +35,10 @@ let blocks = []; // { key, position, value, original }
 let lists = []; // { key, position, fields: [], items: [{ id, tpl, fields, dirty }] }
 let deleted = [];
 let eventsUI;
+let storeUI;
 const EVENTS = '__events';
+const STORE = '__store';
+const STORE_LABEL = 'Store: Products & Orders';
 
 // ── Status helpers ──
 function setStatus(text, kind = '') {
@@ -76,9 +80,10 @@ async function enterApp(session) {
   $('login').hidden = true;
   $('app').hidden = false;
   eventsUI = mountEvents({ sb, root: $('events-view'), setStatus });
+  storeUI = mountStore({ sb, root: $('store-view'), setStatus });
   await loadPages();
   const wanted = decodeURIComponent(location.hash.slice(1));
-  await openPage(wanted === EVENTS || pages.some((p) => p.id === wanted) ? wanted : 'index');
+  await openPage([EVENTS, STORE].includes(wanted) || pages.some((p) => p.id === wanted) ? wanted : 'index');
 }
 
 async function init() {
@@ -171,6 +176,7 @@ async function loadPages() {
   const entries = pages.flatMap((p) => (p.id === 'events'
     ? [[p.id, p.name, false], [EVENTS, EVENTS_LABEL, true]]
     : [[p.id, p.name, p.id.startsWith('programs/')]]));
+  entries.push([STORE, STORE_LABEL, false]); // the shop isn't page text, so it gets its own manager
   $('page-nav').replaceChildren(...entries.map(([id, name, sub]) => link(id, name, sub)));
   $('page-select').replaceChildren(...entries.map(([id, name, sub]) => new Option(sub ? `— ${name}` : name, id)));
 }
@@ -185,14 +191,16 @@ async function openPage(id) {
   current = id;
   history.replaceState(null, '', `#${encodeURIComponent(id)}`);
   $('page-select').value = id;
+  const tool = { [EVENTS]: eventsUI, [STORE]: storeUI }[id]; // managers that aren't page text
   $('events-view').hidden = id !== EVENTS;
-  $('pages-view').hidden = id === EVENTS;
+  $('store-view').hidden = id !== STORE;
+  $('pages-view').hidden = Boolean(tool);
   document.querySelectorAll('.page-link').forEach((b) => b.classList.toggle('active', b.dataset.page === id));
-  if (id === EVENTS) {
+  if (tool) {
     blocks = []; lists = []; deleted = [];
     refreshDirty();
     setStatus('');
-    return eventsUI.show();
+    return tool.show();
   }
   const page = pages.find((p) => p.id === id);
   $('page-title').textContent = page?.name || id;

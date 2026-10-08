@@ -172,27 +172,27 @@
     },
     "site/footer/phone": {
       "page": "site",
-      "position": 39116,
+      "position": 39164,
       "value": "(226) 376-5784"
     },
     "site/footer/email": {
       "page": "site",
-      "position": 39223,
+      "position": 39271,
       "value": "info@legacyxjiujitsu.com"
     },
     "site/footer/address": {
       "page": "site",
-      "position": 39387,
+      "position": 39435,
       "value": "27 Bysham Park Drive (Unit 1)<br/>Woodstock, ON, N4T 1P1"
     },
     "site/footer/copyright": {
       "page": "site",
-      "position": 39555,
+      "position": 39603,
       "value": "© 2026 Legacy X Jiu-Jitsu. All rights reserved."
     },
     "site/footer/motto": {
       "page": "site",
-      "position": 39666,
+      "position": 39714,
       "value": "Discipline · Confidence · Legacy"
     },
     "contact/meta/title": {
@@ -1027,7 +1027,7 @@
     },
     "terms/footer/copyright": {
       "page": "terms",
-      "position": 26557,
+      "position": 26605,
       "value": "© 2026 Legacy X Jiu-Jitsu. All rights reserved. &nbsp;·&nbsp; <a href=\"privacy.html\" style=\"color:var(--muted);\">Privacy Policy</a> &nbsp;·&nbsp; <a href=\"terms.html\" style=\"color:var(--muted);\">Terms & Conditions</a>"
     },
     "programs/adult-jiu-jitsu/meta/title": {

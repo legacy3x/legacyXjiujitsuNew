@@ -39,3 +39,14 @@ export const update = (table, query, values) => call(`${table}?${query}`, {
   headers: headers({ Prefer: 'return=representation' }),
   body: JSON.stringify({ ...values, updated_at: new Date().toISOString() }),
 });
+
+// Inserts rows and returns them. With onConflict (comma-separated columns) it upserts,
+// overwriting only the columns that are sent.
+export const insert = (table, rows, { onConflict } = {}) => call(
+  `${table}${onConflict ? `?on_conflict=${onConflict}` : ''}`,
+  {
+    method: 'POST',
+    headers: headers({ Prefer: `return=representation${onConflict ? ',resolution=merge-duplicates' : ''}` }),
+    body: JSON.stringify(rows),
+  },
+);
