@@ -15,8 +15,24 @@ const json = (status, body) =>
 
 const cents = (price) => Math.round(Number(price || 0) * 100);
 
+// Printful keeps no description on a store's own products, so use the one from its catalogue
+// (the write-up for the blank shirt, hoodie, etc.). A missing one never stops a sync.
+async function catalogDescription(catalogProductId) {
+  if (!catalogProductId) return '';
+  try {
+    const { result } = await printful(`/products/${catalogProductId}`);
+    return String(result.product?.description || '').replace(/\r\n?/g, '\n').replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, '').trim();
+  } catch (err) {
+    console.error('store-admin: no catalogue description for', catalogProductId, err.message);
+    return '';
+  }
+}
+
 async function syncProduct({ store_id: storeId, store_name: storeName, product_id: productId }) {
   const { result } = await printful(`/store/products/${productId}`, { storeId });
+  // Only fill the description in when there isn't one yet, so text written in the admin is never replaced.
+  const [existing] = await select('store_products', `printful_store_id=eq.${Number(storeId)}&printful_product_id=eq.${Number(productId)}&select=description`);
+  const description = existing?.description ? '' : await catalogDescription((result.sync_variants || []).find((v) => v.product?.product_id)?.product.product_id);
   const variants = (result.sync_variants || []).filter((v) => !v.is_ignored).map((v) => ({
     id: v.id,
     catalog_variant_id: v.variant_id,
@@ -41,6 +57,7 @@ async function syncProduct({ store_id: storeId, store_name: storeName, product_i
     min_price_cents: prices.length ? Math.min(...prices) : 0,
     max_price_cents: prices.length ? Math.max(...prices) : 0,
     synced_at: new Date().toISOString(),
+    ...(description ? { description } : {}),
   }], { onConflict: 'printful_store_id,printful_product_id' }); // keeps live / description / sort
   return { id: row.id, name: row.name, variants: variants.length };
 }

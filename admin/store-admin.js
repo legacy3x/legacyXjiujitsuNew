@@ -108,7 +108,7 @@ export function mountStore({ sb, root, setStatus, shrinkImage }) {
       <div class="ev-form">
         <div class="field full"><label for="st-desc">Description for “${esc(p.name)}”</label>
           <textarea class="field-input" id="st-desc" rows="8">${esc(p.description)}</textarea>
-          <small>Shown on the product page. Leave a blank line between paragraphs.</small></div>
+          <small>Shown on the product page. Leave a blank line between paragraphs. A sync fills this in from Printful only while it is empty — to pull Printful's text again, clear it, save, and sync.</small></div>
         <div class="form-actions" style="margin-top:14px;"><button class="btn btn-primary" id="st-save">Save description</button></div>
         <div class="field full" style="margin-top:28px;"><label>Extra photos</label>
           <div id="st-photos" style="display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 12px;"></div>
