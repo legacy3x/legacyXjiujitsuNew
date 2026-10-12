@@ -2,1849 +2,1849 @@
   "blocks": {
     "about/meta/title": {
       "page": "about",
-      "position": 191,
+      "position": 690,
       "value": "About — Legacy X Jiu-Jitsu"
     },
     "about/page-header/page-title": {
       "page": "about",
-      "position": 22474,
+      "position": 22973,
       "value": "Built in Woodstock.<br/><em>Built to last.</em>"
     },
     "about/page-header/page-subtitle": {
       "page": "about",
-      "position": 22599,
+      "position": 23098,
       "value": "Legacy X Jiu-Jitsu is an independent Brazilian Jiu-Jitsu academy founded in June 2026 on a simple belief — that Jiu-Jitsu changes people, and that starts with the right environment."
     },
     "about/story/section-tag": {
       "page": "about",
-      "position": 23000,
+      "position": 23499,
       "value": "Our story"
     },
     "about/story/section-headline": {
       "page": "about",
-      "position": 23119,
+      "position": 23618,
       "value": "Why Legacy <em>X exists.</em>"
     },
     "about/story/p": {
       "page": "about",
-      "position": 23190,
+      "position": 23689,
       "value": "Legacy X Jiu-Jitsu was founded by Coach Francis with one goal: to bring <strong>real, structured Brazilian Jiu-Jitsu to Woodstock, Ontario</strong> — and to build a community around it that people are proud to be part of."
     },
     "about/story/p-2": {
       "page": "about",
-      "position": 23454,
+      "position": 23953,
       "value": "From the beginning, the vision was never just to open a gym. It was to create a place where students of all ages, backgrounds, and experience levels could walk through the door and feel like they belonged — where the teaching is serious, the community is welcoming, and the culture is built on respect."
     },
     "about/story/p-3": {
       "page": "about",
-      "position": 23799,
+      "position": 24298,
       "value": "The name Legacy X reflects that vision. Every student who trains here becomes part of something larger than themselves. The discipline you build, the confidence you develop, the habits you form — those don't stay on the mats. They carry into every part of your life. <strong>That's the legacy.</strong>"
     },
     "about/story/p-4": {
       "page": "about",
-      "position": 24144,
+      "position": 24643,
       "value": "We opened our doors in June 2026 and we're just getting started. We're proud to be an OJA member club and to be building something that will serve the Woodstock community for years to come."
     },
     "instructors/head-coach-francis-yanga/coach-photo": {
       "page": "instructors",
-      "position": 21339,
+      "position": 21838,
       "value": ""
     },
     "about/coach/coach-photo-placeholder": {
       "page": "about",
-      "position": 25721,
+      "position": 26220,
       "value": "FX"
     },
     "about/coach/coach-name": {
       "page": "about",
-      "position": 25842,
+      "position": 26341,
       "value": "Francis"
     },
     "about/coach/coach-title-label": {
       "page": "about",
-      "position": 25940,
+      "position": 26439,
       "value": "Head Coach & Founder · Legacy X Jiu-Jitsu"
     },
     "about/coach/section-tag": {
       "page": "about",
-      "position": 26275,
+      "position": 26774,
       "value": "Meet the coach"
     },
     "about/coach/section-headline": {
       "page": "about",
-      "position": 26399,
+      "position": 26898,
       "value": "Coach <em>Francis.</em>"
     },
     "about/coach/coach-intro": {
       "page": "about",
-      "position": 26495,
+      "position": 26994,
       "value": "\"I started training Jiu-Jitsu because of what it did for me as a person. I started teaching it because I wanted other people to experience the same thing.\""
     },
     "about/coach/p": {
       "page": "about",
-      "position": 26727,
+      "position": 27226,
       "value": "Coach Francis is the Head Coach and Founder of Legacy X Jiu-Jitsu. His approach to teaching is built around the belief that <strong>Jiu-Jitsu is a tool for personal development</strong> — and that the technical side of the art only works when it's taught with patience, clarity, and genuine investment in each student's growth."
     },
     "about/coach/p-2": {
       "page": "about",
-      "position": 27099,
+      "position": 27598,
       "value": "As a coach, Francis brings a curriculum-driven approach to every class. Every technique has a purpose. Every class has a structure. Every student has a progression path they can understand and follow — from their first day on the mat to wherever their journey takes them."
     },
     "about/coach/p-3": {
       "page": "about",
-      "position": 27415,
+      "position": 27914,
       "value": "Outside the academy, Francis runs <strong>Fight Frenzy with Francis</strong> — a UFC and MMA content channel across YouTube, YouTube Shorts, and TikTok — sharing his passion for the sport with a wider audience."
     },
     "about/coach/p-4": {
       "page": "about",
-      "position": 27670,
+      "position": 28169,
       "value": "His door is always open. If you have questions about training, programs, or whether Jiu-Jitsu is right for you — reach out."
     },
     "about/values/section-tag": {
       "page": "about",
-      "position": 29147,
+      "position": 29646,
       "value": "What we stand for"
     },
     "about/values/section-headline": {
       "page": "about",
-      "position": 29243,
+      "position": 29742,
       "value": "The pillars of <em>Legacy X.</em>"
     },
     "about/oja/section-tag": {
       "page": "about",
-      "position": 32251,
+      "position": 32750,
       "value": "Association"
     },
     "about/oja/section-headline": {
       "page": "about",
-      "position": 32370,
+      "position": 32869,
       "value": "OJA <em>Member Club.</em>"
     },
     "about/oja/p": {
       "page": "about",
-      "position": 32469,
+      "position": 32968,
       "value": "Legacy X Jiu-Jitsu is a proud member club of the <strong>Ontario Jiu-Jitsu Association (OJA)</strong> — the provincial organization supporting Jiu-Jitsu across Ontario."
     },
     "about/oja/p-2": {
       "page": "about",
-      "position": 32680,
+      "position": 33179,
       "value": "Being part of the OJA means our students are protected under the association's liability and accident insurance, can participate in OJA-sanctioned events, and are part of a broader provincial community of practitioners."
     },
     "about/oja/p-3": {
       "page": "about",
-      "position": 32942,
+      "position": 33441,
       "value": "All Legacy X members are required to register with the OJA. When registering, select <strong>Legacy X Jiu-Jitsu</strong> as your gym/club to connect your membership with our academy."
     },
     "about/oja/p-4": {
       "page": "about",
-      "position": 33217,
+      "position": 33716,
       "value": "When registering with the OJA, make sure to select <strong>Legacy X Jiu-Jitsu</strong> as your gym/club. This links your membership directly to our academy."
     },
     "about/cta-band/cta-headline": {
       "page": "about",
-      "position": 34785,
+      "position": 35284,
       "value": "Come see Legacy X<br/>for yourself."
     },
     "about/cta-band/cta-sub": {
       "page": "about",
-      "position": 34885,
+      "position": 35384,
       "value": "Your first class is free. No experience needed, no commitment required. Come meet Coach Francis, see the academy, and find out if Jiu-Jitsu is right for you."
     },
     "about/newsletter/newsletter-headline": {
       "page": "about",
-      "position": 35374,
+      "position": 35873,
       "value": "Stay in the loop."
     },
     "about/newsletter/newsletter-sub": {
       "page": "about",
-      "position": 35472,
+      "position": 35971,
       "value": "Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox. No spam, ever."
     },
     "site/footer/about-1": {
       "page": "site",
-      "position": 36272,
+      "position": 36771,
       "value": "Legacy X Jiu-Jitsu is a Brazilian Jiu-Jitsu academy in Woodstock, Ontario, offering structured BJJ classes for kids, teens, and adults of all experience levels."
     },
     "site/footer/about-2": {
       "page": "site",
-      "position": 36477,
+      "position": 36976,
       "value": "Proudly serving Woodstock, Ingersoll, Innerkip, Norwich, Thamesford, and surrounding Oxford County communities."
     },
     "site/footer/phone": {
       "page": "site",
-      "position": 39164,
+      "position": 39663,
       "value": "(226) 376-5784"
     },
     "site/footer/email": {
       "page": "site",
-      "position": 39271,
+      "position": 39770,
       "value": "info@legacyxjiujitsu.com"
     },
     "site/footer/address": {
       "page": "site",
-      "position": 39435,
+      "position": 39934,
       "value": "27 Bysham Park Drive (Unit 1)<br/>Woodstock, ON, N4T 1P1"
     },
     "site/footer/copyright": {
       "page": "site",
-      "position": 39603,
+      "position": 40102,
       "value": "© 2026 Legacy X Jiu-Jitsu. All rights reserved."
     },
     "site/footer/motto": {
       "page": "site",
-      "position": 39714,
+      "position": 40213,
       "value": "Discipline · Confidence · Legacy"
     },
     "contact/meta/title": {
       "page": "contact",
-      "position": 193,
+      "position": 692,
       "value": "Contact — Legacy X Jiu-Jitsu"
     },
     "contact/page-header/page-title": {
       "page": "contact",
-      "position": 17537,
+      "position": 18036,
       "value": "Get in<br/><em>Touch.</em>"
     },
     "contact/page-header/page-subtitle": {
       "page": "contact",
-      "position": 17643,
+      "position": 18142,
       "value": "Have a question about programs, membership, or anything else? Reach out — we're happy to help. Your first class is always free."
     },
     "contact/join-band/join-band-text": {
       "page": "contact",
-      "position": 17947,
+      "position": 18446,
       "value": "Want to visit and train with us?"
     },
     "contact/left-info/info-tag": {
       "page": "contact",
-      "position": 18342,
+      "position": 18841,
       "value": "Find us"
     },
     "contact/left-info/info-headline": {
       "page": "contact",
-      "position": 18429,
+      "position": 18928,
       "value": "Visit <em>Legacy X.</em>"
     },
     "contact/right-form/form-headline": {
       "page": "contact",
-      "position": 20039,
+      "position": 20538,
       "value": "Send us a message."
     },
     "contact/right-form/form-sub": {
       "page": "contact",
-      "position": 20130,
+      "position": 20629,
       "value": "Fill out the form below and we'll get back to you within one business day."
     },
     "contact/right-form/form-success-icon": {
       "page": "contact",
-      "position": 21981,
+      "position": 22480,
       "value": "✅"
     },
     "contact/right-form/form-success-title": {
       "page": "contact",
-      "position": 22078,
+      "position": 22577,
       "value": "Message Sent."
     },
     "contact/right-form/form-success-sub": {
       "page": "contact",
-      "position": 22181,
+      "position": 22680,
       "value": "Thanks for reaching out. We'll get back to you within one business day. See you on the mats."
     },
     "corporate/meta/title": {
       "page": "corporate",
-      "position": 195,
+      "position": 694,
       "value": "Corporate Wellness — Legacy X Jiu-Jitsu"
     },
     "corporate/hero/hero-eyebrow": {
       "page": "corporate",
-      "position": 17800,
+      "position": 18299,
       "value": "Corporate Wellness · Woodstock, Ontario"
     },
     "corporate/hero/hero-title": {
       "page": "corporate",
-      "position": 17910,
+      "position": 18409,
       "value": "Build a stronger<br/>team <em>on the mat.</em>"
     },
     "corporate/hero/hero-sub": {
       "page": "corporate",
-      "position": 18023,
+      "position": 18522,
       "value": "Brazilian Jiu-Jitsu is a structured environment where your people develop focus, resilience, and genuine team connection — while learning one of the world's most effective martial arts. No experience required."
     },
     "corporate/what-it-is/section-tag": {
       "page": "corporate",
-      "position": 18622,
+      "position": 19121,
       "value": "What it is"
     },
     "corporate/what-it-is/section-headline": {
       "page": "corporate",
-      "position": 18721,
+      "position": 19220,
       "value": "A performance<br/>benefit, not a <em>gym discount.</em>"
     },
     "corporate/what-it-is/p": {
       "page": "corporate",
-      "position": 18864,
+      "position": 19363,
       "value": "Legacy X Jiu-Jitsu offers corporate wellness programs for businesses and organizations in Woodstock and the surrounding area. Programs can include <strong>sponsored employee training</strong>, <strong>executive sessions</strong>, <strong>team-building experiences</strong>, and <strong>private corporate classes</strong> — all designed for beginners and customizable around team size, schedule, and goals."
     },
     "corporate/what-it-is/p-2": {
       "page": "corporate",
-      "position": 19319,
+      "position": 19818,
       "value": "Most wellness spending buys access to equipment. Jiu-Jitsu asks something of the participant and gives back across multiple areas your organization already cares about — physical health, focus, resilience, and team culture."
     },
     "corporate/what-it-is/p-3": {
       "page": "corporate",
-      "position": 19592,
+      "position": 20091,
       "value": "The mat is a place where rank means nothing on day one, everyone is a beginner at something, and the only way to improve is through the people around you. That culture is the reason it transfers."
     },
     "corporate/benefits/section-tag": {
       "page": "corporate",
-      "position": 20008,
+      "position": 20507,
       "value": "Why it works"
     },
     "corporate/benefits/section-headline": {
       "page": "corporate",
-      "position": 20107,
+      "position": 20606,
       "value": "What your team<br/>actually <em>develops.</em>"
     },
     "corporate/programs/section-tag": {
       "page": "corporate",
-      "position": 23114,
+      "position": 23613,
       "value": "Program types"
     },
     "corporate/programs/section-headline": {
       "page": "corporate",
-      "position": 23214,
+      "position": 23713,
       "value": "Five ways to<br/>work with <em>Legacy X.</em>"
     },
     "corporate/cta-band/cta-headline": {
       "page": "corporate",
-      "position": 26591,
+      "position": 27090,
       "value": "Build a program<br/>for your team."
     },
     "corporate/cta-band/cta-sub": {
       "page": "corporate",
-      "position": 26694,
+      "position": 27193,
       "value": "Tell us the shape of your organization and what you want to achieve. No prior Jiu-Jitsu experience required from anyone on your team."
     },
     "etiquette/meta/title": {
       "page": "etiquette",
-      "position": 195,
+      "position": 694,
       "value": "Dojo Etiquette — Legacy X Jiu-Jitsu"
     },
     "etiquette/page-header/page-title": {
       "page": "etiquette",
-      "position": 16995,
+      "position": 17494,
       "value": "Mat Rules &amp;<br/><em>Code of Conduct.</em>"
     },
     "etiquette/page-header/page-subtitle": {
       "page": "etiquette",
-      "position": 17122,
+      "position": 17621,
       "value": "Following these guidelines shows respect for the art, the academy, and every person you train with."
     },
     "etiquette/rules/rules-tag": {
       "page": "etiquette",
-      "position": 17423,
+      "position": 17922,
       "value": "Mat Rules"
     },
     "etiquette/rules/rules-headline": {
       "page": "etiquette",
-      "position": 17514,
+      "position": 18013,
       "value": "Eight rules.<br/><em>One culture.</em>"
     },
     "etiquette/rules/rules-intro": {
       "page": "etiquette",
-      "position": 17639,
+      "position": 18138,
       "value": "These guidelines exist to protect the environment that everyone at Legacy X benefits from. They are simple, they are non-negotiable, and they reflect the standard we hold ourselves to every time we step on the mat."
     },
     "etiquette/culture/culture-left": {
       "page": "etiquette",
-      "position": 22199,
+      "position": 22698,
       "value": "A culture worth protecting"
     },
     "etiquette/culture/culture-headline": {
       "page": "etiquette",
-      "position": 22311,
+      "position": 22810,
       "value": "Why these<br/>rules <em>matter.</em>"
     },
     "etiquette/culture/p": {
       "page": "etiquette",
-      "position": 22428,
+      "position": 22927,
       "value": "These rules are not about control — they are about <strong>protecting the culture we are building together.</strong> Legacy X is a place where you should feel safe to make mistakes, ask questions, and grow."
     },
     "etiquette/culture/p-2": {
       "page": "etiquette",
-      "position": 22683,
+      "position": 23182,
       "value": "When everyone follows these guidelines, the entire academy benefits. The mat becomes a place where trust is assumed, intensity is appropriate, and learning can actually happen."
     },
     "etiquette/culture/p-3": {
       "page": "etiquette",
-      "position": 22908,
+      "position": 23407,
       "value": "If you ever have questions or concerns about mat etiquette, <strong>speak with an instructor.</strong> We would rather address something early than let a small issue grow into a bigger problem."
     },
     "etiquette/cta/cta-headline": {
       "page": "etiquette",
-      "position": 25016,
+      "position": 25515,
       "value": "Ready to train<br/>the right way?"
     },
     "etiquette/cta/cta-sub": {
       "page": "etiquette",
-      "position": 25113,
+      "position": 25612,
       "value": "Your first class is free. Come experience a culture built on respect, discipline, and genuine community — and see what Legacy X is all about."
     },
     "events/newsletter/newsletter-headline": {
       "page": "events",
-      "position": 22748,
+      "position": 23247,
       "value": "Never miss an event."
     },
     "events/newsletter/newsletter-sub": {
       "page": "events",
-      "position": 22850,
+      "position": 23349,
       "value": "Subscribe to the Legacy X newsletter and be the first to know about upcoming competitions, seminars, open mats, and academy announcements."
     },
     "events/meta/title": {
       "page": "events",
-      "position": 192,
+      "position": 691,
       "value": "Events — Legacy X Jiu-Jitsu"
     },
     "events/page-header/page-title": {
       "page": "events",
-      "position": 20937,
+      "position": 21436,
       "value": "Upcoming<br/><em>Events.</em>"
     },
     "events/page-header/page-subtitle": {
       "page": "events",
-      "position": 21047,
+      "position": 21546,
       "value": "Competitions, seminars, open mats, and academy milestones. Stay connected with everything happening at Legacy X."
     },
     "events/placeholder-event-3/empty-icon": {
       "page": "events",
-      "position": 22220,
+      "position": 22719,
       "value": "📅"
     },
     "events/placeholder-event-3/empty-title": {
       "page": "events",
-      "position": 22310,
+      "position": 22809,
       "value": "No events in this category yet."
     },
     "events/placeholder-event-3/empty-sub": {
       "page": "events",
-      "position": 22423,
+      "position": 22922,
       "value": "Check back soon or subscribe to our newsletter to be the first to know when new events are announced."
     },
     "faq/meta/title": {
       "page": "faq",
-      "position": 189,
+      "position": 688,
       "value": "FAQ — Legacy X Jiu-Jitsu"
     },
     "faq/page-header/page-title": {
       "page": "faq",
-      "position": 17488,
+      "position": 17987,
       "value": "Frequently<br/><em>Asked Questions.</em>"
     },
     "faq/page-header/page-subtitle": {
       "page": "faq",
-      "position": 17604,
+      "position": 18103,
       "value": "Everything you need to know before stepping on the mat for the first time. Don't see your question? Reach out — we're happy to help."
     },
     "faq/sidebar/sidebar-tag": {
       "page": "faq",
-      "position": 17938,
+      "position": 18437,
       "value": "Jump to"
     },
     "faq/sidebar/sidebar-cta-text": {
       "page": "faq",
-      "position": 18908,
+      "position": 19407,
       "value": "<strong>Still have questions?</strong>\nWe're happy to answer anything before your first class."
     },
     "faq/cta/cta-headline": {
       "page": "faq",
-      "position": 25564,
+      "position": 26063,
       "value": "Ready to try<br/>your first class?"
     },
     "faq/cta/cta-sub": {
       "page": "faq",
-      "position": 25656,
+      "position": 26155,
       "value": "No experience needed. No commitment required. Your first class is always free — just show up and we'll take care of the rest."
     },
     "index/meta/title": {
       "page": "index",
-      "position": 191,
+      "position": 690,
       "value": "Legacy X Jiu-Jitsu — Woodstock, Ontario"
     },
     "index/hero/hero-eyebrow": {
       "page": "index",
-      "position": 26369,
+      "position": 26868,
       "value": "Woodstock, Ontario"
     },
     "index/hero/hero-headline": {
       "page": "index",
-      "position": 26465,
+      "position": 26964,
       "value": "Build your<br/>\nlegacy<br/>\n<span class=\"accent\">on the mat.</span>"
     },
     "index/hero/hero-sub": {
       "page": "index",
-      "position": 26617,
+      "position": 27116,
       "value": "World-class Jiu-Jitsu training for all levels. Join our community and transform your life through martial arts — no experience needed."
     },
     "index/programs/section-tag": {
       "page": "index",
-      "position": 27245,
+      "position": 27744,
       "value": "What we offer"
     },
     "index/programs/section-headline": {
       "page": "index",
-      "position": 27343,
+      "position": 27842,
       "value": "Programs built<br/>for <em>every level.</em>"
     },
     "index/why-legacy-x/section-tag": {
       "page": "index",
-      "position": 31055,
+      "position": 31554,
       "value": "Why Legacy X"
     },
     "index/why-legacy-x/section-headline": {
       "page": "index",
-      "position": 31156,
+      "position": 31655,
       "value": "Built on<br/>the right<br/><em>foundation.</em>"
     },
     "index/testimonials/section-tag": {
       "page": "index",
-      "position": 35027,
+      "position": 35526,
       "value": "From our community"
     },
     "index/testimonials/section-headline": {
       "page": "index",
-      "position": 35130,
+      "position": 35629,
       "value": "What members say."
     },
     "index/testimonials/testimonial-text": {
       "page": "index",
-      "position": 35428,
+      "position": 35927,
       "value": "\"Having trained with Francis for years, I can say firsthand that his technical knowledge is only matched by his integrity as a person. He has created an environment that is technical, safe, and completely ego-free. You’re not just joining a gym—you’re becoming part of a community led by one of the best in the business. I couldn’t be prouder to see him open the doors at Legacy X. Woodstock is lucky to have him!\""
     },
     "index/testimonials/testimonial-meta": {
       "page": "index",
-      "position": 35932,
+      "position": 36431,
       "value": "Rain Plaff · Black Belt"
     },
     "index/gallery/section-tag": {
       "page": "index",
-      "position": 38175,
+      "position": 38674,
       "value": "On the mats"
     },
     "index/gallery/section-headline": {
       "page": "index",
-      "position": 38266,
+      "position": 38765,
       "value": "Legacy X <em>in motion.</em>"
     },
     "index/cta-band/cta-headline": {
       "page": "index",
-      "position": 40275,
+      "position": 40774,
       "value": "Your first class<br/>is on us."
     },
     "index/cta-band/cta-sub": {
       "page": "index",
-      "position": 40370,
+      "position": 40869,
       "value": "No experience needed. No commitment required. Come see what Legacy X is about — bring a friend and train for free together."
     },
     "index/newsletter/newsletter-headline": {
       "page": "index",
-      "position": 40866,
+      "position": 41365,
       "value": "Stay in the loop."
     },
     "index/newsletter/newsletter-sub": {
       "page": "index",
-      "position": 40964,
+      "position": 41463,
       "value": "Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox. No spam, ever."
     },
     "instructors/meta/title": {
       "page": "instructors",
-      "position": 197,
+      "position": 696,
       "value": "Instructors — Legacy X Jiu-Jitsu"
     },
     "instructors/page-header/page-title": {
       "page": "instructors",
-      "position": 20745,
+      "position": 21244,
       "value": "Meet the<br/><em>Instructors.</em>"
     },
     "instructors/page-header/page-subtitle": {
       "page": "instructors",
-      "position": 20863,
+      "position": 21362,
       "value": "The people behind Legacy X — experienced, passionate, and dedicated to your growth on and off the mat."
     },
     "instructors/head-coach-francis-yanga/photo-initials": {
       "page": "instructors",
-      "position": 21447,
+      "position": 21946,
       "value": "FY"
     },
     "instructors/head-coach-francis-yanga/photo-add-note": {
       "page": "instructors",
-      "position": 21557,
+      "position": 22056,
       "value": "Photo coming soon"
     },
     "instructors/head-coach-francis-yanga/instructor-tag": {
       "page": "instructors",
-      "position": 21931,
+      "position": 22430,
       "value": "Head Coach & Founder"
     },
     "instructors/head-coach-francis-yanga/instructor-name": {
       "page": "instructors",
-      "position": 22060,
+      "position": 22559,
       "value": "Francis<br/>Yanga"
     },
     "instructors/head-coach-francis-yanga/instructor-title": {
       "page": "instructors",
-      "position": 22184,
+      "position": 22683,
       "value": "Founder & Head Instructor"
     },
     "instructors/head-coach-francis-yanga/instructor-affiliation": {
       "page": "instructors",
-      "position": 22331,
+      "position": 22830,
       "value": "Black Belt · GF Team"
     },
     "instructors/head-coach-francis-yanga/p": {
       "page": "instructors",
-      "position": 22457,
+      "position": 22956,
       "value": "Francis Yanga's journey in Brazilian Jiu-Jitsu began over <strong>10+ years ago</strong>, and from the very first roll, he knew he had found something that would change the course of his life. What started as a personal challenge quickly became a deep passion — one that he has dedicated himself to sharing with others."
     },
     "instructors/head-coach-francis-yanga/p-2": {
       "page": "instructors",
-      "position": 22846,
+      "position": 23345,
       "value": "Earning his <strong>Black Belt under <a href=\"our-lineage.html\" style=\"text-decoration:underline;text-underline-offset:3px;\">Thomas Armstrong</a></strong>, Francis developed a teaching philosophy rooted in patience, precision, and genuine care for every student who walks through the door. He believes that the mat is a place where anyone — regardless of age, background, or ability — can discover strength they never knew they had."
     },
     "instructors/head-coach-francis-yanga/p-3": {
       "page": "instructors",
-      "position": 23348,
+      "position": 23847,
       "value": "Legacy X Jiu-Jitsu is the realization of Francis's vision: a place where technique meets heart, where discipline builds character, and where every student becomes part of something bigger than themselves. His goal isn't just to teach Jiu-Jitsu — it's to <strong>build a community that transforms lives.</strong>"
     },
     "instructors/section-divider/divider-label": {
       "page": "instructors",
-      "position": 25057,
+      "position": 25556,
       "value": "Program Instructors"
     },
     "instructors/brandon-colvin/coach-photo": {
       "page": "instructors",
-      "position": 25385,
+      "position": 25884,
       "value": ""
     },
     "instructors/brandon-colvin/card-initials": {
       "page": "instructors",
-      "position": 25481,
+      "position": 25980,
       "value": "BC"
     },
     "instructors/brandon-colvin/card-add-note": {
       "page": "instructors",
-      "position": 25579,
+      "position": 26078,
       "value": "Photo coming soon"
     },
     "instructors/brandon-colvin/card-tag": {
       "page": "instructors",
-      "position": 25909,
+      "position": 26408,
       "value": "Kids Classes"
     },
     "instructors/brandon-colvin/card-name": {
       "page": "instructors",
-      "position": 26004,
+      "position": 26503,
       "value": "Brandon<br/>Colvin"
     },
     "instructors/brandon-colvin/card-role": {
       "page": "instructors",
-      "position": 26105,
+      "position": 26604,
       "value": "Kids Program Instructor"
     },
     "instructors/brandon-colvin/card-affiliation": {
       "page": "instructors",
-      "position": 26224,
+      "position": 26723,
       "value": "Brown Belt · Gracie Humaita"
     },
     "instructors/brandon-colvin/p": {
       "page": "instructors",
-      "position": 26341,
+      "position": 26840,
       "value": "Brandon is a Brazilian Jiu-Jitsu brown belt under <strong>Dave Dominy through Gracie Humaita</strong>, earning his brown belt in June 2026 after eight years of dedicated training."
     },
     "instructors/brandon-colvin/p-2": {
       "page": "instructors",
-      "position": 26580,
+      "position": 27079,
       "value": "He brings extensive experience <strong>teaching and coaching children and youth</strong> in Brazilian Jiu-Jitsu. His coaching journey has taken him throughout Ontario and internationally to Thailand, where he coached the <strong>Team Canada Jiu-Jitsu Fighting Team</strong>."
     },
     "instructors/brandon-colvin/p-3": {
       "page": "instructors",
-      "position": 26914,
+      "position": 27413,
       "value": "Brandon's passion for martial arts began at a young age and extends beyond Jiu-Jitsu, with experience in Karate, Modern Arnis, Krav Maga, and Muay Thai."
     },
     "instructors/brandon-colvin/card-tags": {
       "page": "instructors",
-      "position": 27177,
+      "position": 27676,
       "value": "<span class=\"card-badge\">Kids & Youth Specialist</span>\n<span class=\"card-badge\">Team Canada Coach</span>\n<span class=\"card-badge\">Gracie Humaita</span>\n<span class=\"card-badge\">Karate</span>\n<span class=\"card-badge\">Muay Thai</span>\n<span class=\"card-badge\">Krav Maga</span>"
     },
     "instructors/cta/cta-headline": {
       "page": "instructors",
-      "position": 27721,
+      "position": 28220,
       "value": "Train with our<br/>instructors."
     },
     "instructors/cta/cta-sub": {
       "page": "instructors",
-      "position": 27818,
+      "position": 28317,
       "value": "Your first class is free. Come meet the team, experience the culture, and see what Legacy X is all about — no experience required."
     },
     "our-lineage/meta/title": {
       "page": "our-lineage",
-      "position": 197,
+      "position": 696,
       "value": "Our Lineage — Legacy X Jiu-Jitsu"
     },
     "our-lineage/page-header/page-title": {
       "page": "our-lineage",
-      "position": 21190,
+      "position": 21689,
       "value": "Our<br/><em>Heritage.</em>"
     },
     "our-lineage/page-header/page-subtitle": {
       "page": "our-lineage",
-      "position": 21300,
+      "position": 21799,
       "value": "Brazilian Jiu-Jitsu is a living tradition passed directly from instructor to student. This unbroken chain connects Legacy X to the very origins of the art."
     },
     "our-lineage/lineage-chain/section-tag": {
       "page": "our-lineage",
-      "position": 21670,
+      "position": 22169,
       "value": "The Legacy Chain"
     },
     "our-lineage/lineage-chain/p": {
       "page": "our-lineage",
-      "position": 21739,
+      "position": 22238,
       "value": "Every technique taught at Legacy X traces back through a direct line of instruction spanning over a century of Jiu-Jitsu history."
     },
     "our-lineage/lineage-chain/card-num": {
       "page": "our-lineage",
-      "position": 22084,
+      "position": 22583,
       "value": "Lineage 01"
     },
     "our-lineage/lineage-chain/card-name": {
       "page": "our-lineage",
-      "position": 22181,
+      "position": 22680,
       "value": "Mitsuyo Maeda"
     },
     "our-lineage/lineage-chain/card-belt": {
       "page": "our-lineage",
-      "position": 22294,
+      "position": 22793,
       "value": "<span class=\"belt-pip white\"></span>\n<span class=\"belt-label\">7th Dan Judo</span>"
     },
     "our-lineage/lineage-chain/card-affiliation": {
       "page": "our-lineage",
-      "position": 22499,
+      "position": 22998,
       "value": "Kodokan Judo"
     },
     "our-lineage/lineage-chain/card-note": {
       "page": "our-lineage",
-      "position": 22596,
+      "position": 23095,
       "value": "Brought Judo and Jiu-Jitsu from Japan to Brazil, laying the foundation for what would become Brazilian Jiu-Jitsu."
     },
     "our-lineage/lineage-chain/chain-dot": {
       "page": "our-lineage",
-      "position": 22844,
+      "position": 23343,
       "value": "1"
     },
     "our-lineage/lineage-chain/chain-dot-2": {
       "page": "our-lineage",
-      "position": 23203,
+      "position": 23702,
       "value": "2"
     },
     "our-lineage/lineage-chain/card-num-2": {
       "page": "our-lineage",
-      "position": 23339,
+      "position": 23838,
       "value": "Lineage 02"
     },
     "our-lineage/lineage-chain/card-name-2": {
       "page": "our-lineage",
-      "position": 23438,
+      "position": 23937,
       "value": "Luiz França"
     },
     "our-lineage/lineage-chain/card-belt-2": {
       "page": "our-lineage",
-      "position": 23551,
+      "position": 24050,
       "value": "<span class=\"belt-pip red\"></span>\n<span class=\"belt-label\">Red Belt</span>"
     },
     "our-lineage/lineage-chain/card-affiliation-2": {
       "page": "our-lineage",
-      "position": 23752,
+      "position": 24251,
       "value": "França Jiu-Jitsu"
     },
     "our-lineage/lineage-chain/card-note-2": {
       "page": "our-lineage",
-      "position": 23855,
+      "position": 24354,
       "value": "Direct student of Maeda. Built a self-defense driven, tough and effective style that prioritized practicality over sport."
     },
     "our-lineage/lineage-chain/card-num-3": {
       "page": "our-lineage",
-      "position": 24226,
+      "position": 24725,
       "value": "Lineage 03"
     },
     "our-lineage/lineage-chain/card-name-3": {
       "page": "our-lineage",
-      "position": 24325,
+      "position": 24824,
       "value": "Oswaldo Fadda"
     },
     "our-lineage/lineage-chain/card-belt-3": {
       "page": "our-lineage",
-      "position": 24440,
+      "position": 24939,
       "value": "<span class=\"belt-pip red\"></span>\n<span class=\"belt-label\">9th Degree Red Belt</span>"
     },
     "our-lineage/lineage-chain/card-affiliation-3": {
       "page": "our-lineage",
-      "position": 24652,
+      "position": 25151,
       "value": "Equipe Fadda"
     },
     "our-lineage/lineage-chain/card-note-3": {
       "page": "our-lineage",
-      "position": 24751,
+      "position": 25250,
       "value": "Leg lock pioneer who made BJJ inclusive and accessible. Proved that technique could overcome size and strength."
     },
     "our-lineage/lineage-chain/chain-dot-3": {
       "page": "our-lineage",
-      "position": 24999,
+      "position": 25498,
       "value": "3"
     },
     "our-lineage/lineage-chain/chain-dot-4": {
       "page": "our-lineage",
-      "position": 25366,
+      "position": 25865,
       "value": "4"
     },
     "our-lineage/lineage-chain/card-num-4": {
       "page": "our-lineage",
-      "position": 25502,
+      "position": 26001,
       "value": "Lineage 04"
     },
     "our-lineage/lineage-chain/card-name-4": {
       "page": "our-lineage",
-      "position": 25601,
+      "position": 26100,
       "value": "Julio Cesar Pereira"
     },
     "our-lineage/lineage-chain/card-belt-4": {
       "page": "our-lineage",
-      "position": 25722,
+      "position": 26221,
       "value": "<span class=\"belt-pip coral\"></span>\n<span class=\"belt-label\">7th Degree Coral Belt</span>"
     },
     "our-lineage/lineage-chain/card-affiliation-4": {
       "page": "our-lineage",
-      "position": 25938,
+      "position": 26437,
       "value": "GF Team"
     },
     "our-lineage/lineage-chain/card-note-4": {
       "page": "our-lineage",
-      "position": 26032,
+      "position": 26531,
       "value": "Elite competition coach known for developing world-class athletes through advanced strategy, systems, and competition preparation."
     },
     "our-lineage/lineage-chain/card-num-5": {
       "page": "our-lineage",
-      "position": 26415,
+      "position": 26914,
       "value": "Lineage 05"
     },
     "our-lineage/lineage-chain/card-name-5": {
       "page": "our-lineage",
-      "position": 26514,
+      "position": 27013,
       "value": "Thomas Armstrong"
     },
     "our-lineage/lineage-chain/card-belt-5": {
       "page": "our-lineage",
-      "position": 26632,
+      "position": 27131,
       "value": "<span class=\"belt-pip black\" style=\"position:relative;overflow:visible;display:inline-flex;align-items:center;gap:3px;\">\n  <span style=\"display:inline-block;width:32px;height:10px;background:var(--belt-black);border-radius:2px;position:relative;\">\n    <span style=\"position:absolute;top:0;bottom:0;right:6px;width:4px;background:rgba(255,255,255,0.85);border-radius:1px;\"></span>\n    <span style=\"position:absolute;top:0;bottom:0;right:12px;width:4px;background:rgba(255,255,255,0.85);border-radius:1px;\"></span>\n    <span style=\"position:absolute;top:0;bottom:0;right:18px;width:4px;background:rgba(255,255,255,0.85);border-radius:1px;\"></span>\n  </span>\n</span>\n<span class=\"belt-label\">3rd Degree Black Belt</span>"
     },
     "our-lineage/lineage-chain/card-affiliation-5": {
       "page": "our-lineage",
-      "position": 27547,
+      "position": 28046,
       "value": "Armstrong Jiu-Jitsu / GF Team Canada"
     },
     "our-lineage/lineage-chain/card-note-5": {
       "page": "our-lineage",
-      "position": 27670,
+      "position": 28169,
       "value": "Coach Francis's direct instructor. Built his game on strong fundamentals, pressure, and positional control — the same principles carried into Legacy X."
     },
     "our-lineage/lineage-chain/chain-dot-5": {
       "page": "our-lineage",
-      "position": 27958,
+      "position": 28457,
       "value": "5"
     },
     "our-lineage/lineage-chain/chain-dot-6": {
       "page": "our-lineage",
-      "position": 28334,
+      "position": 28833,
       "value": "LX"
     },
     "our-lineage/lineage-chain/card-num-6": {
       "page": "our-lineage",
-      "position": 28471,
+      "position": 28970,
       "value": "Legacy X"
     },
     "our-lineage/lineage-chain/card-name-6": {
       "page": "our-lineage",
-      "position": 28568,
+      "position": 29067,
       "value": "Francis Yanga"
     },
     "our-lineage/lineage-chain/card-belt-6": {
       "page": "our-lineage",
-      "position": 28683,
+      "position": 29182,
       "value": "<span class=\"belt-pip black\"></span>\n<span class=\"belt-label\">Black Belt</span>"
     },
     "our-lineage/lineage-chain/card-affiliation-6": {
       "page": "our-lineage",
-      "position": 28888,
+      "position": 29387,
       "value": "Legacy X Jiu-Jitsu / Armstrong Jiu-Jitsu"
     },
     "our-lineage/lineage-chain/card-note-6": {
       "page": "our-lineage",
-      "position": 29015,
+      "position": 29514,
       "value": "Head Coach and Founder of Legacy X Jiu-Jitsu. A technical coach focused on growth, mindset, and building a lasting Jiu-Jitsu community in Woodstock, Ontario."
     },
     "our-lineage/what-lineage-means/section-tag": {
       "page": "our-lineage",
-      "position": 29440,
+      "position": 29939,
       "value": "Our commitment"
     },
     "our-lineage/what-lineage-means/section-headline": {
       "page": "our-lineage",
-      "position": 29553,
+      "position": 30052,
       "value": "What Lineage<br/>Means to <em>Us.</em>"
     },
     "our-lineage/what-lineage-means/p": {
       "page": "our-lineage",
-      "position": 29685,
+      "position": 30184,
       "value": "At Legacy X, lineage is not just history — it is <strong>accountability</strong>. Knowing where your techniques came from means understanding why they work."
     },
     "our-lineage/what-lineage-means/p-2": {
       "page": "our-lineage",
-      "position": 29903,
+      "position": 30402,
       "value": "Our instruction carries the precision and intent of every generation before us, adapted for today's training environment without losing the essence of the original art."
     },
     "our-lineage/what-lineage-means/p-3": {
       "page": "our-lineage",
-      "position": 30133,
+      "position": 30632,
       "value": "When you train at Legacy X, you become part of this lineage. You carry it forward every time you step on the mat, every time you teach a training partner, and every time you represent the academy."
     },
     "our-lineage/cta/cta-headline": {
       "page": "our-lineage",
-      "position": 31843,
+      "position": 32342,
       "value": "Join the chain.<br/>Start your journey."
     },
     "our-lineage/cta/cta-sub": {
       "page": "our-lineage",
-      "position": 31948,
+      "position": 32447,
       "value": "Your first class is free. Come experience a lineage that connects directly to the origins of Brazilian Jiu-Jitsu — and become part of it."
     },
     "privacy/meta/title": {
       "page": "privacy",
-      "position": 193,
+      "position": 692,
       "value": "Privacy Policy — Legacy X Jiu-Jitsu"
     },
     "privacy/page-header/page-title": {
       "page": "privacy",
-      "position": 15205,
+      "position": 15704,
       "value": "Privacy<br/><em>Policy.</em>"
     },
     "privacy/page-header/page-meta": {
       "page": "privacy",
-      "position": 15305,
+      "position": 15804,
       "value": "Last updated: April 2026"
     },
     "programs/meta/title": {
       "page": "programs",
-      "position": 194,
+      "position": 693,
       "value": "Programs — Legacy X Jiu-Jitsu"
     },
     "programs/page-header/page-title": {
       "page": "programs",
-      "position": 18004,
+      "position": 18503,
       "value": "Six programs.<br/><em>One standard.</em>"
     },
     "programs/page-header/page-subtitle": {
       "page": "programs",
-      "position": 18125,
+      "position": 18624,
       "value": "Every program at Legacy X is built on the same foundation — real Brazilian Jiu-Jitsu, taught with care, regardless of age, experience, or goal. Find the right fit for you."
     },
     "programs/free-trial-band/trial-headline": {
       "page": "programs",
-      "position": 27168,
+      "position": 27667,
       "value": "Not sure which<br/>program is right?"
     },
     "programs/free-trial-band/trial-sub": {
       "page": "programs",
-      "position": 27283,
+      "position": 27782,
       "value": "Try a class for free — no commitment, no experience needed. Come see Legacy X for yourself and we'll help point you in the right direction."
     },
     "programs/newsletter/newsletter-headline": {
       "page": "programs",
-      "position": 27757,
+      "position": 28256,
       "value": "Stay in the loop."
     },
     "programs/newsletter/newsletter-sub": {
       "page": "programs",
-      "position": 27858,
+      "position": 28357,
       "value": "Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox."
     },
     "schedule/meta/title": {
       "page": "schedule",
-      "position": 194,
+      "position": 693,
       "value": "Schedule — Legacy X Jiu-Jitsu"
     },
     "schedule/page-header/page-title": {
       "page": "schedule",
-      "position": 14875,
+      "position": 15374,
       "value": "Class<br/><em>Schedule.</em>"
     },
     "schedule/page-header/page-subtitle": {
       "page": "schedule",
-      "position": 14984,
+      "position": 15483,
       "value": "All classes are held at 27 Bysham Park Drive, Woodstock ON. Your first class is always free — just show up."
     },
     "schedule/gymdesk-schedule/schedule-tag": {
       "page": "schedule",
-      "position": 15337,
+      "position": 15836,
       "value": "Live Schedule"
     },
     "schedule/gymdesk-schedule/schedule-headline": {
       "page": "schedule",
-      "position": 15448,
+      "position": 15947,
       "value": "Find your <em>class.</em>"
     },
     "schedule/cta/cta-headline": {
       "page": "schedule",
-      "position": 15954,
+      "position": 16453,
       "value": "First class<br/>is free."
     },
     "schedule/cta/cta-sub": {
       "page": "schedule",
-      "position": 16041,
+      "position": 16540,
       "value": "No experience needed. No commitment required. Pick a class from the schedule above and just show up — we'll take care of the rest."
     },
     "terms/meta/title": {
       "page": "terms",
-      "position": 191,
+      "position": 690,
       "value": "Terms & Conditions — Legacy X Jiu-Jitsu"
     },
     "terms/page-header/page-title": {
       "page": "terms",
-      "position": 15068,
+      "position": 15567,
       "value": "Terms &amp;<br/><em>Conditions.</em>"
     },
     "terms/page-header/page-meta": {
       "page": "terms",
-      "position": 15174,
+      "position": 15673,
       "value": "Last updated: April 2026"
     },
     "terms/footer/copyright": {
       "page": "terms",
-      "position": 26605,
+      "position": 27104,
       "value": "© 2026 Legacy X Jiu-Jitsu. All rights reserved. &nbsp;·&nbsp; <a href=\"privacy.html\" style=\"color:var(--muted);\">Privacy Policy</a> &nbsp;·&nbsp; <a href=\"terms.html\" style=\"color:var(--muted);\">Terms & Conditions</a>"
     },
     "programs/adult-jiu-jitsu/meta/title": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 210,
+      "position": 718,
       "value": "Adult Jiu-Jitsu — Legacy X Jiu-Jitsu"
     },
     "programs/adult-jiu-jitsu/meta/description": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 289,
+      "position": 797,
       "value": "Adult Brazilian Jiu-Jitsu in Woodstock, Ontario. Gi and No-Gi classes for ages 16 and up, all experience levels. Your first class is free."
     },
     "programs/adult-jiu-jitsu/page-header/page-tag": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 24480,
+      "position": 24988,
       "value": "Adults 16+ · Gi & No-Gi · All levels"
     },
     "programs/adult-jiu-jitsu/page-header/page-title": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 24613,
+      "position": 25121,
       "value": "Adult<br/><em>Jiu-Jitsu.</em>"
     },
     "programs/adult-jiu-jitsu/page-header/page-subtitle": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 24739,
+      "position": 25247,
       "value": "Our flagship adult program covers the full spectrum of Brazilian Jiu-Jitsu — from foundational movement and positional awareness through to escapes, control, and submission offense. Structured for progression, open to all experience levels."
     },
     "programs/adult-jiu-jitsu/what-you-ll-learn/section-label": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 25400,
+      "position": 25908,
       "value": "The Curriculum"
     },
     "programs/adult-jiu-jitsu/what-you-ll-learn/section-headline": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 25525,
+      "position": 26033,
       "value": "What you'll<br/><em>learn.</em>"
     },
     "programs/adult-jiu-jitsu/what-you-ll-learn/section-intro": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 25659,
+      "position": 26167,
       "value": "Classes are fundamentals-focused and built for progression. Every technique is taught with the why behind it, not just the how — so what you learn today still makes sense years from now."
     },
     "programs/adult-jiu-jitsu/gi-no-gi/section-label": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 27675,
+      "position": 28183,
       "value": "Two Styles, One Program"
     },
     "programs/adult-jiu-jitsu/gi-no-gi/section-headline": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 27800,
+      "position": 28308,
       "value": "Gi & <em>No-Gi.</em>"
     },
     "programs/adult-jiu-jitsu/gi-no-gi/section-intro": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 27918,
+      "position": 28426,
       "value": "We teach both styles in the adult program. Each develops different and complementary skills, and training both makes you a more complete grappler."
     },
     "programs/adult-jiu-jitsu/class-flow/section-label": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 29614,
+      "position": 30122,
       "value": "Inside a Class"
     },
     "programs/adult-jiu-jitsu/class-flow/section-headline": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 29732,
+      "position": 30240,
       "value": "What an hour<br/><em>looks like.</em>"
     },
     "programs/adult-jiu-jitsu/class-flow/section-intro": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 29865,
+      "position": 30373,
       "value": "Every adult class follows a structure designed to keep you safe and help you improve, whether it's your first class or your five-hundredth."
     },
     "programs/adult-jiu-jitsu/your-first-class/section-label": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 31748,
+      "position": 32256,
       "value": "Getting Started"
     },
     "programs/adult-jiu-jitsu/your-first-class/section-headline": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 31877,
+      "position": 32385,
       "value": "Your first<br/><em>class.</em>"
     },
     "programs/adult-jiu-jitsu/your-first-class/section-intro": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 32013,
+      "position": 32521,
       "value": "Most of our adult members walked in with zero experience. You don't need to be in shape, flexible, or athletic to start — that's what training is for."
     },
     "programs/adult-jiu-jitsu/coach/section-label": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 34250,
+      "position": 34758,
       "value": "Your Coach"
     },
     "programs/adult-jiu-jitsu/coach/section-headline": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 34359,
+      "position": 34867,
       "value": "Taught by a<br/><em>black belt.</em>"
     },
     "programs/adult-jiu-jitsu/coach/coach-initials": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 34661,
+      "position": 35169,
       "value": "FY"
     },
     "programs/adult-jiu-jitsu/coach/coach-role": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 34851,
+      "position": 35359,
       "value": "Founder & Head Instructor"
     },
     "programs/adult-jiu-jitsu/coach/coach-name": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 34971,
+      "position": 35479,
       "value": "Francis Yanga"
     },
     "programs/adult-jiu-jitsu/coach/coach-bio": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 35071,
+      "position": 35579,
       "value": "Coach Francis leads the adult program with a teaching philosophy rooted in patience, precision, and genuine care for every student who walks through the door. He believes the mat is a place where anyone — regardless of age, background, or ability — can discover strength they never knew they had."
     },
     "programs/adult-jiu-jitsu/coach/coach-stat-label": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 35523,
+      "position": 36031,
       "value": "Belt Rank"
     },
     "programs/adult-jiu-jitsu/coach/coach-stat-value": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 35640,
+      "position": 36148,
       "value": "Black Belt"
     },
     "programs/adult-jiu-jitsu/coach/coach-stat-label-2": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 35793,
+      "position": 36301,
       "value": "Lineage"
     },
     "programs/adult-jiu-jitsu/coach/coach-stat-value-2": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 35910,
+      "position": 36418,
       "value": "<a href=\"../our-lineage.html\" style=\"text-decoration:underline;text-underline-offset:3px;\">Thomas Armstrong</a>"
     },
     "programs/adult-jiu-jitsu/coach/coach-stat-label-3": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 36164,
+      "position": 36672,
       "value": "Years Training"
     },
     "programs/adult-jiu-jitsu/coach/coach-stat-value-3": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 36288,
+      "position": 36796,
       "value": "10+"
     },
     "programs/adult-jiu-jitsu/testimonials/section-label": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 36645,
+      "position": 37153,
       "value": "From the Mat"
     },
     "programs/adult-jiu-jitsu/testimonials/section-headline": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 36763,
+      "position": 37271,
       "value": "What adults<br/><em>are saying.</em>"
     },
     "programs/adult-jiu-jitsu/faq/section-label": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 37904,
+      "position": 38412,
       "value": "Adult Program FAQ"
     },
     "programs/adult-jiu-jitsu/faq/section-headline": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 38018,
+      "position": 38526,
       "value": "Common<br/><em>questions.</em>"
     },
     "programs/adult-jiu-jitsu/free-trial-band/trial-headline": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 41320,
+      "position": 41828,
       "value": "Your first class<br/>is on us."
     },
     "programs/adult-jiu-jitsu/free-trial-band/trial-sub": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 41445,
+      "position": 41953,
       "value": "No experience needed. No commitment required. Pick a class from the schedule, show up, and we'll take care of the rest."
     },
     "programs/adult-jiu-jitsu/newsletter/newsletter-headline": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 41915,
+      "position": 42423,
       "value": "Stay in the loop."
     },
     "programs/adult-jiu-jitsu/newsletter/newsletter-sub": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 42032,
+      "position": 42540,
       "value": "Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox."
     },
     "programs/competition/meta/title": {
       "page": "programs/competition",
-      "position": 206,
+      "position": 714,
       "value": "Competition — Legacy X Jiu-Jitsu"
     },
     "programs/competition/meta/description": {
       "page": "programs/competition",
-      "position": 281,
+      "position": 789,
       "value": "Brazilian Jiu-Jitsu competition team in Woodstock, Ontario. Structured Gi and No-Gi preparation for IBJJF/OJA-sanctioned events and open tournaments."
     },
     "programs/competition/page-header/page-tag": {
       "page": "programs/competition",
-      "position": 22158,
+      "position": 22666,
       "value": "Intermediate–Advanced · Gi & No-Gi"
     },
     "programs/competition/page-header/page-title": {
       "page": "programs/competition",
-      "position": 22285,
+      "position": 22793,
       "value": "Competition<br/><em>Team.</em>"
     },
     "programs/competition/page-header/page-subtitle": {
       "page": "programs/competition",
-      "position": 22408,
+      "position": 22916,
       "value": "Structured preparation for IBJJF/OJA-sanctioned events and open tournaments. This program covers competition strategy, drilling under fatigue, live rounds with intensity, and the mental preparation needed to perform under pressure."
     },
     "programs/competition/what-you-ll-train/section-label": {
       "page": "programs/competition",
-      "position": 23056,
+      "position": 23564,
       "value": "The Preparation"
     },
     "programs/competition/what-you-ll-train/section-headline": {
       "page": "programs/competition",
-      "position": 23178,
+      "position": 23686,
       "value": "Built to<br/><em>perform.</em>"
     },
     "programs/competition/what-you-ll-train/section-intro": {
       "page": "programs/competition",
-      "position": 23307,
+      "position": 23815,
       "value": "Competing asks more of you than a regular class. This program prepares you for every part of it — body, mind, and game plan."
     },
     "programs/competition/who-it-s-for/section-label": {
       "page": "programs/competition",
-      "position": 25180,
+      "position": 25688,
       "value": "Who It's For"
     },
     "programs/competition/who-it-s-for/section-headline": {
       "page": "programs/competition",
-      "position": 25294,
+      "position": 25802,
       "value": "Ready for<br/><em>the next step.</em>"
     },
     "programs/competition/who-it-s-for/section-intro": {
       "page": "programs/competition",
-      "position": 25425,
+      "position": 25933,
       "value": "The competition team is for students who want to test their Jiu-Jitsu on the mat — in the Gi, in No-Gi, or both."
     },
     "programs/competition/oja/section-label": {
       "page": "programs/competition",
-      "position": 27116,
+      "position": 27624,
       "value": "Before You Compete"
     },
     "programs/competition/oja/section-headline": {
       "page": "programs/competition",
-      "position": 27231,
+      "position": 27739,
       "value": "OJA<br/><em>registration.</em>"
     },
     "programs/competition/oja/section-intro": {
       "page": "programs/competition",
-      "position": 27350,
+      "position": 27858,
       "value": "Legacy X Jiu-Jitsu is a proud member club of the Ontario Jiu-Jitsu Association (OJA). OJA registration is required to compete in OJA-sanctioned events, and IBJJF events require an active IBJJF membership."
     },
     "programs/competition/faq/section-label": {
       "page": "programs/competition",
-      "position": 29704,
+      "position": 30212,
       "value": "Competition FAQ"
     },
     "programs/competition/faq/section-headline": {
       "page": "programs/competition",
-      "position": 29812,
+      "position": 30320,
       "value": "Common<br/><em>questions.</em>"
     },
     "programs/competition/free-trial-band/trial-headline": {
       "page": "programs/competition",
-      "position": 31958,
+      "position": 32466,
       "value": "Ready to test<br/>your game?"
     },
     "programs/competition/free-trial-band/trial-sub": {
       "page": "programs/competition",
-      "position": 32077,
+      "position": 32585,
       "value": "New to Legacy X? Your first class is free. Come train with us and talk to us about joining the competition team."
     },
     "programs/competition/newsletter/newsletter-headline": {
       "page": "programs/competition",
-      "position": 32536,
+      "position": 33044,
       "value": "Stay in the loop."
     },
     "programs/competition/newsletter/newsletter-sub": {
       "page": "programs/competition",
-      "position": 32649,
+      "position": 33157,
       "value": "Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox."
     },
     "programs/jiu-jitsu-over-55/meta/title": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 212,
+      "position": 720,
       "value": "Jiu-Jitsu Over 55 — Legacy X Jiu-Jitsu"
     },
     "programs/jiu-jitsu-over-55/meta/description": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 293,
+      "position": 801,
       "value": "Low-impact Brazilian Jiu-Jitsu for practitioners 55 and older in Woodstock, Ontario. Focused on movement, joint health, and longevity. No experience required. Your first class is free."
     },
     "programs/jiu-jitsu-over-55/page-header/page-tag": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 22219,
+      "position": 22727,
       "value": "55+ · All levels · Low impact <span class=\"page-badge\">New Program</span>"
     },
     "programs/jiu-jitsu-over-55/page-header/page-title": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 22387,
+      "position": 22895,
       "value": "Jiu-Jitsu<br/><em>Over 55.</em>"
     },
     "programs/jiu-jitsu-over-55/page-header/page-subtitle": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 22517,
+      "position": 23025,
       "value": "Jiu-Jitsu is for every body and every age. This program is designed specifically around the needs, pace, and goals of practitioners 55 and older — prioritizing movement quality, longevity, joint health, and staying active."
     },
     "programs/jiu-jitsu-over-55/focus-areas/section-label": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 23150,
+      "position": 23658,
       "value": "The Focus"
     },
     "programs/jiu-jitsu-over-55/focus-areas/section-headline": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 23266,
+      "position": 23774,
       "value": "Train for<br/><em>the long run.</em>"
     },
     "programs/jiu-jitsu-over-55/focus-areas/section-intro": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 23401,
+      "position": 23909,
       "value": "This program is about more than technique. It's about moving well, feeling good, and staying on the mats for years to come."
     },
     "programs/jiu-jitsu-over-55/train-smart/section-label": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 25251,
+      "position": 25759,
       "value": "How It's Different"
     },
     "programs/jiu-jitsu-over-55/train-smart/section-headline": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 25376,
+      "position": 25884,
       "value": "Same Jiu-Jitsu.<br/><em>Smarter pace.</em>"
     },
     "programs/jiu-jitsu-over-55/train-smart/section-intro": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 25517,
+      "position": 26025,
       "value": "You'll work on the same foundational principles as our adult program, adapted to train smart and stay on the mats for years to come."
     },
     "programs/jiu-jitsu-over-55/class-flow/section-label": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 27067,
+      "position": 27575,
       "value": "Inside a Class"
     },
     "programs/jiu-jitsu-over-55/class-flow/section-headline": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 27187,
+      "position": 27695,
       "value": "What a class<br/><em>looks like.</em>"
     },
     "programs/jiu-jitsu-over-55/class-flow/section-intro": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 27322,
+      "position": 27830,
       "value": "Every class follows a clear structure, so you always know what to expect and can work at your own pace."
     },
     "programs/jiu-jitsu-over-55/your-first-class/section-label": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 28811,
+      "position": 29319,
       "value": "Getting Started"
     },
     "programs/jiu-jitsu-over-55/your-first-class/section-headline": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 28942,
+      "position": 29450,
       "value": "Your first<br/><em>class.</em>"
     },
     "programs/jiu-jitsu-over-55/your-first-class/section-intro": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 29080,
+      "position": 29588,
       "value": "No prior experience required, and you don't need to be in shape to start. Come as you are — we'll take it from there."
     },
     "programs/jiu-jitsu-over-55/faq/section-label": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 31284,
+      "position": 31792,
       "value": "Over 55 FAQ"
     },
     "programs/jiu-jitsu-over-55/faq/section-headline": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 31394,
+      "position": 31902,
       "value": "Common<br/><em>questions.</em>"
     },
     "programs/jiu-jitsu-over-55/free-trial-band/trial-headline": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 33521,
+      "position": 34029,
       "value": "It's never too late<br/>to start."
     },
     "programs/jiu-jitsu-over-55/free-trial-band/trial-sub": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 33651,
+      "position": 34159,
       "value": "No experience needed. No commitment required. Your first class is free — pick a class from the schedule and we'll take care of the rest."
     },
     "programs/jiu-jitsu-over-55/newsletter/newsletter-headline": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 34140,
+      "position": 34648,
       "value": "Stay in the loop."
     },
     "programs/jiu-jitsu-over-55/newsletter/newsletter-sub": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 34259,
+      "position": 34767,
       "value": "Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox."
     },
     "programs/kids-jiu-jitsu/meta/title": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 209,
+      "position": 717,
       "value": "Kids Jiu-Jitsu — Legacy X Jiu-Jitsu"
     },
     "programs/kids-jiu-jitsu/meta/description": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 287,
+      "position": 795,
       "value": "Kids and teen Brazilian Jiu-Jitsu in Woodstock, Ontario for ages 4–15: Little Warriors (4–6), Legacy Juniors (7–12), and Legacy Next Gen (13–15). The first class is free."
     },
     "programs/kids-jiu-jitsu/page-header/page-tag": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 25864,
+      "position": 26372,
       "value": "Kids & Teens · Gi & No-Gi · Ages 4–15"
     },
     "programs/kids-jiu-jitsu/page-header/page-title": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 26001,
+      "position": 26509,
       "value": "Kids<br/><em>Jiu-Jitsu.</em>"
     },
     "programs/kids-jiu-jitsu/page-header/page-subtitle": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 26125,
+      "position": 26633,
       "value": "A fun, structured program introducing children to movement fundamentals, discipline, and confidence through Jiu-Jitsu. Three age groups, each with games, exercises, and age-appropriate technique in a positive, encouraging environment."
     },
     "programs/kids-jiu-jitsu/age-groups/section-label": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 26783,
+      "position": 27291,
       "value": "Three Age Groups"
     },
     "programs/kids-jiu-jitsu/age-groups/section-headline": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 26902,
+      "position": 27410,
       "value": "The right class<br/><em>for every age.</em>"
     },
     "programs/kids-jiu-jitsu/age-groups/section-intro": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 27040,
+      "position": 27548,
       "value": "Kids train with others their own age, so every class is pitched at the right level. At 16, students move up to our <a href=\"adult-jiu-jitsu.html\" style=\"color:var(--blue);\">Adult program</a>."
     },
     "programs/kids-jiu-jitsu/what-kids-gain/section-label": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 29097,
+      "position": 29605,
       "value": "Why Jiu-Jitsu"
     },
     "programs/kids-jiu-jitsu/what-kids-gain/section-headline": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 29217,
+      "position": 29725,
       "value": "More than<br/><em>a sport.</em>"
     },
     "programs/kids-jiu-jitsu/what-kids-gain/section-intro": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 29347,
+      "position": 29855,
       "value": "Jiu-Jitsu gives kids an active, structured place to grow. The skills they build on the mat go home with them — to school, to the playground, and everywhere in between."
     },
     "programs/kids-jiu-jitsu/class-flow/section-label": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 31253,
+      "position": 31761,
       "value": "Inside a Class"
     },
     "programs/kids-jiu-jitsu/class-flow/section-headline": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 31370,
+      "position": 31878,
       "value": "What a class<br/><em>looks like.</em>"
     },
     "programs/kids-jiu-jitsu/class-flow/section-intro": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 31502,
+      "position": 32010,
       "value": "Every class mixes three things together, in both Gi and No-Gi, adapted to each age group."
     },
     "programs/kids-jiu-jitsu/first-class/section-label": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 32976,
+      "position": 33484,
       "value": "For Parents"
     },
     "programs/kids-jiu-jitsu/first-class/section-headline": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 33095,
+      "position": 33603,
       "value": "Your child's<br/><em>first class.</em>"
     },
     "programs/kids-jiu-jitsu/first-class/section-intro": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 33233,
+      "position": 33741,
       "value": "No experience needed and nothing to buy. If you're unsure whether your child is ready, reach out — we assess each child individually and are happy to talk it through before the first class."
     },
     "programs/kids-jiu-jitsu/coach/section-label": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 35544,
+      "position": 36052,
       "value": "Your Child's Coach"
     },
     "programs/kids-jiu-jitsu/coach/section-headline": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 35660,
+      "position": 36168,
       "value": "Meet Coach<br/><em>Brandon.</em>"
     },
     "programs/kids-jiu-jitsu/coach/coach-initials": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 35947,
+      "position": 36455,
       "value": "BC"
     },
     "programs/kids-jiu-jitsu/coach/coach-role": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 36142,
+      "position": 36650,
       "value": "Kids Program Instructor"
     },
     "programs/kids-jiu-jitsu/coach/coach-name": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 36255,
+      "position": 36763,
       "value": "Brandon Colvin"
     },
     "programs/kids-jiu-jitsu/coach/coach-bio": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 36355,
+      "position": 36863,
       "value": "Brandon is a Brazilian Jiu-Jitsu brown belt under Dave Dominy through Gracie Humaita, earning his brown belt in June 2026 after eight years of dedicated training. He brings extensive experience teaching and coaching children and youth, and his coaching journey has taken him throughout Ontario and internationally to Thailand, where he coached the Team Canada Jiu-Jitsu Fighting Team."
     },
     "programs/kids-jiu-jitsu/coach/coach-stat-label": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 36894,
+      "position": 37402,
       "value": "Belt Rank"
     },
     "programs/kids-jiu-jitsu/coach/coach-stat-value": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 37010,
+      "position": 37518,
       "value": "Brown Belt"
     },
     "programs/kids-jiu-jitsu/coach/coach-stat-label-2": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 37162,
+      "position": 37670,
       "value": "Lineage"
     },
     "programs/kids-jiu-jitsu/coach/coach-stat-value-2": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 37278,
+      "position": 37786,
       "value": "Dave Dominy"
     },
     "programs/kids-jiu-jitsu/coach/coach-stat-label-3": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 37431,
+      "position": 37939,
       "value": "Years Training"
     },
     "programs/kids-jiu-jitsu/coach/coach-stat-value-3": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 37554,
+      "position": 38062,
       "value": "8"
     },
     "programs/kids-jiu-jitsu/testimonial/section-label": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 37906,
+      "position": 38414,
       "value": "From Our Parents"
     },
     "programs/kids-jiu-jitsu/testimonial/section-headline": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 38026,
+      "position": 38534,
       "value": "What parents<br/><em>are saying.</em>"
     },
     "programs/kids-jiu-jitsu/testimonial/quote-text": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 38274,
+      "position": 38782,
       "value": "\"My kid started the trial classes and now she talks about Jiu-Jitsu constantly. The energy in that room is amazing — fun, safe, and structured.\""
     },
     "programs/kids-jiu-jitsu/testimonial/quote-meta": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 38513,
+      "position": 39021,
       "value": "Kids Program Parent"
     },
     "programs/kids-jiu-jitsu/faq/section-label": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 38721,
+      "position": 39229,
       "value": "Parent FAQ"
     },
     "programs/kids-jiu-jitsu/faq/section-headline": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 38827,
+      "position": 39335,
       "value": "Common<br/><em>questions.</em>"
     },
     "programs/kids-jiu-jitsu/free-trial-band/trial-headline": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 41455,
+      "position": 41963,
       "value": "Their first class<br/>is on us."
     },
     "programs/kids-jiu-jitsu/free-trial-band/trial-sub": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 41580,
+      "position": 42088,
       "value": "No experience needed. No commitment required. Find your child's group on the schedule, bring them in, and we'll take care of the rest."
     },
     "programs/kids-jiu-jitsu/newsletter/newsletter-headline": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 42064,
+      "position": 42572,
       "value": "Stay in the loop."
     },
     "programs/kids-jiu-jitsu/newsletter/newsletter-sub": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 42180,
+      "position": 42688,
       "value": "Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox."
     },
     "programs/private-lessons/meta/title": {
       "page": "programs/private-lessons",
-      "position": 210,
+      "position": 718,
       "value": "Private Lessons — Legacy X Jiu-Jitsu"
     },
     "programs/private-lessons/meta/description": {
       "page": "programs/private-lessons",
-      "position": 289,
+      "position": 797,
       "value": "One-on-one Brazilian Jiu-Jitsu private lessons with Coach Francis Yanga in Woodstock, Ontario. All levels, fully customized to your goals. Book online."
     },
     "programs/private-lessons/page-header/page-tag": {
       "page": "programs/private-lessons",
-      "position": 22042,
+      "position": 22550,
       "value": "All levels · 1-on-1"
     },
     "programs/private-lessons/page-header/page-title": {
       "page": "programs/private-lessons",
-      "position": 22154,
+      "position": 22662,
       "value": "Private<br/><em>Lessons.</em>"
     },
     "programs/private-lessons/page-header/page-subtitle": {
       "page": "programs/private-lessons",
-      "position": 22280,
+      "position": 22788,
       "value": "Work directly with Coach Francis in a one-on-one setting tailored entirely to your goals, questions, and areas of focus. Private lessons deliver results faster than group classes alone."
     },
     "programs/private-lessons/what-we-can-work-on/section-label": {
       "page": "programs/private-lessons",
-      "position": 22832,
+      "position": 23340,
       "value": "Your Session, Your Goals"
     },
     "programs/private-lessons/what-we-can-work-on/section-headline": {
       "page": "programs/private-lessons",
-      "position": 22969,
+      "position": 23477,
       "value": "What we can<br/><em>work on.</em>"
     },
     "programs/private-lessons/what-we-can-work-on/section-intro": {
       "page": "programs/private-lessons",
-      "position": 23107,
+      "position": 23615,
       "value": "Every private lesson is built around you. Bring a goal, a question, or a problem in your game — we'll focus the whole session on it."
     },
     "programs/private-lessons/why-private/section-label": {
       "page": "programs/private-lessons",
-      "position": 24966,
+      "position": 25474,
       "value": "Why Private Lessons"
     },
     "programs/private-lessons/why-private/section-headline": {
       "page": "programs/private-lessons",
-      "position": 25090,
+      "position": 25598,
       "value": "Faster<br/><em>progress.</em>"
     },
     "programs/private-lessons/why-private/section-intro": {
       "page": "programs/private-lessons",
-      "position": 25216,
+      "position": 25724,
       "value": "Group classes build your base. Private lessons fill the gaps and speed everything up."
     },
     "programs/private-lessons/booking/section-label": {
       "page": "programs/private-lessons",
-      "position": 26675,
+      "position": 27183,
       "value": "Book a Session"
     },
     "programs/private-lessons/booking/section-headline": {
       "page": "programs/private-lessons",
-      "position": 26790,
+      "position": 27298,
       "value": "Book your<br/><em>private lesson.</em>"
     },
     "programs/private-lessons/booking/section-intro": {
       "page": "programs/private-lessons",
-      "position": 26921,
+      "position": 27429,
       "value": "Choose a time that works for you and complete the booking below. Have a question first? <a href=\"../contact.html\" style=\"color:var(--blue);\">Get in touch</a>."
     },
     "programs/private-lessons/faq/section-label": {
       "page": "programs/private-lessons",
-      "position": 27419,
+      "position": 27927,
       "value": "Private Lessons FAQ"
     },
     "programs/private-lessons/faq/section-headline": {
       "page": "programs/private-lessons",
-      "position": 27535,
+      "position": 28043,
       "value": "Common<br/><em>questions.</em>"
     },
     "programs/private-lessons/free-trial-band/trial-headline": {
       "page": "programs/private-lessons",
-      "position": 29620,
+      "position": 30128,
       "value": "New to<br/>Legacy X?"
     },
     "programs/private-lessons/free-trial-band/trial-sub": {
       "page": "programs/private-lessons",
-      "position": 29735,
+      "position": 30243,
       "value": "Try a group class for free — no commitment, no experience needed. Come see Legacy X for yourself."
     },
     "programs/private-lessons/newsletter/newsletter-headline": {
       "page": "programs/private-lessons",
-      "position": 30183,
+      "position": 30691,
       "value": "Stay in the loop."
     },
     "programs/private-lessons/newsletter/newsletter-sub": {
       "page": "programs/private-lessons",
-      "position": 30300,
+      "position": 30808,
       "value": "Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox."
     },
     "programs/womens-only/meta/title": {
       "page": "programs/womens-only",
-      "position": 206,
+      "position": 714,
       "value": "Women's Only — Legacy X Jiu-Jitsu"
     },
     "programs/womens-only/meta/description": {
       "page": "programs/womens-only",
-      "position": 282,
+      "position": 790,
       "value": "Women's only Brazilian Jiu-Jitsu in Woodstock, Ontario for women 16 and older. Self-defense, fundamentals, and positional training for all levels. Your first class is free."
     },
     "programs/womens-only/page-header/page-tag": {
       "page": "programs/womens-only",
-      "position": 21884,
+      "position": 22392,
       "value": "Women 16+ · All levels"
     },
     "programs/womens-only/page-header/page-title": {
       "page": "programs/womens-only",
-      "position": 21995,
+      "position": 22503,
       "value": "Women's<br/><em>Only.</em>"
     },
     "programs/womens-only/page-header/page-subtitle": {
       "page": "programs/womens-only",
-      "position": 22114,
+      "position": 22622,
       "value": "A dedicated program for women of all experience levels in a focused, supportive environment. Covers self-defense applications, fundamental Jiu-Jitsu technique, and positional training in a space built specifically for women to learn and grow."
     },
     "programs/womens-only/what-you-ll-learn/section-label": {
       "page": "programs/womens-only",
-      "position": 22773,
+      "position": 23281,
       "value": "The Curriculum"
     },
     "programs/womens-only/what-you-ll-learn/section-headline": {
       "page": "programs/womens-only",
-      "position": 22894,
+      "position": 23402,
       "value": "What you'll<br/><em>learn.</em>"
     },
     "programs/womens-only/what-you-ll-learn/section-intro": {
       "page": "programs/womens-only",
-      "position": 23024,
+      "position": 23532,
       "value": "Every class is built around three pillars. You'll learn real, practical Jiu-Jitsu — taught step by step, with the why behind every technique."
     },
     "programs/womens-only/why-women-s-only/section-label": {
       "page": "programs/womens-only",
-      "position": 24633,
+      "position": 25141,
       "value": "Why Women's Only"
     },
     "programs/womens-only/why-women-s-only/section-headline": {
       "page": "programs/womens-only",
-      "position": 24755,
+      "position": 25263,
       "value": "A space built<br/><em>for you.</em>"
     },
     "programs/womens-only/why-women-s-only/section-intro": {
       "page": "programs/womens-only",
-      "position": 24888,
+      "position": 25396,
       "value": "Starting something new is easier in the right room. This program gives women a dedicated place to learn, ask questions, and grow at their own pace."
     },
     "programs/womens-only/class-flow/section-label": {
       "page": "programs/womens-only",
-      "position": 26476,
+      "position": 26984,
       "value": "Inside a Class"
     },
     "programs/womens-only/class-flow/section-headline": {
       "page": "programs/womens-only",
-      "position": 26590,
+      "position": 27098,
       "value": "What a class<br/><em>looks like.</em>"
     },
     "programs/womens-only/class-flow/section-intro": {
       "page": "programs/womens-only",
-      "position": 26719,
+      "position": 27227,
       "value": "Every class follows a structure designed to keep you safe and help you improve, whether it's your first class or your fiftieth."
     },
     "programs/womens-only/your-first-class/section-label": {
       "page": "programs/womens-only",
-      "position": 28576,
+      "position": 29084,
       "value": "Getting Started"
     },
     "programs/womens-only/your-first-class/section-headline": {
       "page": "programs/womens-only",
-      "position": 28701,
+      "position": 29209,
       "value": "Your first<br/><em>class.</em>"
     },
     "programs/womens-only/your-first-class/section-intro": {
       "page": "programs/womens-only",
-      "position": 28833,
+      "position": 29341,
       "value": "You don't need to be in shape, flexible, or athletic to start. Just bring yourself — we'll guide you through every step."
     },
     "programs/womens-only/faq/section-label": {
       "page": "programs/womens-only",
-      "position": 31028,
+      "position": 31536,
       "value": "Women's Only FAQ"
     },
     "programs/womens-only/faq/section-headline": {
       "page": "programs/womens-only",
-      "position": 31137,
+      "position": 31645,
       "value": "Common<br/><em>questions.</em>"
     },
     "programs/womens-only/free-trial-band/trial-headline": {
       "page": "programs/womens-only",
-      "position": 33173,
+      "position": 33681,
       "value": "Your first class<br/>is on us."
     },
     "programs/womens-only/free-trial-band/trial-sub": {
       "page": "programs/womens-only",
-      "position": 33294,
+      "position": 33802,
       "value": "No experience needed. No commitment required. Pick a class from the schedule, show up, and we'll take care of the rest."
     },
     "programs/womens-only/newsletter/newsletter-headline": {
       "page": "programs/womens-only",
-      "position": 33760,
+      "position": 34268,
       "value": "Stay in the loop."
     },
     "programs/womens-only/newsletter/newsletter-sub": {
       "page": "programs/womens-only",
-      "position": 33873,
+      "position": 34381,
       "value": "Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox."
     }
   },
   "lists": {
     "about/story/story-aside": {
       "page": "about",
-      "position": 24432,
+      "position": 24931,
       "items": [
         {
           "tpl": 0,
@@ -1874,7 +1874,7 @@
     },
     "about/coach/coach-credentials": {
       "page": "about",
-      "position": 27910,
+      "position": 28409,
       "items": [
         {
           "tpl": 0,
@@ -1912,7 +1912,7 @@
     },
     "about/values/values-grid": {
       "page": "about",
-      "position": 29360,
+      "position": 29859,
       "items": [
         {
           "tpl": 0,
@@ -1972,7 +1972,7 @@
     },
     "about/oja/oja-visual": {
       "page": "about",
-      "position": 33737,
+      "position": 34236,
       "items": [
         {
           "tpl": 0,
@@ -2002,7 +2002,7 @@
     },
     "contact/left-info/info-block": {
       "page": "contact",
-      "position": 18466,
+      "position": 18965,
       "items": [
         {
           "tpl": 0,
@@ -2034,7 +2034,7 @@
     },
     "corporate/benefits/benefits-grid": {
       "page": "corporate",
-      "position": 20258,
+      "position": 20757,
       "items": [
         {
           "tpl": 0,
@@ -2094,7 +2094,7 @@
     },
     "corporate/programs/programs-list": {
       "page": "corporate",
-      "position": 23364,
+      "position": 23863,
       "items": [
         {
           "tpl": 0,
@@ -2150,7 +2150,7 @@
     },
     "etiquette/rules/rules-grid": {
       "page": "etiquette",
-      "position": 17949,
+      "position": 18448,
       "items": [
         {
           "tpl": 0,
@@ -2236,7 +2236,7 @@
     },
     "etiquette/culture/culture-right": {
       "page": "etiquette",
-      "position": 23217,
+      "position": 23716,
       "items": [
         {
           "tpl": 0,
@@ -2274,7 +2274,7 @@
     },
     "faq/faq-list/faq-list": {
       "page": "faq",
-      "position": 19211,
+      "position": 19710,
       "items": [
         {
           "tpl": 0,
@@ -2344,7 +2344,7 @@
     },
     "index/programs/programs-grid": {
       "page": "index",
-      "position": 27549,
+      "position": 28048,
       "items": [
         {
           "tpl": 0,
@@ -2410,7 +2410,7 @@
     },
     "index/why-legacy-x/why-left": {
       "page": "index",
-      "position": 31217,
+      "position": 31716,
       "items": [
         {
           "tpl": 0,
@@ -2430,7 +2430,7 @@
     },
     "index/why-legacy-x/why-items": {
       "page": "index",
-      "position": 31782,
+      "position": 32281,
       "items": [
         {
           "tpl": 0,
@@ -2467,7 +2467,7 @@
     },
     "index/why-legacy-x/why-right": {
       "page": "index",
-      "position": 33902,
+      "position": 34401,
       "items": [
         {
           "tpl": 0,
@@ -2497,7 +2497,7 @@
     },
     "index/testimonials/testimonials-grid": {
       "page": "index",
-      "position": 35995,
+      "position": 36494,
       "items": [
         {
           "tpl": 0,
@@ -2527,7 +2527,7 @@
     },
     "index/gallery/mosaic": {
       "page": "index",
-      "position": 38447,
+      "position": 38946,
       "items": [
         {
           "tpl": 0,
@@ -2578,7 +2578,7 @@
     },
     "instructors/head-coach-francis-yanga/instructor-stats": {
       "page": "instructors",
-      "position": 23799,
+      "position": 24298,
       "items": [
         {
           "tpl": 0,
@@ -2616,7 +2616,7 @@
     },
     "our-lineage/what-lineage-means/meaning-right": {
       "page": "our-lineage",
-      "position": 30458,
+      "position": 30957,
       "items": [
         {
           "tpl": 0,
@@ -2646,7 +2646,7 @@
     },
     "privacy/policy-body/policy-body": {
       "page": "privacy",
-      "position": 16075,
+      "position": 16574,
       "items": [
         {
           "tpl": 0,
@@ -2740,7 +2740,7 @@
     },
     "programs/programs-grid/programs-overview-grid": {
       "page": "programs",
-      "position": 19082,
+      "position": 19581,
       "items": [
         {
           "tpl": 0,
@@ -2819,7 +2819,7 @@
     },
     "terms/terms-body/terms-body": {
       "page": "terms",
-      "position": 16126,
+      "position": 16625,
       "items": [
         {
           "tpl": 0,
@@ -2927,7 +2927,7 @@
     },
     "programs/adult-jiu-jitsu/what-you-ll-learn/curriculum-grid": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 25966,
+      "position": 26474,
       "items": [
         {
           "tpl": 0,
@@ -2969,7 +2969,7 @@
     },
     "programs/adult-jiu-jitsu/gi-no-gi/split-grid": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 28166,
+      "position": 28674,
       "items": [
         {
           "tpl": 0,
@@ -2999,7 +2999,7 @@
     },
     "programs/adult-jiu-jitsu/class-flow/flow": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 30096,
+      "position": 30604,
       "items": [
         {
           "tpl": 0,
@@ -3041,7 +3041,7 @@
     },
     "programs/adult-jiu-jitsu/your-first-class/checklist": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 32460,
+      "position": 32968,
       "items": [
         {
           "tpl": 0,
@@ -3079,7 +3079,7 @@
     },
     "programs/adult-jiu-jitsu/testimonials/quote-grid": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 36906,
+      "position": 37414,
       "items": [
         {
           "tpl": 0,
@@ -3101,7 +3101,7 @@
     },
     "programs/adult-jiu-jitsu/faq/faq-list": {
       "page": "programs/adult-jiu-jitsu",
-      "position": 38142,
+      "position": 38650,
       "items": [
         {
           "tpl": 0,
@@ -3163,7 +3163,7 @@
     },
     "programs/competition/what-you-ll-train/curriculum-grid": {
       "page": "programs/competition",
-      "position": 23548,
+      "position": 24056,
       "items": [
         {
           "tpl": 0,
@@ -3205,7 +3205,7 @@
     },
     "programs/competition/who-it-s-for/split-grid": {
       "page": "programs/competition",
-      "position": 25645,
+      "position": 26153,
       "items": [
         {
           "tpl": 0,
@@ -3238,7 +3238,7 @@
     },
     "programs/competition/oja/checklist": {
       "page": "programs/competition",
-      "position": 27981,
+      "position": 28489,
       "items": [
         {
           "tpl": 0,
@@ -3276,7 +3276,7 @@
     },
     "programs/competition/faq/faq-list": {
       "page": "programs/competition",
-      "position": 29932,
+      "position": 30440,
       "items": [
         {
           "tpl": 0,
@@ -3322,7 +3322,7 @@
     },
     "programs/jiu-jitsu-over-55/focus-areas/curriculum-grid": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 23641,
+      "position": 24149,
       "items": [
         {
           "tpl": 0,
@@ -3364,7 +3364,7 @@
     },
     "programs/jiu-jitsu-over-55/train-smart/split-grid": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 25762,
+      "position": 26270,
       "items": [
         {
           "tpl": 0,
@@ -3397,7 +3397,7 @@
     },
     "programs/jiu-jitsu-over-55/class-flow/flow": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 27525,
+      "position": 28033,
       "items": [
         {
           "tpl": 0,
@@ -3430,7 +3430,7 @@
     },
     "programs/jiu-jitsu-over-55/your-first-class/checklist": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 29496,
+      "position": 30004,
       "items": [
         {
           "tpl": 0,
@@ -3468,7 +3468,7 @@
     },
     "programs/jiu-jitsu-over-55/faq/faq-list": {
       "page": "programs/jiu-jitsu-over-55",
-      "position": 31520,
+      "position": 32028,
       "items": [
         {
           "tpl": 0,
@@ -3514,7 +3514,7 @@
     },
     "programs/kids-jiu-jitsu/age-groups/groups-grid": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 27336,
+      "position": 27844,
       "items": [
         {
           "tpl": 0,
@@ -3550,7 +3550,7 @@
     },
     "programs/kids-jiu-jitsu/what-kids-gain/curriculum-grid": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 29631,
+      "position": 30139,
       "items": [
         {
           "tpl": 0,
@@ -3592,7 +3592,7 @@
     },
     "programs/kids-jiu-jitsu/class-flow/flow": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 31688,
+      "position": 32196,
       "items": [
         {
           "tpl": 0,
@@ -3625,7 +3625,7 @@
     },
     "programs/kids-jiu-jitsu/first-class/checklist": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 33713,
+      "position": 34221,
       "items": [
         {
           "tpl": 0,
@@ -3663,7 +3663,7 @@
     },
     "programs/kids-jiu-jitsu/faq/faq-list": {
       "page": "programs/kids-jiu-jitsu",
-      "position": 38950,
+      "position": 39458,
       "items": [
         {
           "tpl": 0,
@@ -3717,7 +3717,7 @@
     },
     "programs/private-lessons/what-we-can-work-on/curriculum-grid": {
       "page": "programs/private-lessons",
-      "position": 23362,
+      "position": 23870,
       "items": [
         {
           "tpl": 0,
@@ -3759,7 +3759,7 @@
     },
     "programs/private-lessons/why-private/split-grid": {
       "page": "programs/private-lessons",
-      "position": 25412,
+      "position": 25920,
       "items": [
         {
           "tpl": 0,
@@ -3792,7 +3792,7 @@
     },
     "programs/private-lessons/faq/faq-list": {
       "page": "programs/private-lessons",
-      "position": 27659,
+      "position": 28167,
       "items": [
         {
           "tpl": 0,
@@ -3838,7 +3838,7 @@
     },
     "programs/womens-only/what-you-ll-learn/curriculum-grid": {
       "page": "programs/womens-only",
-      "position": 23288,
+      "position": 23796,
       "items": [
         {
           "tpl": 0,
@@ -3871,7 +3871,7 @@
     },
     "programs/womens-only/why-women-s-only/split-grid": {
       "page": "programs/womens-only",
-      "position": 25147,
+      "position": 25655,
       "items": [
         {
           "tpl": 0,
@@ -3904,7 +3904,7 @@
     },
     "programs/womens-only/class-flow/flow": {
       "page": "programs/womens-only",
-      "position": 26934,
+      "position": 27442,
       "items": [
         {
           "tpl": 0,
@@ -3946,7 +3946,7 @@
     },
     "programs/womens-only/your-first-class/checklist": {
       "page": "programs/womens-only",
-      "position": 29246,
+      "position": 29754,
       "items": [
         {
           "tpl": 0,
@@ -3984,7 +3984,7 @@
     },
     "programs/womens-only/faq/faq-list": {
       "page": "programs/womens-only",
-      "position": 31257,
+      "position": 31765,
       "items": [
         {
           "tpl": 0,
