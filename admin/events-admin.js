@@ -264,7 +264,8 @@ export function mountEvents({ sb, root, setStatus }) {
     const confirmedRevenue = data.filter((r) => r.status === 'confirmed').reduce((n, r) => n + r.amount_cents, 0);
     const rows = data.map((r) => {
       const people = [...(r.event_attendees || [])].sort((a, b) => a.position - b.position)
-        .map((a) => `${esc(a.full_name)} <span class="sub">(${esc(a.date_of_birth)})</span>`).join('<br/>');
+        .map((a) => `${esc(a.full_name)}${a.date_of_birth ? ` <span class="sub">(${esc(a.date_of_birth)})</span>` : ''}`).join('<br/>')
+        + (r.waiver_accepted_at ? '' : '<br/><span class="sub warn">No waiver on file</span>'); // imported registrations
       const pay = `${METHOD_LABEL[r.payment_method]}${r.etransfer_code ? `<div class="sub">Code: <strong>${esc(r.etransfer_code)}</strong></div>` : ''}`;
       const actions = [
         r.status === 'awaiting_verification' ? '<button class="btn btn-sm btn-blue" data-act="confirm">Mark paid</button>' : '',
