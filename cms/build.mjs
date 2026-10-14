@@ -5,6 +5,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { ROOT, sourcePages, render } from './lib.mjs';
 
 const DIST = path.join(ROOT, 'dist');
@@ -76,5 +77,26 @@ const publicConfig = JSON.stringify({ supabaseUrl: SUPABASE_URL, supabaseAnonKey
 fs.mkdirSync(path.join(DIST, 'admin'), { recursive: true });
 fs.writeFileSync(path.join(DIST, 'admin/config.js'), `window.CMS_CONFIG = ${publicConfig};\n`);
 fs.writeFileSync(path.join(DIST, 'js/site-config.js'), `window.SITE_CONFIG = ${publicConfig};\n`);
+
+// Sitemap and robots.txt for search engines. Pages that only work with an ?id (one event,
+// one product) or that are private (cart, admin) are left out.
+const SITE_URL = (process.env.SITE_URL || 'https://legacyxjiujitsu.com').replace(/\/+$/, '');
+const NOT_IN_SITEMAP = new Set(['event.html', 'store-product.html', 'store-cart.html']);
+const lastChanged = (rel) => {
+  try {
+    return execFileSync('git', ['log', '-1', '--format=%cs', '--', rel], { cwd: ROOT, encoding: 'utf8' }).trim();
+  } catch {
+    return '';
+  }
+};
+const urls = sourcePages().filter((rel) => !NOT_IN_SITEMAP.has(rel)).map((rel) => {
+  const loc = `${SITE_URL}/${rel === 'index.html' ? '' : rel}`;
+  const date = lastChanged(rel);
+  return `  <url>\n    <loc>${loc}</loc>\n${date ? `    <lastmod>${date}</lastmod>\n` : ''}  </url>`;
+});
+fs.writeFileSync(path.join(DIST, 'sitemap.xml'),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`);
+fs.writeFileSync(path.join(DIST, 'robots.txt'),
+  `User-agent: *\nDisallow: /admin/\nDisallow: /store-cart.html\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 
 console.log(`Built ${sourcePages().length} pages into dist/ from ${LOCAL ? 'content/seed.json' : 'Supabase'}.`);
