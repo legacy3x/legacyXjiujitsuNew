@@ -45,6 +45,7 @@ function regState(e, taken) {
 export function mountEvents({ sb, root, setStatus }) {
   let events = [];
   let regs = [];
+  let regTab = 'confirmed'; // registrations view: confirmed | waiting | cancelled
 
   async function load() {
     root.innerHTML = '<p class="loading">Loading events…</p>';
@@ -262,7 +263,18 @@ export function mountEvents({ sb, root, setStatus }) {
 
     const active = data.filter(HOLDING);
     const confirmedRevenue = data.filter((r) => r.status === 'confirmed').reduce((n, r) => n + r.amount_cents, 0);
-    const rows = data.map((r) => {
+    // Tabs: paid, not paid yet (e-Transfer to check, card checkout not finished), cancelled.
+    const TABS = [
+      ['confirmed', 'Confirmed', (r) => r.status === 'confirmed'],
+      ['waiting', 'Awaiting payment', (r) => r.status === 'awaiting_verification' || r.status === 'pending_payment'],
+      ['cancelled', 'Cancelled', (r) => r.status === 'cancelled'],
+    ].map(([id, label, test]) => ({ id, label, list: data.filter(test) }))
+      .filter((t) => t.id !== 'waiting' || t.list.length); // only show the middle tab when someone is waiting
+    if (!TABS.some((t) => t.id === regTab)) regTab = 'confirmed';
+    const tab = TABS.find((t) => t.id === regTab);
+    const shown = tab.list;
+    const tabBar = TABS.map((t) => `<button class="btn btn-sm${t.id === regTab ? ' btn-blue' : ''}" data-reg-tab="${t.id}">${t.label} (${t.list.length})</button>`).join('');
+    const rows = shown.map((r) => {
       const people = [...(r.event_attendees || [])].sort((a, b) => a.position - b.position)
         .map((a) => `${esc(a.full_name)}${a.date_of_birth ? ` <span class="sub">(${esc(a.date_of_birth)})</span>` : ''}`).join('<br/>')
         + (r.waiver_accepted_at ? '' : '<br/><span class="sub warn">No waiver on file</span>'); // imported registrations
@@ -288,13 +300,15 @@ export function mountEvents({ sb, root, setStatus }) {
       <p style="margin-bottom:12px;"><button class="link-btn" id="ev-back" style="margin:0;">← All events</button></p>
       <p class="hint">${active.reduce((n, r) => n + r.quantity, 0)} spot(s) taken${e.capacity != null ? ` of ${e.capacity}` : ''} · ${money(confirmedRevenue)} confirmed ·
         “Check e-Transfer” means someone entered a confirmation code — once the money arrives, press <strong>Mark paid</strong>.</p>
-      <p style="margin-bottom:16px;"><button class="btn btn-sm" id="ev-csv" ${data.length ? '' : 'disabled'}>Download CSV</button></p>
-      ${data.length ? `<div class="table-wrap"><table class="data">
+      <p class="tabs" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;">${tabBar}</p>
+      <p style="margin-bottom:16px;"><button class="btn btn-sm" id="ev-csv" ${shown.length ? '' : 'disabled'}>Download CSV (${esc(tab.label.toLowerCase())})</button></p>
+      ${shown.length ? `<div class="table-wrap"><table class="data">
         <thead><tr><th>When</th><th>Registered by</th><th>People</th><th>Payment</th><th>Amount</th><th>Status</th><th></th></tr></thead>
-        <tbody>${rows}</tbody></table></div>` : '<p class="empty">No registrations yet.</p>'}`;
+        <tbody>${rows}</tbody></table></div>` : `<p class="empty">${data.length ? `No ${esc(tab.label.toLowerCase())} registrations.` : 'No registrations yet.'}</p>`}`;
 
-    root.querySelector('#ev-back').addEventListener('click', load);
-    root.querySelector('#ev-csv').addEventListener('click', () => downloadCsv(e, data));
+    root.querySelector('#ev-back').addEventListener('click', () => { regTab = 'confirmed'; load(); });
+    root.querySelectorAll('[data-reg-tab]').forEach((b) => b.addEventListener('click', () => { regTab = b.dataset.regTab; renderRegistrations(e); }));
+    root.querySelector('#ev-csv').addEventListener('click', () => downloadCsv(e, shown, tab.id));
     root.querySelectorAll('tr[data-id] button').forEach((b) => b.addEventListener('click', async () => {
       const id = b.closest('tr').dataset.id;
       const status = b.dataset.act === 'confirm' ? 'confirmed' : 'cancelled';
@@ -306,7 +320,7 @@ export function mountEvents({ sb, root, setStatus }) {
     }));
   }
 
-  function downloadCsv(e, data) {
+  function downloadCsv(e, data, which) {
     const cell = (v) => `"${String(v ?? '').replace(/"/g, '""')}"`;
     const lines = [['Registered', 'Status', 'Payment', 'e-Transfer code', 'Amount', 'Buyer first name', 'Buyer last name', 'Email', 'Phone', 'Attendee', 'Date of birth']];
     for (const r of data) {
@@ -318,7 +332,7 @@ export function mountEvents({ sb, root, setStatus }) {
     const blob = new Blob([lines.map((l) => l.map(cell).join(',')).join('\n')], { type: 'text/csv' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = `${e.title.replace(/[^\w]+/g, '-').toLowerCase()}-registrations.csv`;
+    a.download = `${e.title.replace(/[^\w]+/g, '-').toLowerCase()}-${which}.csv`;
     a.click();
   }
 
