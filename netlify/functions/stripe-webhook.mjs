@@ -9,6 +9,7 @@ import { update } from '../lib/supabase.mjs';
 import { verifyWebhook } from '../lib/stripe.mjs';
 import { addRegistrant } from '../lib/resend.mjs';
 import { fulfillPaidOrder } from '../lib/store.mjs';
+import { trySendRegistrationEmail } from '../lib/event-emails.mjs';
 
 export default async (req) => {
   if (req.method !== 'POST') return new Response('Method not allowed', { status: 405 });
@@ -33,7 +34,10 @@ export default async (req) => {
       else if (failed) await update('store_orders', `id=eq.${storeOrderId}&payment_status=eq.pending`, { payment_status: 'cancelled' });
     } else if (paid) {
       const rows = await update('event_registrations', `id=eq.${regId}&status=eq.pending_payment`, { status: 'confirmed' });
-      if (rows.length) await addRegistrant(rows[0]);
+      if (rows.length) {
+        await addRegistrant(rows[0]);
+        await trySendRegistrationEmail(regId, 'approved');
+      }
     } else if (failed) {
       await update('event_registrations', `id=eq.${regId}&status=eq.pending_payment`, { status: 'cancelled' });
     }

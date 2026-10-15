@@ -47,6 +47,19 @@ export function mountEvents({ sb, root, setStatus }) {
   let regs = [];
   let regTab = 'confirmed'; // registrations view: confirmed | waiting | cancelled
 
+  // Registration actions that send email run on the server (/api/event-admin).
+  async function api(action, payload) {
+    const { data: { session } } = await sb.auth.getSession();
+    const res = await fetch('/api/event-admin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${session?.access_token}` },
+      body: JSON.stringify({ action, ...payload }),
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+    return data;
+  }
+
   async function load() {
     root.innerHTML = '<p class="loading">Loading events…</p>';
     const [{ data: ev, error: e1 }, { data: rg, error: e2 }] = await Promise.all([
@@ -273,12 +286,18 @@ export function mountEvents({ sb, root, setStatus }) {
     if (!TABS.some((t) => t.id === regTab)) regTab = 'confirmed';
     const tab = TABS.find((t) => t.id === regTab);
     const shown = tab.list;
-    const tabBar = TABS.map((t) => `<button class="btn btn-sm${t.id === regTab ? ' btn-blue' : ''}" data-reg-tab="${t.id}">${t.label} (${t.list.length})</button>`).join('');
+    const unemailed = data.filter((r) => r.status === 'confirmed' && !r.approved_emailed_at).length;
+    // Counts are people, not sign-ups: one registration can be for several people.
+    const people = (list) => list.reduce((n, r) => n + r.quantity, 0);
+    const tabBar = TABS.map((t) => `<button class="btn btn-sm${t.id === regTab ? ' btn-blue' : ''}" data-reg-tab="${t.id}">${t.label} (${people(t.list)})</button>`).join('');
     const rows = shown.map((r) => {
       const people = [...(r.event_attendees || [])].sort((a, b) => a.position - b.position)
         .map((a) => `${esc(a.full_name)}${a.date_of_birth ? ` <span class="sub">(${esc(a.date_of_birth)})</span>` : ''}`).join('<br/>')
         + (r.waiver_accepted_at ? '' : '<br/><span class="sub warn">No waiver on file</span>'); // imported registrations
       const pay = `${METHOD_LABEL[r.payment_method]}${r.etransfer_code ? `<div class="sub">Code: <strong>${esc(r.etransfer_code)}</strong></div>` : ''}`;
+      const mail = r.status === 'confirmed'
+        ? (r.approved_emailed_at ? `<div class="sub">Approval emailed ${esc(fmtStamp(r.approved_emailed_at))}</div>` : '<div class="sub warn">Approval email not sent</div>')
+        : r.status === 'awaiting_verification' && r.pending_emailed_at ? `<div class="sub">“Pending” emailed ${esc(fmtStamp(r.pending_emailed_at))}</div>` : '';
       const actions = [
         r.status === 'awaiting_verification' ? '<button class="btn btn-sm btn-blue" data-act="confirm">Mark paid</button>' : '',
         r.status !== 'cancelled' ? '<button class="btn btn-sm btn-danger" data-act="cancel">Cancel</button>' : '',
@@ -290,7 +309,7 @@ export function mountEvents({ sb, root, setStatus }) {
           <td>${r.quantity}<div class="sub">${people}</div></td>
           <td>${pay}</td>
           <td>${money(r.amount_cents)}</td>
-          <td><span class="pill ${r.status === 'confirmed' ? 'on' : r.status === 'cancelled' ? 'off' : 'wait'}">${STATUS_LABEL[r.status]}</span></td>
+          <td><span class="pill ${r.status === 'confirmed' ? 'on' : r.status === 'cancelled' ? 'off' : 'wait'}">${STATUS_LABEL[r.status]}</span>${mail}</td>
           <td class="actions">${actions}</td>
         </tr>`;
     }).join('');
@@ -301,7 +320,8 @@ export function mountEvents({ sb, root, setStatus }) {
       <p class="hint">${active.reduce((n, r) => n + r.quantity, 0)} spot(s) taken${e.capacity != null ? ` of ${e.capacity}` : ''} · ${money(confirmedRevenue)} confirmed ·
         “Check e-Transfer” means someone entered a confirmation code — once the money arrives, press <strong>Mark paid</strong>.</p>
       <p class="tabs" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;">${tabBar}</p>
-      <p style="margin-bottom:16px;"><button class="btn btn-sm" id="ev-csv" ${shown.length ? '' : 'disabled'}>Download CSV (${esc(tab.label.toLowerCase())})</button></p>
+      <p style="margin-bottom:16px;display:flex;gap:8px;flex-wrap:wrap;"><button class="btn btn-sm" id="ev-csv" ${shown.length ? '' : 'disabled'}>Download CSV (${esc(tab.label.toLowerCase())})</button>
+        ${regTab === 'confirmed' && unemailed ? `<button class="btn btn-sm btn-blue" id="ev-email">Send approval email (${unemailed} sign-up${unemailed === 1 ? "" : "s"} not yet emailed)</button>` : ''}</p>
       ${shown.length ? `<div class="table-wrap"><table class="data">
         <thead><tr><th>When</th><th>Registered by</th><th>People</th><th>Payment</th><th>Amount</th><th>Status</th><th></th></tr></thead>
         <tbody>${rows}</tbody></table></div>` : `<p class="empty">${data.length ? `No ${esc(tab.label.toLowerCase())} registrations.` : 'No registrations yet.'}</p>`}`;
@@ -309,14 +329,41 @@ export function mountEvents({ sb, root, setStatus }) {
     root.querySelector('#ev-back').addEventListener('click', () => { regTab = 'confirmed'; load(); });
     root.querySelectorAll('[data-reg-tab]').forEach((b) => b.addEventListener('click', () => { regTab = b.dataset.regTab; renderRegistrations(e); }));
     root.querySelector('#ev-csv').addEventListener('click', () => downloadCsv(e, shown, tab.id));
+    root.querySelector('#ev-email')?.addEventListener('click', async (ev) => {
+      if (!confirm(`Email ${unemailed} confirmed registration${unemailed === 1 ? '' : 's'} to say they're approved?`)) return;
+      ev.target.disabled = true;
+      setStatus('Sending emails…');
+      let msg;
+      try {
+        const r = await api('email-approved', { event_id: e.id });
+        msg = r.failed ? [`Sent ${r.sent}; ${r.failed} failed — ${r.email_error}`, 'err'] : [`Sent ${r.sent} approval email${r.sent === 1 ? '' : 's'}.`, 'ok'];
+      } catch (err) {
+        msg = [`Emails not sent — ${err.message}`, 'err'];
+      }
+      await renderRegistrations(e);
+      setStatus(...msg);
+    });
     root.querySelectorAll('tr[data-id] button').forEach((b) => b.addEventListener('click', async () => {
       const id = b.closest('tr').dataset.id;
-      const status = b.dataset.act === 'confirm' ? 'confirmed' : 'cancelled';
-      if (status === 'cancelled' && !confirm('Cancel this registration? Their spot will be released. (Refunds are handled separately.)')) return;
-      const { error: upErr } = await sb.from('event_registrations').update({ status, updated_at: new Date().toISOString() }).eq('id', id);
+      if (b.dataset.act === 'confirm') {
+        if (!confirm('Mark this registration as paid? They will get an email saying their registration is approved.')) return;
+        b.disabled = true;
+        let r;
+        try {
+          r = await api('confirm', { registration_id: id });
+        } catch (err) {
+          b.disabled = false;
+          return setStatus(`Update failed — ${err.message}`, 'err');
+        }
+        await renderRegistrations(e);
+        return r.emailed ? setStatus('Marked as paid — approval email sent.', 'ok')
+          : setStatus(`Marked as paid, but the approval email failed — ${r.email_error}. Use “Send approval email” on the Confirmed tab to retry.`, 'err');
+      }
+      if (!confirm('Cancel this registration? Their spot will be released. (Refunds are handled separately.)')) return;
+      const { error: upErr } = await sb.from('event_registrations').update({ status: 'cancelled', updated_at: new Date().toISOString() }).eq('id', id);
       if (upErr) return setStatus(`Update failed — ${upErr.message}`, 'err');
-      setStatus(status === 'confirmed' ? 'Marked as paid.' : 'Registration cancelled.', 'ok');
-      renderRegistrations(e);
+      await renderRegistrations(e);
+      setStatus('Registration cancelled.', 'ok');
     }));
   }
 

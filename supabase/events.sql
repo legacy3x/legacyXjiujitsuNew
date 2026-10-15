@@ -43,6 +43,9 @@ create table if not exists public.event_registrations (
   created_at         timestamptz not null default now(),
   updated_at         timestamptz not null default now()
 );
+-- When the "pending approval" / "approved" emails went out (see netlify/lib/event-emails.mjs).
+alter table public.event_registrations add column if not exists pending_emailed_at  timestamptz;
+alter table public.event_registrations add column if not exists approved_emailed_at timestamptz;
 create index if not exists event_registrations_event_idx on public.event_registrations (event_id, status);
 create index if not exists event_registrations_stripe_idx on public.event_registrations (stripe_session_id);
 

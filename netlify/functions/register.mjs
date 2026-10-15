@@ -2,11 +2,12 @@
 // Free events and e-Transfer registrations are saved right away; card payments are
 // saved as "pending" and sent to Stripe Checkout, then confirmed by stripe-webhook.
 // Needs: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, STRIPE_SECRET_KEY (for card payments),
-//        RESEND_API_KEY (mailing list).
+//        RESEND_API_KEY (mailing list, confirmation emails).
 
 import { rpc, update, supabaseConfigured } from '../lib/supabase.mjs';
 import { stripe } from '../lib/stripe.mjs';
 import { addRegistrant } from '../lib/resend.mjs';
+import { trySendRegistrationEmail } from '../lib/event-emails.mjs';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
@@ -99,6 +100,8 @@ export default async (req) => {
 
   if (reg.payment_method !== 'stripe') {
     await addRegistrant(person);
+    // Free → approved right away; e-Transfer → pending until an admin marks it paid.
+    await trySendRegistrationEmail(reg.id, reg.status === 'confirmed' ? 'approved' : 'pending');
     return json(200, result);
   }
 

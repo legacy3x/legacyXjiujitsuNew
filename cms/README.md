@@ -21,6 +21,7 @@ design templates; the build fills in their text from the database.
 | `NETLIFY_BUILD_HOOK_URL` | publish function — optional; used instead of the token if set |
 | `RESEND_API_KEY`, `RESEND_SEGMENT_ID` | newsletter signup, event registrants, contact form email |
 | `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` | optional — contact form recipient (default info@legacyxjiujitsu.com) and sender |
+| `EVENTS_FROM_EMAIL` | optional — sender for registration emails (default Legacy X Jiu-Jitsu <info@legacyxjiujitsu.com>) |
 | `RESEND_EVENTS_SEGMENT_ID` | optional — put event registrants in their own Resend segment |
 | `SUPABASE_SERVICE_ROLE_KEY` | event registration functions (secret — Functions scope only) |
 | `STRIPE_SECRET_KEY` | card payments for events |
@@ -34,6 +35,9 @@ and are managed under **Events & registrations** in /admin. The Events page and 
 so event changes don't need Publish. Registration goes through `netlify/functions/register.mjs`, which uses a
 database function (`create_registration`) that locks the event row so capacity can't be oversold.
 Card payments use Stripe Checkout; e-Transfers are marked paid by an admin after the money arrives.
+Registrants get a "pending approval" email for e-Transfers and an "approved" email once confirmed
+(`netlify/lib/event-emails.mjs`, sent from `EVENTS_FROM_EMAIL` or info@legacyxjiujitsu.com). Run
+`supabase/registration-emails.sql` once to add the columns that record which emails went out.
 
 ## Store
 

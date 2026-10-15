@@ -39,10 +39,10 @@ export async function addRegistrant(reg) {
 // Sends a plain-text email. `from` must be on a domain verified in Resend; until
 // legacyxjiujitsu.com is verified we fall back to Resend's shared sender, which only
 // delivers to the Resend account's own address.
-export async function sendEmail({ to, subject, text, replyTo }) {
+export async function sendEmail({ to, subject, text, replyTo, from: sender }) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) throw new Error('RESEND_API_KEY is not set');
-  const from = process.env.CONTACT_FROM_EMAIL || 'Legacy X Website <website@legacyxjiujitsu.com>';
+  const from = sender || process.env.CONTACT_FROM_EMAIL || 'Legacy X Website <website@legacyxjiujitsu.com>';
 
   const send = (sender) => fetch('https://api.resend.com/emails', {
     method: 'POST',
