@@ -16,7 +16,7 @@ export async function stripe(path, params) {
   const res = await fetch(`https://api.stripe.com/v1/${path}`, {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${process.env.STRIPE_SECRET_KEY}`,
+      Authorization: `Bearer ${(process.env.STRIPE_SECRET_KEY || "").trim()}`, // tolerate a stray space pasted into Netlify
       'Content-Type': 'application/x-www-form-urlencoded',
     },
     body: params ? form(params) : undefined,

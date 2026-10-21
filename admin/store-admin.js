@@ -282,12 +282,25 @@ export function mountStore({ sb, root, setStatus, shrinkImage }) {
 
     const body = shell(`
       <p class="hint">New paid orders arrive as <strong>Draft — needs your OK</strong>. Press <strong>Confirm order</strong> to send one to production; that's when Printful charges your account. Refunds are made in Stripe.</p>
-      <p style="margin-bottom:16px;"><label class="check"><input type="checkbox" id="st-unpaid" ${showUnpaid ? 'checked' : ''}/> Also show unpaid / abandoned checkouts</label></p>
+      <p style="margin-bottom:16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;"><label class="check"><input type="checkbox" id="st-unpaid" ${showUnpaid ? 'checked' : ''}/> Also show unpaid / abandoned checkouts</label>
+        <button class="btn btn-sm" id="st-stripe-test">Test card payments</button></p>
       ${orders.length ? `<div class="table-wrap"><table class="data">
         <thead><tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>`
     : '<p class="empty">No orders yet.</p>'}`);
 
     body.querySelector('#st-unpaid').addEventListener('change', (e) => { showUnpaid = e.target.checked; showOrders(); });
+    body.querySelector('#st-stripe-test').addEventListener('click', async (e) => {
+      e.target.disabled = true;
+      setStatus('Checking Stripe…');
+      try {
+        const r = await api('stripe-test');
+        const where = r.mode ? ` (${r.mode} mode${r.currency ? `, ${r.currency}` : ''})` : '';
+        setStatus(r.ok ? `Stripe is working${where}. Checkout can take card payments.` : `Stripe problem${where}: ${r.problem}`, r.ok ? 'ok' : 'err');
+      } catch (err) {
+        setStatus(`Test failed — ${err.message}`, 'err');
+      }
+      e.target.disabled = false;
+    });
     body.querySelectorAll('tr[data-id] button').forEach((b) => b.addEventListener('click', async () => {
       const id = b.closest('tr').dataset.id;
       const act = b.dataset.act;

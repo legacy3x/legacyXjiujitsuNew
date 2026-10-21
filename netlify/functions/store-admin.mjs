@@ -3,12 +3,14 @@
 //   products {store_id, offset}    → one page of a store's products
 //   sync-product {store_id, store_name, product_id} → copy a product and its variants into our database
 //   order-send | order-confirm | order-cancel | order-refresh {order_id}
+//   stripe-test                    → open and immediately close a $1 Stripe Checkout, to show Stripe's own error if any
 // Needs: PRINTFUL_API_KEY, SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY.
 
 import { requireAdmin } from '../lib/admin-auth.mjs';
 import { printful, printfulConfigured } from '../lib/printful.mjs';
 import { select, update, insert } from '../lib/supabase.mjs';
 import { sendToPrintful, overallStatus } from '../lib/store.mjs';
+import { stripe } from '../lib/stripe.mjs';
 
 const json = (status, body) =>
   new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
@@ -90,7 +92,31 @@ const fromPrintful = (result) => ({
   shipments: (result.shipments || []).map((s) => ({ carrier: s.carrier, service: s.service, tracking_number: s.tracking_number, tracking_url: s.tracking_url })),
 });
 
+// Checks the Stripe setup the same way a store checkout uses it, without charging anyone.
+async function stripeTest() {
+  const key = (process.env.STRIPE_SECRET_KEY || '').trim();
+  if (!key) return { ok: false, problem: 'STRIPE_SECRET_KEY is not set in Netlify (or the site has not been redeployed since it was added).' };
+  if (key.startsWith('pk_')) return { ok: false, problem: 'STRIPE_SECRET_KEY holds the publishable key (pk_…). It needs the secret key (sk_live_… or sk_test_…) from Stripe → Developers → API keys.' };
+  const [product] = await select('store_products', 'live=eq.true&select=currency&limit=1');
+  const currency = (product?.currency || 'CAD').toLowerCase();
+  const mode = key.includes('_live_') ? 'live' : key.includes('_test_') ? 'test' : 'unknown';
+  try {
+    const session = await stripe('checkout/sessions', {
+      mode: 'payment',
+      line_items: { 0: { quantity: 1, price_data: { currency, unit_amount: 100, product_data: { name: 'Connection test' } } } },
+      success_url: 'https://example.com/ok', cancel_url: 'https://example.com/cancel',
+      expires_at: Math.floor(Date.now() / 1000) + 31 * 60,
+    });
+    await stripe(`checkout/sessions/${session.id}/expire`).catch(() => {});
+    return { ok: true, mode, currency: currency.toUpperCase() };
+  } catch (err) {
+    return { ok: false, mode, currency: currency.toUpperCase(), problem: err.message };
+  }
+}
+
 const ACTIONS = {
+  'stripe-test': stripeTest,
+
   stores: async () => ({ stores: (await printful('/stores')).result }),
 
   products: async ({ store_id: storeId, offset = 0 }) => {
