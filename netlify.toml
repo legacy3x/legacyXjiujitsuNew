@@ -12,3 +12,19 @@
   [headers.values]
     Cache-Control = "no-store"
     X-Robots-Tag = "noindex, nofollow"
+
+# Addresses from the old website that Google still knows about.
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy.html"
+  status = 301
+
+[[redirects]]
+  from = "/join"
+  to = "https://legacy-x-jiujitsu.gymdesk.com/signup"
+  status = 301
+
+[[redirects]]
+  from = "/check-in"
+  to = "https://legacy-x-jiujitsu.gymdesk.com/login"
+  status = 301

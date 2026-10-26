@@ -62,11 +62,24 @@ function copyDir(from, to) {
 
 const content = await loadContent();
 
+// The site's one official address. Pages that only work with an ?id (one event, one product)
+// or that are private (cart) get no canonical tag and stay out of the sitemap.
+const SITE_URL = (process.env.SITE_URL || 'https://legacyxjiujitsu.com').replace(/\/+$/, '');
+const NOT_IN_SITEMAP = new Set(['event.html', 'store-product.html', 'store-cart.html']);
+const pageUrl = (rel) => `${SITE_URL}/${rel === 'index.html' ? '' : rel}`;
+
+// Tells search engines which address is the real one (the same page is also reachable
+// without ".html", and on www / http, which would otherwise count as duplicates).
+function withCanonical(html, rel) {
+  if (NOT_IN_SITEMAP.has(rel) || /<link[^>]+rel="canonical"/i.test(html)) return html;
+  return html.replace(/<\/title>/i, `</title>\n<link rel="canonical" href="${pageUrl(rel)}"/>`);
+}
+
 fs.rmSync(DIST, { recursive: true, force: true });
 for (const rel of sourcePages()) {
   const out = path.join(DIST, rel);
   fs.mkdirSync(path.dirname(out), { recursive: true });
-  fs.writeFileSync(out, render(fs.readFileSync(path.join(ROOT, rel), 'utf8'), content));
+  fs.writeFileSync(out, withCanonical(render(fs.readFileSync(path.join(ROOT, rel), 'utf8'), content), rel));
 }
 copyDir(path.join(ROOT, 'js'), path.join(DIST, 'js'));
 copyDir(path.join(ROOT, 'images'), path.join(DIST, 'images'));
@@ -78,10 +91,7 @@ fs.mkdirSync(path.join(DIST, 'admin'), { recursive: true });
 fs.writeFileSync(path.join(DIST, 'admin/config.js'), `window.CMS_CONFIG = ${publicConfig};\n`);
 fs.writeFileSync(path.join(DIST, 'js/site-config.js'), `window.SITE_CONFIG = ${publicConfig};\n`);
 
-// Sitemap and robots.txt for search engines. Pages that only work with an ?id (one event,
-// one product) or that are private (cart, admin) are left out.
-const SITE_URL = (process.env.SITE_URL || 'https://legacyxjiujitsu.com').replace(/\/+$/, '');
-const NOT_IN_SITEMAP = new Set(['event.html', 'store-product.html', 'store-cart.html']);
+// Sitemap and robots.txt for search engines.
 const lastChanged = (rel) => {
   try {
     return execFileSync('git', ['log', '-1', '--format=%cs', '--', rel], { cwd: ROOT, encoding: 'utf8' }).trim();
@@ -90,7 +100,7 @@ const lastChanged = (rel) => {
   }
 };
 const urls = sourcePages().filter((rel) => !NOT_IN_SITEMAP.has(rel)).map((rel) => {
-  const loc = `${SITE_URL}/${rel === 'index.html' ? '' : rel}`;
+  const loc = pageUrl(rel);
   const date = lastChanged(rel);
   return `  <url>\n    <loc>${loc}</loc>\n${date ? `    <lastmod>${date}</lastmod>\n` : ''}  </url>`;
 });
