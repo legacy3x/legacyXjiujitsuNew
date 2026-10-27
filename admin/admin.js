@@ -150,9 +150,31 @@ async function loadPages() {
   ]);
   if (error) return setStatus(`Could not load pages: ${error.message}`, 'err');
 
+  // Menu names are fixed here, not taken from the page titles, so search-friendly titles
+  // (e.g. "Adult Brazilian Jiu-Jitsu in Woodstock, ON | …") don't change the admin menu.
+  const PAGE_NAMES = {
+    about: 'About',
+    contact: 'Contact',
+    corporate: 'Corporate Wellness',
+    etiquette: 'Dojo Etiquette',
+    events: 'Events',
+    faq: 'FAQ',
+    instructors: 'Instructors',
+    'our-lineage': 'Our Lineage',
+    privacy: 'Privacy Policy',
+    programs: 'Programs',
+    'programs/adult-jiu-jitsu': 'Adult Jiu-Jitsu',
+    'programs/competition': 'Competition',
+    'programs/jiu-jitsu-over-55': 'Jiu-Jitsu Over 55',
+    'programs/kids-jiu-jitsu': 'Kids Jiu-Jitsu',
+    'programs/private-lessons': 'Private Lessons',
+    'programs/womens-only': "Women's Only",
+    schedule: 'Schedule',
+    terms: 'Terms & Conditions',
+  };
   const titles = {};
   for (const r of rows) {
-    if (r.key.endsWith('/meta/title')) titles[r.page] = plain(r.value).replace(/\s+[—–|-]\s+Legacy X.*$/i, '');
+    if (r.key.endsWith('/meta/title')) titles[r.page] = PAGE_NAMES[r.page] || plain(r.value).replace(/\s+[—–|-]\s+Legacy X.*$/i, '');
   }
   const ids = [...new Set([...rows, ...(listRows || [])].map((r) => r.page))];
   ids.sort((a, b) => {
