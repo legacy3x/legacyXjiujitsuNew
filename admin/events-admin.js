@@ -163,7 +163,8 @@ export function mountEvents({ sb, root, setStatus }) {
               <small>JPG or PNG, up to 5 MB.</small></div>
             </div></div>
           <div class="field"><label for="f-cost">Cost per person ($)</label><input class="field-input" id="f-cost" type="number" min="0" step="0.01" value="${(v.cost_cents / 100).toFixed(2)}"/><small>0 = free.</small></div>
-          <div class="field"><label for="f-capacity">Total capacity</label><input class="field-input" id="f-capacity" type="number" min="1" step="1" value="${v.capacity ?? ''}"/><small>Leave empty for unlimited.</small></div>
+          <div class="field"><label for="f-capacity">Total capacity</label><input class="field-input" id="f-capacity" type="number" min="1" step="1" value="${v.capacity ?? ''}"/><small>Leave empty for unlimited.</small>
+            <label class="check"><input type="checkbox" id="f-spots" ${v.show_spots_left !== false ? 'checked' : ''}/> Show spots left on the events page</label></div>
           <div class="field"><label for="f-opens">Registration opens</label><input class="field-input" id="f-opens" type="datetime-local" value="${toLocalInput(v.registration_opens_at)}"/><small>Empty = open now.</small></div>
           <div class="field"><label for="f-closes">Registration closes</label><input class="field-input" id="f-closes" type="datetime-local" value="${toLocalInput(v.registration_closes_at)}"/><small>Empty = open until the event date.</small></div>
           <div class="field full"><label for="f-instr">Additional instructions for attendees</label><textarea class="field-input" id="f-instr" rows="4">${esc(v.attendee_instructions)}</textarea><small>Shown on the event page and after someone registers.</small></div>
@@ -243,6 +244,7 @@ export function mountEvents({ sb, root, setStatus }) {
           photo_url: photoUrl || null,
           cost_cents: cost,
           capacity: cap,
+          show_spots_left: $('f-spots').checked,
           registration_opens_at: opens,
           registration_closes_at: closes,
           attendee_instructions: $('f-instr').value.trim(),

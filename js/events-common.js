@@ -49,7 +49,7 @@ window.LXEvents = (() => {
   }
 
   function spotsText(e) {
-    if (e.capacity == null || e.registration_state !== 'open') return '';
+    if (e.capacity == null || e.spots_left == null || e.registration_state !== 'open') return '';
     return e.spots_left === 1 ? '1 spot left' : `${e.spots_left} spots left`;
   }
 

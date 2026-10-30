@@ -21,6 +21,7 @@ create table if not exists public.events (
   attendee_instructions  text not null default '',
   published              boolean not null default false,
   registration_enabled   boolean not null default true,
+  show_spots_left        boolean not null default true,  -- show "N spots left" on the website
   created_at             timestamptz not null default now(),
   updated_at             timestamptz not null default now()
 );
@@ -46,6 +47,7 @@ create table if not exists public.event_registrations (
 -- When the "pending approval" / "approved" emails went out (see netlify/lib/event-emails.mjs).
 alter table public.event_registrations add column if not exists pending_emailed_at  timestamptz;
 alter table public.event_registrations add column if not exists approved_emailed_at timestamptz;
+alter table public.events add column if not exists show_spots_left boolean not null default true;
 create index if not exists event_registrations_event_idx on public.event_registrations (event_id, status);
 create index if not exists event_registrations_stripe_idx on public.event_registrations (stripe_session_id);
 
@@ -104,7 +106,7 @@ set search_path = public
 as $$
   select e.id, e.title, e.category, e.event_date, e.start_time, e.end_time, e.location, e.description,
          e.photo_url, e.cost_cents, e.capacity,
-         case when e.capacity is null then null else greatest(e.capacity - public.event_spots_taken(e.id), 0) end,
+         case when e.capacity is null or not e.show_spots_left then null else greatest(e.capacity - public.event_spots_taken(e.id), 0) end,
          public.event_registration_state(e), e.registration_opens_at, e.registration_closes_at
   from public.events e
   where e.published
@@ -124,7 +126,7 @@ set search_path = public
 as $$
   select e.id, e.title, e.category, e.event_date, e.start_time, e.end_time, e.location, e.description,
          e.photo_url, e.cost_cents, e.capacity,
-         case when e.capacity is null then null else greatest(e.capacity - public.event_spots_taken(e.id), 0) end,
+         case when e.capacity is null or not e.show_spots_left then null else greatest(e.capacity - public.event_spots_taken(e.id), 0) end,
          public.event_registration_state(e), e.registration_opens_at, e.registration_closes_at,
          e.attendee_instructions
   from public.events e
