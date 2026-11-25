@@ -60,7 +60,7 @@ create policy "site photos admin delete" on storage.objects for delete to authen
 -- ── Black Friday 2026: every page, once per visit, Nov 25 – Nov 30 (Woodstock time) ──
 insert into public.popups (name, image_url, alt_text, starts_at, ends_at, pages, frequency)
 select 'Black Friday Sale 2026', '/images/popups/black-friday-2026.jpg',
-       'Black Friday Sale at Legacy X Jiu-Jitsu, November 25 to 30, 2026',
+       'Black Friday membership sale at Legacy X Jiu-Jitsu, November 25 to 30, 2026: 12 weeks for $279 (Kids, Teens, Women''s Only, Adults) and 1 year for $999 (Kids, Teens, Adults)',
        timestamp '2026-11-25 00:00' at time zone 'America/Toronto',
        timestamp '2026-12-01 00:00' at time zone 'America/Toronto',
        '{}', 'session'
