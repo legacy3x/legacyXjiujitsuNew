@@ -50,6 +50,15 @@ per Printful store in the cart.
 Extra product photos are uploaded in the admin (**Details & photos**) to the `site-photos` bucket and saved in
 `store_products.photos` (`supabase/add-store-photos.sql`); a re-sync leaves them alone.
 
+## Popups
+
+Poster popups live in `popups` (see `supabase/popups.sql`) and are managed in the admin's **Popups** section:
+poster (uploaded to `site-photos/popups/`), optional click-through link, start/stop dates, which pages, and how
+often each visitor sees it (once per visit, once a day, once ever, every page). `js/popup.js` runs on every public
+page, asks `public_popups()` for the live ones and shows the newest that matches the page and hasn't been seen
+too recently (remembered in the visitor's browser). New public pages need
+`<script src="js/site-config.js"></script><script src="js/popup.js"></script>` before `</body>`.
+
 ## Changing the design or adding content
 
 - **Local preview without Supabase:** `npm run build:local` (uses `content/seed.json`) and open `dist/`.

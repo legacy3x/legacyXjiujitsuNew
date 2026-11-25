@@ -3,6 +3,7 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 import { mountEvents } from './events-admin.js';
 import { mountStore } from './store-admin.js';
+import { mountPopups } from './popups-admin.js';
 
 const cfg = window.CMS_CONFIG || {};
 const $ = (id) => document.getElementById(id);
@@ -36,9 +37,12 @@ let lists = []; // { key, position, fields: [], items: [{ id, tpl, fields, dirty
 let deleted = [];
 let eventsUI;
 let storeUI;
+let popupsUI;
 const EVENTS = '__events';
 const STORE = '__store';
+const POPUPS = '__popups';
 const STORE_LABEL = 'Store: Products & Orders';
+const POPUPS_LABEL = 'Popups';
 
 // ── Status helpers ──
 function setStatus(text, kind = '') {
@@ -81,9 +85,10 @@ async function enterApp(session) {
   $('app').hidden = false;
   eventsUI = mountEvents({ sb, root: $('events-view'), setStatus });
   storeUI = mountStore({ sb, root: $('store-view'), setStatus, shrinkImage });
+  popupsUI = mountPopups({ sb, root: $('popups-view'), setStatus, shrinkImage });
   await loadPages();
   const wanted = decodeURIComponent(location.hash.slice(1));
-  await openPage([EVENTS, STORE].includes(wanted) || pages.some((p) => p.id === wanted) ? wanted : 'index');
+  await openPage([EVENTS, STORE, POPUPS].includes(wanted) || pages.some((p) => p.id === wanted) ? wanted : 'index');
 }
 
 async function init() {
@@ -200,6 +205,7 @@ async function loadPages() {
     ? [[p.id, p.name, false], [EVENTS, EVENTS_LABEL, true]]
     : [[p.id, p.name, p.id.startsWith('programs/')]]));
   entries.push([STORE, STORE_LABEL, false]); // the shop isn't page text, so it gets its own manager
+  entries.push([POPUPS, POPUPS_LABEL, false]);
   $('page-nav').replaceChildren(...entries.map(([id, name, sub]) => link(id, name, sub)));
   $('page-select').replaceChildren(...entries.map(([id, name, sub]) => new Option(sub ? `— ${name}` : name, id)));
 }
@@ -214,9 +220,10 @@ async function openPage(id) {
   current = id;
   history.replaceState(null, '', `#${encodeURIComponent(id)}`);
   $('page-select').value = id;
-  const tool = { [EVENTS]: eventsUI, [STORE]: storeUI }[id]; // managers that aren't page text
+  const tool = { [EVENTS]: eventsUI, [STORE]: storeUI, [POPUPS]: popupsUI }[id]; // managers that aren't page text
   $('events-view').hidden = id !== EVENTS;
   $('store-view').hidden = id !== STORE;
+  $('popups-view').hidden = id !== POPUPS;
   $('pages-view').hidden = Boolean(tool);
   document.querySelectorAll('.page-link').forEach((b) => b.classList.toggle('active', b.dataset.page === id));
   if (tool) {
