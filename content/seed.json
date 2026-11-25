@@ -507,87 +507,87 @@
     },
     "index/hero/hero-eyebrow": {
       "page": "index",
-      "position": 28315,
+      "position": 28344,
       "value": "Woodstock, Ontario"
     },
     "index/hero/hero-headline": {
       "page": "index",
-      "position": 28411,
+      "position": 28440,
       "value": "Build your<br/>\nlegacy<br/>\n<span class=\"accent\">on the mat.</span>"
     },
     "index/hero/hero-sub": {
       "page": "index",
-      "position": 28563,
+      "position": 28592,
       "value": "World-class Jiu-Jitsu training for all levels. Join our community and transform your life through martial arts — no experience needed."
     },
     "index/programs/section-tag": {
       "page": "index",
-      "position": 29191,
+      "position": 29220,
       "value": "What we offer"
     },
     "index/programs/section-headline": {
       "page": "index",
-      "position": 29289,
+      "position": 29318,
       "value": "Programs built<br/>for <em>every level.</em>"
     },
     "index/why-legacy-x/section-tag": {
       "page": "index",
-      "position": 33001,
+      "position": 33030,
       "value": "Why Legacy X"
     },
     "index/why-legacy-x/section-headline": {
       "page": "index",
-      "position": 33102,
+      "position": 33131,
       "value": "Built on<br/>the right<br/><em>foundation.</em>"
     },
     "index/testimonials/section-tag": {
       "page": "index",
-      "position": 36973,
+      "position": 37002,
       "value": "From our community"
     },
     "index/testimonials/section-headline": {
       "page": "index",
-      "position": 37076,
+      "position": 37105,
       "value": "What members say."
     },
     "index/testimonials/testimonial-text": {
       "page": "index",
-      "position": 37374,
+      "position": 37403,
       "value": "\"Having trained with Francis for years, I can say firsthand that his technical knowledge is only matched by his integrity as a person. He has created an environment that is technical, safe, and completely ego-free. You’re not just joining a gym—you’re becoming part of a community led by one of the best in the business. I couldn’t be prouder to see him open the doors at Legacy X. Woodstock is lucky to have him!\""
     },
     "index/testimonials/testimonial-meta": {
       "page": "index",
-      "position": 37878,
+      "position": 37907,
       "value": "Rain Plaff · Black Belt"
     },
     "index/gallery/section-tag": {
       "page": "index",
-      "position": 40121,
+      "position": 40150,
       "value": "On the mats"
     },
     "index/gallery/section-headline": {
       "page": "index",
-      "position": 40212,
+      "position": 40241,
       "value": "Legacy X <em>in motion.</em>"
     },
     "index/cta-band/cta-headline": {
       "page": "index",
-      "position": 42221,
+      "position": 42250,
       "value": "Your first class<br/>is on us."
     },
     "index/cta-band/cta-sub": {
       "page": "index",
-      "position": 42316,
+      "position": 42345,
       "value": "No experience needed. No commitment required. Come see what Legacy X is about — bring a friend and train for free together."
     },
     "index/newsletter/newsletter-headline": {
       "page": "index",
-      "position": 42812,
+      "position": 42841,
       "value": "Stay in the loop."
     },
     "index/newsletter/newsletter-sub": {
       "page": "index",
-      "position": 42910,
+      "position": 42939,
       "value": "Weekly class recaps, training tips, event announcements, and academy updates — straight to your inbox. No spam, ever."
     },
     "instructors/meta/title": {
@@ -1094,6 +1094,56 @@
       "page": "terms",
       "position": 27312,
       "value": "© 2026 Legacy X Jiu-Jitsu. All rights reserved. &nbsp;·&nbsp; <a href=\"privacy.html\" style=\"color:var(--muted);\">Privacy Policy</a> &nbsp;·&nbsp; <a href=\"terms.html\" style=\"color:var(--muted);\">Terms & Conditions</a>"
+    },
+    "thank-you/header/page-title": {
+      "page": "thank-you",
+      "position": 34190,
+      "value": "Welcome to<br/><em>the team.</em>"
+    },
+    "thank-you/header/page-subtitle": {
+      "page": "thank-you",
+      "position": 34302,
+      "value": "Thank you for signing up with Legacy X Jiu-Jitsu. Your membership is set up and we can't wait to see you on the mat."
+    },
+    "thank-you/next/lead": {
+      "page": "thank-you",
+      "position": 34589,
+      "value": "Check your inbox for a confirmation email from us. Here's what to do before your first class."
+    },
+    "thank-you/next/step-1-title": {
+      "page": "thank-you",
+      "position": 34831,
+      "value": "Pick your class"
+    },
+    "thank-you/next/step-1-text": {
+      "page": "thank-you",
+      "position": 34901,
+      "value": "Have a look at the <a href=\"schedule.html\">class schedule</a> and choose the class that fits your program and your week."
+    },
+    "thank-you/next/step-2-title": {
+      "page": "thank-you",
+      "position": 35155,
+      "value": "Know what to bring"
+    },
+    "thank-you/next/step-2-text": {
+      "page": "thank-you",
+      "position": 35228,
+      "value": "Wear comfortable athletic clothing and bring a water bottle. No shoes are worn on the mat. Read our <a href=\"etiquette.html\">dojo etiquette</a> before you come in."
+    },
+    "thank-you/next/step-3-title": {
+      "page": "thank-you",
+      "position": 35525,
+      "value": "Use the member portal"
+    },
+    "thank-you/next/step-3-text": {
+      "page": "thank-you",
+      "position": 35601,
+      "value": "Sign in to the <a href=\"https://legacy-x-jiujitsu.gymdesk.com/login\" target=\"_blank\">member portal</a> to check in to classes, see your membership and update your details."
+    },
+    "thank-you/next/help": {
+      "page": "thank-you",
+      "position": 36085,
+      "value": "Questions before your first class? Call us at <a href=\"tel:2263765784\">(226) 376-5784</a> or email <a href=\"mailto:info@legacyxjiujitsu.com\">info@legacyxjiujitsu.com</a>."
     },
     "programs/adult-jiu-jitsu/meta/title": {
       "page": "programs/adult-jiu-jitsu",
@@ -2409,7 +2459,7 @@
     },
     "index/programs/programs-grid": {
       "page": "index",
-      "position": 29495,
+      "position": 29524,
       "items": [
         {
           "tpl": 0,
@@ -2475,7 +2525,7 @@
     },
     "index/why-legacy-x/why-left": {
       "page": "index",
-      "position": 33163,
+      "position": 33192,
       "items": [
         {
           "tpl": 0,
@@ -2495,7 +2545,7 @@
     },
     "index/why-legacy-x/why-items": {
       "page": "index",
-      "position": 33728,
+      "position": 33757,
       "items": [
         {
           "tpl": 0,
@@ -2532,7 +2582,7 @@
     },
     "index/why-legacy-x/why-right": {
       "page": "index",
-      "position": 35848,
+      "position": 35877,
       "items": [
         {
           "tpl": 0,
@@ -2562,7 +2612,7 @@
     },
     "index/testimonials/testimonials-grid": {
       "page": "index",
-      "position": 37941,
+      "position": 37970,
       "items": [
         {
           "tpl": 0,
@@ -2592,7 +2642,7 @@
     },
     "index/gallery/mosaic": {
       "page": "index",
-      "position": 40393,
+      "position": 40422,
       "items": [
         {
           "tpl": 0,

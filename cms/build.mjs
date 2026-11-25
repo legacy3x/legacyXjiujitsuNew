@@ -65,7 +65,7 @@ const content = await loadContent();
 // The site's one official address. Pages that only work with an ?id (one event, one product)
 // or that are private (cart) get no canonical tag and stay out of the sitemap.
 const SITE_URL = (process.env.SITE_URL || 'https://legacyxjiujitsu.com').replace(/\/+$/, '');
-const NOT_IN_SITEMAP = new Set(['event.html', 'store-product.html', 'store-cart.html']);
+const NOT_IN_SITEMAP = new Set(['event.html', 'store-product.html', 'store-cart.html', 'thank-you.html']);
 const pageUrl = (rel) => `${SITE_URL}/${rel === 'index.html' ? '' : rel}`;
 
 // Tells search engines which address is the real one (the same page is also reachable

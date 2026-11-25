@@ -171,6 +171,7 @@ async function loadPages() {
     'programs/womens-only': "Women's Only",
     schedule: 'Schedule',
     terms: 'Terms & Conditions',
+    'thank-you': 'Thank You (after sign-up)',
   };
   const titles = {};
   for (const r of rows) {
@@ -183,7 +184,7 @@ async function loadPages() {
   });
   pages = ids.map((id) => ({
     id,
-    name: id === 'site' ? 'Site-wide (footer)' : id === 'index' ? 'Home' : titles[id] || humanize(id.split('/').at(-1)),
+    name: id === 'site' ? 'Site-wide (footer)' : id === 'index' ? 'Home' : titles[id] || PAGE_NAMES[id] || humanize(id.split('/').at(-1)),
   }));
 
   // The event manager sits right under the Events page, like a sub-page.
